@@ -1,0 +1,15 @@
+development: &default
+  adapter: postgresql
+  database: reliefhub_development
+  username: postgres
+  password: postgres
+  min_messages: warning
+  host: localhost
+  encoding: utf8
+
+test: &test
+  <<: *default
+  database: reliefhub_test
+
+cucumber:
+  <<: *test

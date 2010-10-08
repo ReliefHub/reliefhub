@@ -1,0 +1,25 @@
+ReliefHub
+=========
+
+Setup
+-----
+
+    bundle install
+    rake db:create
+    rake db:migrate
+    rake
+
+You should see a chain of satisfying green dots.
+
+Dependencies
+------------
+
+Gems are managed by Bundler. Database is Postgres to match Heroku.
+
+If you're on a Mac, install Postgres with Homebrew:
+
+    brew install postgresql
+
+Then, go into System Preferences > Accounts and
+create a new "postgres" user with password "postgres"
+
