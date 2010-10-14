@@ -18,8 +18,12 @@ Gems are managed by Bundler. Database is Postgres to match Heroku.
 
 If you're on a Mac, install Postgres with Homebrew:
 
-    brew install postgresql
+    brew install postgres
 
 Then, go into System Preferences > Accounts and
 create a new "postgres" user with password "postgres"
+
+We don't set a username or password in development or test environments. Instead, create postgres database role (user) with the same handle as your unix username. To create the postgres user, try (your password will be prompted):
+
+    sudo -u postgres createuser --no-superuser --createdb --no-createrole --login --pwprompt --encrypted -h 127.0.0.1 -p 5432 $YOUR_UNIX_USERNAME$
 
