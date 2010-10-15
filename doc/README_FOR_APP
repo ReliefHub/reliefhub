@@ -16,14 +16,37 @@ Dependencies
 
 Gems are managed by Bundler. Database is Postgres to match Heroku.
 
-If you're on a Mac, install Postgres with Homebrew:
+Mac:
 
     brew install postgres
 
-Then, go into System Preferences > Accounts and
-create a new "postgres" user with password "postgres"
+Ubuntu:
 
-We don't set a username or password in development or test environments. Instead, create postgres database role (user) with the same handle as your unix username. To create the postgres user, try (your password will be prompted):
+    sudo apt-get install postgres
 
-    sudo -u postgres createuser --no-superuser --createdb --no-createrole --login --pwprompt --encrypted -h 127.0.0.1 -p 5432 $YOUR_UNIX_USERNAME$
+This should install a postgres/postgres UNIX account.
+Then, make sure the postgres/postgres user is set up for the database server.
 
+    su - postgres
+    psql
+    \password postgres
+
+Our config/database.yml uses these postgres/postgres credentials.
+
+Deploy
+------
+
+Deploy to Heroku, rake db:migrate, and notify Hoptoad of deploy:
+
+    rake deploy
+
+Deploys to staging by default. When ready for production:
+
+    rake deploy:production
+
+Continuous Integration
+----------------------
+
+http://ci.reliefhub.railsmachina.com
+
+Commits to origin master (Github) will notify CI of the build.
