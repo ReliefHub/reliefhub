@@ -33,4 +33,5 @@ group :test, :cucumber do
   gem "treetop"
   gem "shoulda"
   gem "launchy"
+  gem "email_spec"
 end

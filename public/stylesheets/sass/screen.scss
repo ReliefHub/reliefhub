@@ -580,6 +580,7 @@ body {
 #faq {
   width: 230px;
   float: left;
+  text-align: left;
   min-height: 150px;
   border-right: 3px solid #662d91;
   margin: 20px 0 0 30px;
@@ -588,12 +589,27 @@ body {
 #contact_us {
   width: 230px;
   float: left;
+  text-align: left;
   min-height: 150px;
   border-right: 3px solid #662d91;
   margin: 20px 0 0 0;
-  padding: 0 20px 0 0; }
+  padding: 0 20px 0 0;
+  fieldset {
+    width: 200px;
+    margin-top: 10px;
+    #email_from, #email_body {
+      width: 180px;
+    }
+  }
+}
 
 #submit_contact {
   height: 25px;
   width: 65px;
   margin: 10px 0 0 0; }
+
+.vcard {
+  .street-address {
+    display: block;
+  }
+}

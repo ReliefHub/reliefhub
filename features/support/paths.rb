@@ -10,22 +10,18 @@ module NavigationHelpers
 
     when /the home\s?page/
       '/'
-
-    # Add more mappings here.
+    when /the "(.*)" static page/i
+      page_path($1.gsub(" ", "_"))
     when /the sign up page/i
       sign_up_path
     when /the sign in page/i
       sign_in_path
     when /the password reset request page/i
       new_password_path
-      
     when /the organizations page/i
       admin_organizations_path
-        
-    # Here is an example that pulls values out of the Regexp:
-    #
-    #   when /^(.*)'s profile page$/i
-    #     user_profile_path(User.find_by_login($1))
+
+    # Add more mappings here.
 
     else
       begin

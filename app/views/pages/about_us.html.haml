@@ -1,0 +1,81 @@
+#body_wrap
+  #about_left
+    #our_mission
+      %h1 Our Mission
+      %p ReliefHub is dedicated to working with orphanages in third world countries to help them secure the resources they require to continue to care for millions of orphans and abandoned children.
+    #about_us
+      %h1 About Us
+      %p ReliefHub is a 501 (c) 3 nonprofit organization founded to work with orphanages around the world to help them secure the resources required to provide excellent care for orphans and abandoned children. Initially ReliefHub will focus on Haiti, where an estimated 200,000 children are living in orphanages.
+      %p ReliefHub is managed by an international team of volunteers from Haiti, USA, and Sweden who have come together to support this great cause. The team works tirelessly to organize innovative fundraisers and to manage the selection and distribution of funds to orphanages.
+      .vol_photo
+      .vol_photo
+      .vol_photo
+      .vol_photo
+      .vol_photo
+      .vol_photo
+  #about_right
+    #why_relief
+    %h1 Why ReliefHub
+    %p ReliefHub is unique because it is built on the following guiding principles:
+    %span.bold
+      1. This is a heading
+    %p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    %span.bold
+      2. This is a heading
+    %p Lorem Ipsum is simply dummy text of ts simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    %span.bold
+      3. This is a heading
+    %p Lorem Ipsum is simply dummy text of ts simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    %span.bold
+      4. This is a heading
+    %p Lorem Ipsum is simply dummy text of ts simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+.clear
+#bottom_info
+  #contact_us
+    %h2 Contact Us
+    .vcard
+      .adr
+        %span.street-address 11 Bigelow Street
+        %span.locality Cambridge,
+        %abbr.region{ :title => "Massachusetts" } MA
+        %span.postal-code 02139
+        .country-name USA
+      %div
+        %span.email info@reliefhub.org
+    = semantic_form_for :email, :url => emails_path do |form|
+      = form.error_messages
+      = form.inputs do
+        = form.input :from, :label => "Email" unless signed_in?
+        = form.input :body, :as => :text, :required => true
+      = form.buttons do
+        = form.commit_button "Contact us"
+  #faq
+    %h2 FAQ
+    %dl
+      %dt Why?
+      %dd Because
+      %dt When?
+      %dd Now
+      %dt Who?
+      %dd Us
+      %dt What?
+      %dd It
+      %dt Where?
+      %dd Here
+  #recent_press
+    %h2 Recent Press
+    .press_logo
+    .press_copy
+      %h3 Lorem Ipsum is simply dum
+      %p Lorem Ipsum is simply dummy text of the printing and typesetting
+    .clear
+    .press_logo
+    .press_copy
+      %h3 Lorem Ipsum is simply dum
+      %p Lorem Ipsum is simply dummy text of the printing and typesetting
+    .clear
+    .press_logo
+    .press_copy
+      %h3 Lorem Ipsum is simply dum
+      %p Lorem Ipsum is simply dummy text of the printing and typesetting
+.clear
