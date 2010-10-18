@@ -1,12 +1,13 @@
 .bundle
 db/*.sqlite3
 log/*.log
-tmp/**/*
+tmp
 db/schema.rb
 public/system
 *.DS_Store
 coverage/*
 *.swp
+*.swo
 rerun.txt
 tags
 !.keep
