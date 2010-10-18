@@ -5,6 +5,11 @@ Reliefhub::Application.routes.draw do
   match 'sign_in'  => 'devise/sessions#create', :as => 'sign_in'
   match 'sign_out' => 'devise/sessions#destroy', :via => :delete, :as => 'sign_out' 
 
+  namespace :admin do  
+    resources :organizations, :only=>[:index, :new, :create]
+  end
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
