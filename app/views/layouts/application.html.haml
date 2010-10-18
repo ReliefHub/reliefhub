@@ -12,8 +12,11 @@
         - if user_signed_in?
           = link_to "Sign out", sign_out_path, :method => :delete
         - else
-          = link_to "Sign in", sign_in_path
+          = link_to "Sign in", user_session_url #sign_in_path
+          = link_to_rpx "Janrain", user_session_url  
       = render :partial => 'shared/flashes'
       = yield
       = render :partial => 'shared/javascript'
       = render :partial => 'shared/footer'
+      
+      = javascript_include_rpx(user_session_url) 

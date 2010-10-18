@@ -139,4 +139,9 @@ Devise.setup do |config|
   #   end
   #   manager.default_strategies(:scope => :user).unshift :twitter_oauth
   # end
+  
+  # ==> RPXNow/Janrain configuration
+  config.mailer_sender = "info@reliefhub.org"  
+  config.rpx_application_name = 'reliefhub'  
+  RPXNow.api_key = "0f07e2f9d686a685edc4da0e2bc8957dcd1a6893"  
 end
