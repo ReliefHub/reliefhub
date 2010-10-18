@@ -1,0 +1,20 @@
+!!! 5
+%html
+  %head
+    %meta{ :charset => "utf-8" }/
+    %title ReliefHub
+    = stylesheet_link_tag :flutie, 'screen', :media => 'all', :cache => true
+    = javascript_include_tag "jquery", "jquery-ui", "prefilled_input", "rails", "application", :cache => true
+    = csrf_meta_tag
+  %body{ :class => body_class }
+    #wrapper
+      = render :partial => 'shared/header'
+      #header
+        - if signed_in?
+          = link_to "Sign out", sign_out_path, :method => :delete
+        - else
+          = link_to "Sign in", sign_in_path
+      = render :partial => 'shared/flashes'
+      = yield
+      = render :partial => 'shared/javascript'
+      = render :partial => 'shared/footer'
