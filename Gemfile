@@ -1,6 +1,6 @@
 source :rubygems
 
-gem "rails", ">= 3.0"
+gem "rails", "3.0.1"
 gem "rack"
 gem "clearance", "0.9.0.rc9"
 gem "haml"
@@ -15,7 +15,7 @@ gem "dynamic_form"
 
 # http://blog.davidchelimsky.net/2010/07/11/rspec-rails-2-generators-and-rake-tasks/
 group :development, :test, :cucumber do
-  gem "rspec-rails", "~> 2.0.0.rc"
+  gem "rspec-rails", "2.0.0"
   gem "ruby-debug"
 end
 
