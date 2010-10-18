@@ -74,6 +74,10 @@ GEM
       json (~> 1.4.6)
       term-ansicolor (~> 1.0.5)
     haml (3.0.21)
+    heroku (1.10.14)
+      json_pure (>= 1.2.0, < 1.5.0)
+      launchy (~> 0.3.2)
+      rest-client (>= 1.4.0, < 1.7.0)
     high_voltage (0.9.1)
     hoptoad_notifier (2.3.8)
       activesupport
@@ -116,6 +120,8 @@ GEM
       rake (>= 0.8.4)
       thor (~> 0.14.0)
     rake (0.8.7)
+    rest-client (1.6.1)
+      mime-types (>= 1.16)
     rspec (2.0.0)
       rspec-core (= 2.0.0)
       rspec-expectations (= 2.0.0)
@@ -162,6 +168,7 @@ DEPENDENCIES
   flutie
   formtastic
   haml
+  heroku
   high_voltage
   hoptoad_notifier
   launchy
