@@ -1,1 +1,19 @@
-Projects
+#body_wrap
+  %br
+  %br
+  %br
+  %br
+  %br
+    #h2
+      Projects
+    - @projects.each do |project|
+      %h3= project.name
+      = link_to 'Edit', edit_admin_project_path(project)
+
+    = link_to 'Create', new_admin_project_path
+  %br
+  %br
+  %br
+  %br
+  %br
+

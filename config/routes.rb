@@ -1,7 +1,7 @@
 Reliefhub::Application.routes.draw do
 
   namespace :admin do
-    resources :projects, :only => [ :index ]
+    resources :projects, :only => [ :index, :new, :create, :edit, :update ]
   end
 
   # The priority is based upon order of creation:

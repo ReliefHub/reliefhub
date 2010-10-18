@@ -1,0 +1,14 @@
+!!! 5
+%html
+  %head
+    %meta{ :charset => "utf-8" }/
+    %title ReliefHub
+    = stylesheet_link_tag :flutie, 'screen', :media => 'all'
+    = csrf_meta_tag
+  %body{ :class => body_class }
+    #wrapper
+      = render :partial => 'shared/header'
+      = render :partial => 'shared/flashes'
+      = yield
+      = render :partial => 'shared/javascript'
+      = render :partial => 'shared/footer'

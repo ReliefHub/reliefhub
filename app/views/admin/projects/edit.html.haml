@@ -1,0 +1,11 @@
+%h1
+  Edit Project Form
+%p
+  - semantic_form_for [:admin, @project] do |f|
+    %p
+      = f.label :name
+      = f.text_field :name
+    %p
+      = f.submit 'Save Project'
+
+
