@@ -1,6 +1,11 @@
 Reliefhub::Application.routes.draw do
   root :to => 'Clearance::Sessions#new'
 
+  namespace :admin do  
+    resources :organizations, :only=>[:index, :new, :create]
+  end
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
