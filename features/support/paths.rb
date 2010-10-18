@@ -18,6 +18,8 @@ module NavigationHelpers
       sign_in_path
     when /the password reset request page/i
       new_password_path
+    when /the admin projects page/
+      admin_projects_path
     # Here is an example that pulls values out of the Regexp:
     #
     #   when /^(.*)'s profile page$/i
