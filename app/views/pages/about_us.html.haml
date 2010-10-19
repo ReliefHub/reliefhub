@@ -45,7 +45,7 @@
     = semantic_form_for :email, :url => emails_path do |form|
       = form.error_messages
       = form.inputs do
-        = form.input :from, :label => "Email" unless signed_in?
+        = form.input :from, :label => "Email" unless user_signed_in?
         = form.input :body, :as => :text, :required => true
       = form.buttons do
         = form.commit_button "Contact us"

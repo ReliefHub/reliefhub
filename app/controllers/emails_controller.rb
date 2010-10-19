@@ -3,7 +3,7 @@ class EmailsController < ApplicationController
     if params[:email][:body].blank?
       flash[:failure] = 'Email was not sent. Please enter some text.'
     else
-      from = if signed_in?
+      from = if user_signed_in?
                current_user.email
              else
                params[:email][:from]
