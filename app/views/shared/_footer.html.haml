@@ -34,12 +34,8 @@
     %li
       %a{ :href => "#" }
         Site Map
-    %li
-      %a{ :href => "#" }
-        Contact
-    %li
-      %a{ :href => "#" }
-        FAQ
+    %li= link_to 'Contact', page_path("about_us")
+    %li= link_to 'FAQ',     page_path("about_us")
     %li
       %a{ :href => "#" }
         My account
@@ -52,9 +48,7 @@
     %li
       %a{ :href => "#" }
         Projects
-    %li
-      %a{ :href => "#" }
-        About Us
+    %li= link_to 'About Us', page_path("about_us")
     %li
       %a{ :href => "#" }
         Home
