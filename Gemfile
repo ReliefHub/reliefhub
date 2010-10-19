@@ -14,6 +14,7 @@ gem "dynamic_form"
 gem "heroku"
 gem 'devise'  
 gem 'devise_rpx_connectable'
+gem 'rmagick'
 
 # http://blog.davidchelimsky.net/2010/07/11/rspec-rails-2-generators-and-rake-tasks/
 group :development, :test, :cucumber do

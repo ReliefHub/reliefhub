@@ -1,5 +1,8 @@
 hi show me page for
 = @organization.name
+Pictures
+- @organization.organization_photos.each do |organization_photo|
+  = image_tag organization_photo.file.url(:thumb) 
 = @organization.address
 = @organization.contact_person
 = link_to image_tag('my_pic.gif'), edit_admin_organization_path(@organization), :id=>"Edit"

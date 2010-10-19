@@ -1,0 +1,30 @@
+%h1= @project.name
+
+%p
+  Orphanage
+  = @project.organization.name
+  
+%p
+  Status
+  PENDING
+
+%p
+  Overview
+  PENDING
+
+%p
+  Materials Needed
+  PENDING
+
+%p
+  Funding Needed
+  PENDING
+
+%p
+  Pictures
+  - @project.project_photos.each do |project_photo|
+    = image_tag project_photo.file.url(:thumb) 
+
+= link_to image_tag('my_pic.gif'), edit_admin_organization_project_path(@project.organization, @project), :id=>"Edit"
+
+

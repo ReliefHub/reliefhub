@@ -9,7 +9,6 @@ describe Admin::OrganizationsController do
       get :index 
     end 
     it "should have called organization.all" do
-
       Organization.should have_received(:all)
     end
     it { should assign_to(:organizations).with(organizations)} 

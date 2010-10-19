@@ -128,6 +128,7 @@ GEM
     rake (0.8.7)
     rest-client (1.6.1)
       mime-types (>= 1.16)
+    rmagick (2.13.1)
     rpx_now (0.6.23)
       json_pure
     rspec (2.0.1)
@@ -189,6 +190,7 @@ DEPENDENCIES
   pg
   rack
   rails (= 3.0.1)
+  rmagick
   rspec-rails (= 2.0.1)
   ruby-debug
   shoulda

@@ -1,0 +1,4 @@
+%li.file.optional#project_project_photo_file_input
+  = label_tag 'File'
+  = image_tag edit_photo.file.url(:thumb) if edit_photo.file?
+  = file_field_tag field_name
