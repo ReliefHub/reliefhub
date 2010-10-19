@@ -9,7 +9,7 @@ I want to be able to Add/Edit an organization
 		  | oliver's orphanage | 123 main st      | alex           |
 		  | oscar's orphanage  | 455 fifth avenue | alex           |
 		  | olivia's orphanage | 131 first st     | yan            |
-	  Given I go to the organizations page
+	  Given I go to the admin organizations page
 	   Then I should see "Organization"
 		  And I should see "oliver's orphanage"
 		  And I should see "oscar's orphanage"
@@ -17,7 +17,7 @@ I want to be able to Add/Edit an organization
 
 
 	Scenario: Create a new organization
-	  Given I go to the organizations page
+	  Given I go to the admin organizations page
 	   When I follow "Create"
 	   When I fill in "Name" with "my orphanage"
 	    And I fill in "Street1" with "123 main st"
