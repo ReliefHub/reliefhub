@@ -11,6 +11,8 @@ module NamedElements
       '#relief_blog'
     when /recent press/i
       '#recent_press'
+    when /error messages/i
+      '#error_explanation'
     else
       raise %{No selector defined for an element with name "#{named_element}"\n} +
             "Check out features/support/named_elements.rb and add one"

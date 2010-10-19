@@ -13,11 +13,13 @@ module NavigationHelpers
     when /the "(.*)" static page/i
       page_path($1.gsub(" ", "_"))
     when /the sign up page/i
-      sign_up_path
+      new_user_registration_path
     when /the sign in page/i
-      sign_in_path
+      new_user_session_path
+    when /the sign out page/i
+      destroy_user_session_path
     when /the password reset request page/i
-      new_password_path
+      new_user_password_path
     when /the admin organizations page/i
       admin_organizations_path
     when /the admin projects page for organization \"(.*)\"/i

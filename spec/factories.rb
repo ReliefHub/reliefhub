@@ -5,7 +5,21 @@ Factory.sequence :project_name do |n|
   "Project #{n}"
 end
 
-Factory.define :project do |p|
-  p.add_attribute(:name) { Factory.next(:project_name) }
-  p.organization         { |o| o.association(:organization) }
+Factory.define :project do |project|
+  project.name { Factory.next(:project_name) }
+  project.association(:organization)
+end
+
+Factory.sequence :email do |n|
+  "user#{n}@example.com"
+end
+
+Factory.define :user do |user|
+  user.email                 { Factory.next :email }
+  user.password              { "password" }
+  user.password_confirmation { "password" }
+end
+
+Factory.define :email_confirmed_user, :parent => :user do |user|
+  user.email_confirmed { true }
 end
