@@ -6,11 +6,11 @@
   %br
     #h2
       Projects
-    - @projects.each do |project|
+    - @organization.projects.each do |project|
       %h3= project.name
-      = link_to 'Edit', edit_admin_project_path(project)
+      = link_to 'Edit', edit_admin_organization_project_path(@organization, project)
 
-    = link_to 'Create', new_admin_project_path
+    = link_to 'Create', new_admin_organization_project_path(@organization)
   %br
   %br
   %br

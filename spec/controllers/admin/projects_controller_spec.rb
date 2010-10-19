@@ -3,22 +3,21 @@ require 'spec_helper'
 describe Admin::ProjectsController do
   
   describe "index" do
-    let(:project_array) { [ Factory.stub(:project), Factory.stub(:project) ] }
-
     before do
-      Project.stubs(:all => project_array)
-      get :index
+      @org = Factory :organization
+      get :new, :organization_id => @org.to_param
     end
 
-    it { should assign_to(:projects).with(project_array) }
+    it { should assign_to(:organization).with(@org) }
   end
 
   describe "new" do
     let(:project) { Factory.build(:project) }
 
     before do
+      org = Factory :organization
       Project.stubs(:new => project)
-      get :new
+      get :new, :organization_id => org.to_param
     end
 
     it { should assign_to(:project).with(project) }
@@ -34,17 +33,19 @@ describe Admin::ProjectsController do
 
     describe 'succeeds' do
       before do
+        org = Factory :organization
         project.stubs(:save=>true)
-        post :create, :project=>@data
+        post :create, :project=>@data, :organization_id=>org.to_param
       end
-      it { should redirect_to(admin_projects_path) }
+      it { should redirect_to(admin_organization_projects_path) }
       it { should set_the_flash.to("Successfully created a new project called my project") }
     end
 
     describe 'failing' do
       before do
+        org = Factory :organization
         project.stubs(:save=>false)
-        post :create, :project=>@data
+        post :create, :project=>@data, :organization_id=>org.to_param
       end
       it { should render_template(:new) }
     end

@@ -1,0 +1,14 @@
+This is the Organizations page
+
+= link_to "Create", new_admin_organization_path
+
+
+%table
+  %tr
+    %th Created
+    %th Name
+    %th Address
+    %th Contact Person
+    %th # of projects
+  = render @organizations
+
