@@ -171,6 +171,8 @@ body {
 .amount_index {
   margin: 0 0 10px 0;
   text-align: left; }
+  .amount_index input[type="text"] {
+    width: 200px; }
 
 #thumbnails {
   width: 585px;

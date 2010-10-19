@@ -1,4 +1,6 @@
 Reliefhub::Application.routes.draw do
+  root :to => "homes#show"
+  resource :home, :only => [:show]
 
   devise_for :users
 

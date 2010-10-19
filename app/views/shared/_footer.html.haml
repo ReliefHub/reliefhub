@@ -49,8 +49,6 @@
       %a{ :href => "#" }
         Projects
     %li= link_to 'About Us', page_path("about_us")
-    %li
-      %a{ :href => "#" }
-        Home
+    %li= link_to 'Home', home_path
   .clear
   %p &copy; Copyright #{Date.today.strftime("%Y")} ReliefHub. All rights reserved.

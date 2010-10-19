@@ -1,5 +1,5 @@
 #relief_logo
-  %a{ :href => "#" }
+  = link_to home_path do
     %img{ :src => "/images/relief_logo.gif", :alt => "relief_logo" }
 #social_logos
   %a{ :href => "#" }
@@ -18,10 +18,10 @@
     %li
       %a{ :href => "#" }
         Blog
-    %li
-      %a{ :href => "#" }
-        My Account
-    %li
-      %a{ :href => "#" }
-        Home
+    - if user_signed_in?
+      %li= link_to "Sign out", sign_out_path, :method => :delete
+    - else
+      %li= link_to "Sign in", user_session_url
+      %li= link_to_rpx "Janrain", user_session_url
+    %li= link_to 'Home', home_path
 .clear
