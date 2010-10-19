@@ -17,7 +17,7 @@ gem 'devise_rpx_connectable'
 
 # http://blog.davidchelimsky.net/2010/07/11/rspec-rails-2-generators-and-rake-tasks/
 group :development, :test, :cucumber do
-  gem "rspec-rails", "2.0.0"
+  gem "rspec-rails", "2.0.1"
   gem "ruby-debug"
 end
 
