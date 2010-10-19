@@ -26,7 +26,6 @@ describe Admin::ProjectsController do
   describe 'create' do
     let(:project) { Factory.build(:project) }
     before do
-      @data = stub
       Project.stubs(:new=>project)
       project.stubs(:name=>'my project')
     end
@@ -35,7 +34,7 @@ describe Admin::ProjectsController do
       before do
         org = Factory :organization
         project.stubs(:save=>true)
-        post :create, :project=>@data, :organization_id=>org.to_param
+        post :create, :project=>stub, :organization_id=>org.to_param
       end
       it { should redirect_to(admin_organization_projects_path) }
       it { should set_the_flash.to("Successfully created a new project called my project") }
@@ -45,7 +44,7 @@ describe Admin::ProjectsController do
       before do
         org = Factory :organization
         project.stubs(:save=>false)
-        post :create, :project=>@data, :organization_id=>org.to_param
+        post :create, :project=>stub, :organization_id=>org.to_param
       end
       it { should render_template(:new) }
     end
