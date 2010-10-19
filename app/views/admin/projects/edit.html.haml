@@ -1,0 +1,7 @@
+%h1
+  Edit Project Form
+%p
+  = semantic_form_for [:admin, @project], :url => admin_organization_project_path(@organization) do |f|
+    = f.inputs do
+      = f.input :name
+    = f.submit 'Save Project'
