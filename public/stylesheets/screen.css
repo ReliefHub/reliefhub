@@ -604,7 +604,43 @@ body {
   -webkit-border-bottom-left-radius: 10px;
   -moz-border-radius-bottomright: 10px;
   -webkit-border-bottom-right-radius: 10px;
-  background-color: white; }
+  background: white;
+  width: 800px; }
 
 .projects li {
-  /*  float: left;*/ }
+  width: 320px;
+  float: left;
+  margin: 40px; }
+  .projects li img {
+    margin-right: 5px;
+    margin-bottom: 0px; }
+  .projects li .summary {
+    width: 100px;
+    float: left; }
+  .projects li h3 {
+    color: #3DA9DF;
+    padding: 0px 0px 0px 110px;
+    margin: 0px;
+    text-align: left; }
+  .projects li h4 {
+    padding: 10px 0px 0px 110px;
+    margin: 0px;
+    text-align: left; }
+  .projects li h5 {
+    padding: 0px 0px 0px 110px;
+    margin: 0px;
+    text-align: left; }
+  .projects li p {
+    padding: 5px 0px 0px 110px; }
+  .projects li .raised {
+    color: #662d91;
+    /*    padding: 5px 0px 0px 110px;*/ }
+
+.clear {
+  clear: both; }
+
+.right {
+  float: right; }
+
+.left {
+  float: left; }

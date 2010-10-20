@@ -620,11 +620,63 @@ body {
 }
 
 
-.projects {
+.projects  {
   @include round;
-  background-color: white;
+  background: white;
+  width: 800px;
 }
 
-.projects li {
-/*  float: left;*/
+.projects li  {
+  width: 320px;
+  float: left;
+  margin: 40px;
+  
+  img {
+    margin-right: 5px;
+    margin-bottom: 0px;
+  }
+  
+  .summary {
+    width: 100px;
+    float: left;
+  }
+  
+  h3 {
+    color: #3DA9DF;
+    padding: 0px 0px 0px 110px;
+    margin: 0px;
+    text-align: left;
+  }
+  
+  h4 {
+    padding: 10px 0px 0px 110px;
+    margin: 0px;
+    text-align: left;
+  }
+  
+  h5 {
+    padding: 0px 0px 0px 110px;
+    margin: 0px;
+    text-align: left;    
+  }
+  
+  p {
+    padding: 5px 0px 0px 110px;
+  }
+  
+  .raised {
+    color: #662d91;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
 }

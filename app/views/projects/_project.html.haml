@@ -1,11 +1,10 @@
-%li
-  =image_tag(project.thumbnail_url)
+%li.project
+  .summary
+    =image_tag(project.thumbnail_url)
+    =link_to('Fund this Project', project_path(project), :class => 'button')
   %h3=project.name
   %h4=project.orphanage
   %h5=project.requestor
-  %p=truncate(project.description, :length => 300)
-  .raised==#{project.percent_completed}% of #{number_to_currency(project.goal)}
-  =form_for(project) do |form|
-    =text_field_tag :fund
-    =submit_tag('Fund this Project')
-    
+  %p=truncate(project.description, :length => 150)
+  .raised==#{project.percent_completed}% of #{number_to_currency(project.goal)} raised
+  
