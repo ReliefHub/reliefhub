@@ -18,23 +18,23 @@ The source code here can be modified so other non-profit organizations and fundr
 
 Git source code repository:
 
-link:http://github.com/ReliefHub/reliefhub
-  
+http://github.com/ReliefHub/reliefhub/[http://github.com/ReliefHub/reliefhub/]
+
 Pivotal Tracker:
 
-link:https://www.pivotaltracker.com/projects/122363
+https://www.pivotaltracker.com/projects/122363[https://www.pivotaltracker.com/projects/122363]
    
 Campfire Chat Room:
 
-link:https://futurefridays.campfirenow.com/room/339412
+https://futurefridays.campfirenow.com/room/339412[https://futurefridays.campfirenow.com/room/339412]
   
 Designs:
 
-link:http://melissayasko.com/ReliefHub/reliefhub.html
+http://melissayasko.com/ReliefHub/reliefhub.html[http://melissayasko.com/ReliefHub/reliefhub.html]
 
 Build Machine:
 
-link:http://ci.reliefhub.railsmachina.com
+http://ci.reliefhub.railsmachina.com/[http://ci.reliefhub.railsmachina.com/]
 
 ==Contributing
 
