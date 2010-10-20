@@ -47,5 +47,6 @@ Reliefhub::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.action_mailer.default_url_options = { :host => 'reliefhub.com' }
+  # TBD change to reliefhub.org when going live
+  config.action_mailer.default_url_options = { :host => 'production.reliefhub.org' }
 end
