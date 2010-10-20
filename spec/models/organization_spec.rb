@@ -7,8 +7,9 @@ describe Organization do
   end
   
   it 'should return the number of projects' do
-    organization.projects_count.should == 0
-    pending("implement when we integrate projects")
+    2.times { organization.projects << Factory.build(:project, :organization=>organization) }
+    organization.save
+    organization.projects_count.should == 2
   end
     
   

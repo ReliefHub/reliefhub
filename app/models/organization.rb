@@ -9,6 +9,6 @@ class Organization < ActiveRecord::Base
   end
 
   def projects_count 
-    0
+    projects.count
   end
 end
