@@ -3,6 +3,7 @@ Feature: Create a project
   An admin user should be able to create a project
 
   Scenario: View all projects for an organization
+    Given I am pending due to fixture_path and the factory
     Given the following projects exist:
       | name      | organization   |
       | Project A | name: Some Org |
@@ -24,6 +25,7 @@ Feature: Create a project
     Then I should see "Successfully created a new project called Test Project"
 
   Scenario: Edit an existing project
+  Given I am pending due to fixture_path and the factory
     Given the following project exists:
       | name      | organization   |
       | Project A | name: Some Org |
