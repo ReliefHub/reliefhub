@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
   
   def index
-    @projects = Project.by_raised_amount
+    @projects = Project.all
   end
   
 end

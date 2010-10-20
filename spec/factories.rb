@@ -6,11 +6,16 @@ Factory.define :project do |project|
   project.association(:organization)
   project.name        { Faker::Company.catch_phrase }
   project.goal        { rand(100000) }
-  project.raised      { rand(10000) }
   project.orphanage   { Faker::Company.name }
   project.requestor   { Faker::Name.name }
   project.description { Faker::Lorem.paragraphs.join("\n") }
   project.photo       { File.read(File.join(Rails.root, 'spec', 'fixtures', "orphanage_#{rand(3)}.jpg"))}
+end
+
+Factory.define :donation do |donation|
+  donation.association(:project)
+  donation.association(:user)
+  donation.amount                  { 100 }
 end
 
 Factory.define :user do |user|
