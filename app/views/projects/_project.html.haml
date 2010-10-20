@@ -1,0 +1,11 @@
+%li
+  =image_tag(project.thumbnail_url)
+  %h3=project.name
+  %h4=project.orphanage
+  %h5=project.requestor
+  %p=truncate(project.description, :length => 300)
+  .raised==#{project.percent_completed}% of #{number_to_currency(project.goal)}
+  =form_for(project) do |form|
+    =text_field_tag :fund
+    =submit_tag('Fund this Project')
+    

@@ -1,0 +1,36 @@
+@mixin round-top-left{
+  -moz-border-radius-topleft:10px;
+  -webkit-border-top-left-radius:10px;
+}
+
+@mixin round-top-right{
+  -moz-border-radius-topright:10px;
+  -webkit-border-top-right-radius:10px;
+}
+
+@mixin round-bottom-left{
+  -moz-border-radius-bottomleft:10px;
+  -webkit-border-bottom-left-radius:10px;
+}
+
+@mixin round-bottom-right{
+  -moz-border-radius-bottomright:10px;
+  -webkit-border-bottom-right-radius:10px;
+}
+
+@mixin round-top {
+  @include round-top-left; 
+  @include round-top-right; 
+}
+
+@mixin round-bottom {
+  @include round-bottom-left; 
+  @include round-bottom-right;   
+}
+
+@mixin round {
+ @include round-top-left; 
+ @include round-top-right; 
+ @include round-bottom-left; 
+ @include round-bottom-right; 
+}
