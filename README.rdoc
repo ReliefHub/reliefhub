@@ -12,28 +12,29 @@ ReliefHub is a 501 (c) 3 nonprofit organization founded to work with orphanages 
 
 ReliefHub.org is a website that makes it easy for anyone to donate to a specific project at an orphanage that is in need of assistance.   Orphanage Managers can post project requests for materials or services they require at their orphanage.  Project requests can range from new mattresses for beds or art supplies, to clothing for children or even repairing a roof.  Donors can browse project requests and donate any amount to their favorite projects.  Once a project reaches its funding goal, a ReliefHub Project Coordinator ensures that the materials and/or services are delivered to the orphanage.  The ReliefHub.org website will be updated with photos of the project taking place and a cost report showing how each dollar was spent.  This process allows donors to connect directly to orphanage projects they are passionate about, giving them transparency into how their donation money is spent, and provides feedback on the project’s outcome.
 
+The source code here can be modified so other non-profit organizations and fundraisers can use it for their needs.
+
 ==Resources
 
 Git source code repository:
 
-  http://github.com/ReliefHub/reliefhub/
+  http://github.com/ReliefHub/reliefhub/[http://github.com/ReliefHub/reliefhub/]
 
 Pivotal Tracker:
 
-  https://www.pivotaltracker.com/projects/122363
-  
-  
+  https://www.pivotaltracker.com/projects/122363[https://www.pivotaltracker.com/projects/122363]
+   
 Campfire Chat Room:
 
-  https://futurefridays.campfirenow.com/room/339412
+  https://futurefridays.campfirenow.com/room/339412[https://futurefridays.campfirenow.com/room/339412]
   
 Designs:
 
-  http://melissayasko.com/ReliefHub/reliefhub.html
+  http://melissayasko.com/ReliefHub/reliefhub.html[http://melissayasko.com/ReliefHub/reliefhub.html]
 
 Build Machine:
 
-  http://ci.reliefhub.railsmachina.com/
+  http://ci.reliefhub.railsmachina.com/[http://ci.reliefhub.railsmachina.com/]
 
 ==Contributing
 
