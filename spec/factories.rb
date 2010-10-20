@@ -1,5 +1,3 @@
-include ActionDispatch::TestProcess
-    
 Factory.define :organization do |o|
 
 end
@@ -12,7 +10,7 @@ Factory.define :project do |project|
   project.orphanage   { Faker::Company.name }
   project.requestor   { Faker::Name.name }
   project.description { Faker::Lorem.paragraphs.join("\n") }
-  project.photo       { fixture_file_upload("#{Rails.root}/spec/support/orphanage_#{rand(3)}.jpg", 'image/jpeg') }
+  project.photo       { File.read(File.join(Rails.root, 'spec', 'fixtures', "orphanage_#{rand(3)}.jpg"))}
 end
 
 Factory.define :user do |user|

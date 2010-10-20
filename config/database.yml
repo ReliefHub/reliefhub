@@ -1,17 +1,14 @@
 development: &default
   adapter: postgresql
-  database: reliefhub_development
   username: postgres
   password: postgres
   min_messages: warning
-  host: localhost
-  encoding: utf8
   # adapter: mysql
-  # database: reliefhub_development
   # username: root
   # password: 
-  # host: localhost
-  # encoding: utf8
+  database: reliefhub_development
+  host: localhost
+  encoding: utf8
 
 test: &test
   <<: *default
