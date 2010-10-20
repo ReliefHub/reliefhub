@@ -18,11 +18,11 @@ The source code here can be modified so other non-profit organizations and fundr
 
 This application was developed with the following:
 
-Ruby 1.8.7
-Rails 3.0.1
-Postgres 
-Test Framework: Rspec, Cucumber
-Payment Solution: Amazon FPS (Flexible Payment Service) via Devise
+*Ruby 1.8.7
+*Rails 3.0.1
+*Postgres 
+*Test Framework: Rspec, Cucumber
+*Payment Solution: Amazon FPS (Flexible Payment Service) via Devise
 
 Git source code repository:
 
