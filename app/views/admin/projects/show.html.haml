@@ -6,25 +6,25 @@
   
 %p
   Status
-  PENDING
+  = @project.status
 
 %p
   Overview
-  PENDING
+  = @project.overview
 
 %p
   Materials Needed
-  PENDING
+  = @project.materials_needed
 
 %p
   Funding Needed
-  PENDING
+  = @project.funding_needed
 
 %p
   Pictures
   - @project.project_photos.each do |project_photo|
     = image_tag project_photo.file.url(:thumb) 
 
-= link_to image_tag('my_pic.gif'), edit_admin_organization_project_path(@project.organization, @project), :id=>"Edit"
+= link_to image_tag('edit.gif'), edit_admin_organization_project_path(@project.organization, @project), :id=>"Edit"
 
 

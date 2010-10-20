@@ -6,4 +6,8 @@ describe Project do
   it 'should belong to an organization' do
     project.organization.projects.should include project
   end
+  
+  it 'should compute funds received based on donations' do
+    pending 'we do not have dontations yet'
+  end
 end

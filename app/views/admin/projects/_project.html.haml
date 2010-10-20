@@ -1,0 +1,7 @@
+%tr
+  %td= project.created_at
+  %td= link_to project.name, edit_admin_organization_project_path(project.organization, project)
+  %td= project.status
+  %td= project.materials_needed
+  %td= project.funds_needed
+  %td= project.funds_received

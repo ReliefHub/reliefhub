@@ -4,6 +4,10 @@
   = semantic_form_for [:admin, @project], :url => admin_organization_project_path(@organization), :html => { :multipart => true } do |f|
     = f.inputs do
       = f.input :name
+      = f.input :status
+      = f.input :overview
+      = f.input :materials_needed
+      = f.input :funding_needed
       = render :partial=>'admin/edit_photo', :collection=>@project.project_photos, :locals=>{:field_name=>'project[project_photos_attributes][][file]'}
       
     = f.submit 'Save Project'

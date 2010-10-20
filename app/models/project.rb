@@ -3,4 +3,8 @@ class Project < ActiveRecord::Base
   has_many   :project_photos, :foreign_key=>:owner_id
 
   accepts_nested_attributes_for :project_photos
+  
+  def funds_received
+    0
+  end
 end
