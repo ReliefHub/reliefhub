@@ -18,7 +18,7 @@ The source code here can be modified so other non-profit organizations and fundr
 
 Git source code repository:
 
-http://github.com/ReliefHub/reliefhub/[http://github.com/ReliefHub/reliefhub/]
+http://github.com/ReliefHub/reliefhub/
 
 Pivotal Tracker:
 
