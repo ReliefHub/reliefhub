@@ -10,7 +10,7 @@ Reliefhub::Application.routes.draw do
   
   namespace :admin do
     resources :organizations, :only => [:show, :edit, :update,  :index, :new, :create] do
-      resources :projects, :only => [ :index, :new, :create, :edit, :update ]
+      resources :projects, :only => [ :index, :show, :new, :create, :edit, :update ]
     end
   end
 

@@ -1,0 +1,2 @@
+class ProjectPhoto < Photo
+end

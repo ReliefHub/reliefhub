@@ -102,6 +102,7 @@ GEM
     mime-types (1.16)
     mocha (0.9.8)
       rake
+    mysql (2.8.1)
     nokogiri (1.4.3.1)
     paperclip (2.3.4)
       activerecord
@@ -186,6 +187,7 @@ DEPENDENCIES
   high_voltage
   hoptoad_notifier
   launchy
+  mysql
   nokogiri
   paperclip
   pg

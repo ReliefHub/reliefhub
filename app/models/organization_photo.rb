@@ -1,0 +1,2 @@
+class OrganizationPhoto < Photo
+end

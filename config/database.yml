@@ -6,6 +6,12 @@ development: &default
   min_messages: warning
   host: localhost
   encoding: utf8
+  # adapter: mysql
+  # database: reliefhub_development
+  # username: root
+  # password: 
+  # host: localhost
+  # encoding: utf8
 
 test: &test
   <<: *default

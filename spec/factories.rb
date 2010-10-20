@@ -24,3 +24,11 @@ end
 Factory.define :email_confirmed_user, :parent => :user do |user|
   user.email_confirmed { true }
 end
+
+Factory.define :organization_photo do |op|
+  
+end
+
+Factory.define :project_photo do |op|
+  
+end

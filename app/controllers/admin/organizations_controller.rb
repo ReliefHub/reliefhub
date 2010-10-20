@@ -6,6 +6,7 @@ module Admin
     end
     def new
       @organization = Organization.new
+      @organization.organization_photos.build
     end
     def create
       organization = Organization.new(params[:organization])

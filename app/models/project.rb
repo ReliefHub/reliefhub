@@ -1,5 +1,8 @@
 class Project < ActiveRecord::Base
   belongs_to :organization
+  has_many   :project_photos, :foreign_key=>:owner_id
+
+  accepts_nested_attributes_for :project_photos
   
   has_attached_file :photo, :styles => {:thumb => ["100x100#", :png]}
   
@@ -14,4 +17,7 @@ class Project < ActiveRecord::Base
     return ((raised / goal) * 100).ceil.to_i
   end
     
+  def funds_received
+    raised
+  end
 end

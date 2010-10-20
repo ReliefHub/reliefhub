@@ -1,6 +1,37 @@
-hi show me page for
-= @organization.name
-= @organization.address
-= @organization.contact_person
-= link_to image_tag('my_pic.gif'), edit_admin_organization_path(@organization), :id=>"Edit"
+.section
+  .left 
+    %h2= @organization.name
+  .right= link_to image_tag('edit.gif'), edit_admin_organization_path(@organization), :id=>"Edit"
 
+.section
+  .section
+    Pictures
+    - @organization.organization_photos.each do |organization_photo|
+      = image_tag organization_photo.file.url(:thumb) 
+
+  .section
+    Address
+    = @organization.address
+
+  .section
+    Contact Person
+    = @organization.contact_person
+
+  .section
+    Phone Number
+    = @organization.phone_number
+
+.section
+  Overview
+  = @organization.overview
+
+%h2 Projects in this Orphanage
+%table
+  %tr
+    %th Created
+    %th Name
+    %th Status
+    %th Materials Needed
+    %th Funds Needed
+    %th Funds Received
+  = render @organization.projects
