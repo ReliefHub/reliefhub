@@ -1,21 +1,22 @@
+include ActionDispatch::TestProcess
+    
 Factory.define :organization do |o|
-end
 
-Factory.sequence :project_name do |n|
-  "Project #{n}"
 end
 
 Factory.define :project do |project|
-  project.name { Factory.next(:project_name) }
   project.association(:organization)
-end
-
-Factory.sequence :email do |n|
-  "user#{n}@example.com"
+  project.name        { Faker::Company.catch_phrase }
+  project.goal        { rand(100000) }
+  project.raised      { rand(10000) }
+  project.orphanage   { Faker::Company.name }
+  project.requestor   { Faker::Name.name }
+  project.description { Faker::Lorem.paragraphs.join("\n") }
+  project.photo       { fixture_file_upload("#{Rails.root}/spec/support/orphanage_#{rand(3)}.jpg", 'image/jpeg') }
 end
 
 Factory.define :user do |user|
-  user.email                 { Factory.next :email }
+  user.email                 { Faker::Internet.email }
   user.password              { "password" }
   user.password_confirmation { "password" }
 end

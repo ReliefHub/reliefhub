@@ -19,9 +19,12 @@ gem 'devise_rpx_connectable'
 group :development, :test, :cucumber do
   gem "rspec-rails", "2.0.1"
   gem "ruby-debug"
+  gem "faker"
+  gem "factory_girl_rails"
 end
 
 group :test, :cucumber do
+  gem "faker"
   gem "cucumber-rails"
   gem "factory_girl_rails"
   gem "bourne"

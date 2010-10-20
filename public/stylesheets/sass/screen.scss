@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import "round";
 
 /* CSS Document */
 /*CSS Reset*/
@@ -616,4 +617,14 @@ body {
   .street-address {
     display: block;
   }
+}
+
+
+.projects {
+  @include round;
+  background-color: white;
+}
+
+.projects li {
+/*  float: left;*/
 }
