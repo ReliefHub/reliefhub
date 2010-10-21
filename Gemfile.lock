@@ -30,6 +30,10 @@ GEM
     activesupport (3.0.1)
     arel (1.0.1)
       activesupport (~> 3.0.0)
+    aws-s3 (0.6.2)
+      builder
+      mime-types
+      xml-simple
     bcrypt-ruby (2.1.2)
     bourne (1.0)
       mocha (= 0.9.8)
@@ -163,11 +167,13 @@ GEM
     warden (0.10.7)
       rack (>= 1.0.0)
     will_paginate (2.3.15)
+    xml-simple (1.0.12)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-s3
   bourne
   capybara
   cucumber-rails
