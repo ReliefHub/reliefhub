@@ -18,9 +18,5 @@ Feature: Sign up
     And I fill in "Password" with "password"
     And I fill in "Password confirmation" with "password"
     And I press "Sign up"
-    Then I should see "instructions for confirming"
-    And "email@person.com" should receive an email
-    When I open the email
-    And I click the first link in the email
-    Then I should see "Your account was confirmed. You are now signed in."
+    Then I should see "You have signed up"
 

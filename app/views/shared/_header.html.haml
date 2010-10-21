@@ -15,9 +15,9 @@
       %a{ :href => "#" }
         Blog
     - if user_signed_in?
-      %li= link_to "Sign out", sign_out_path, :method => :delete
+      %li= link_to "Sign out", destroy_user_session_url 
     - else
       %li= link_to "Sign in", user_session_url
-      %li= link_to_rpx "Janrain", user_session_url
+    -# %li= link_to_rpx "Janrain", user_session_url
     %li= link_to 'Home', home_path
 .clear
