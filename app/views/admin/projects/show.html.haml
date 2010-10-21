@@ -2,7 +2,7 @@
 
 %p
   Orphanage
-  = @project.organization.name
+  = link_to @project.organization.name, admin_organization_path(@project.organization)
   
 %p
   Status
@@ -18,7 +18,7 @@
 
 %p
   Funding Needed
-  = @project.funding_needed
+  = @project.goal
 
 %p
   Pictures

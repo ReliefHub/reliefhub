@@ -7,6 +7,8 @@ class Project < ActiveRecord::Base
   
   has_attached_file :photo, :styles => {:thumb => ["100x100#", :png]}
   
+  scope :by_updated_date, order('updated_at DESC')
+  
   def thumbnail_url
     photo.url(:thumb)
   end
@@ -21,7 +23,7 @@ class Project < ActiveRecord::Base
     return ((raised / goal) * 100).ceil.to_i
   end
     
-  def funds_received
-    raised
+  def self.statuses
+    [ 'Approved', 'Closed', 'Pending', 'Suspended']
   end
 end

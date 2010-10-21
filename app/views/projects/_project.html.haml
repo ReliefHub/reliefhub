@@ -3,7 +3,7 @@
     =image_tag(project.thumbnail_url)
     =link_to('Fund this Project', project_path(project), :class => 'button')
   %h3=project.name
-  %h4=project.orphanage
+  %h4=project.organization.name
   %h5=project.requestor
   %p=truncate(project.description, :length => 150)
   .raised==#{project.percent_completed}% of #{number_to_currency(project.goal)} raised

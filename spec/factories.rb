@@ -1,12 +1,11 @@
-Factory.define :organization do |o|
-
+Factory.define :organization do |organization|
+  organization.name { Faker::Company.name }
 end
 
 Factory.define :project do |project|
   project.association(:organization)
   project.name        { Faker::Company.catch_phrase }
   project.goal        { rand(100000) }
-  project.orphanage   { Faker::Company.name }
   project.requestor   { Faker::Name.name }
   project.description { Faker::Lorem.paragraphs.join("\n") }
   project.photo       { File.read(File.join(Rails.root, 'spec', 'fixtures', "orphanage_#{rand(3)}.jpg"))}

@@ -7,7 +7,7 @@ describe ProjectsController do
   end
 
   it 'should return all projects with no sort' do
-    Project.stubs(:all).returns(:all_projects)
+    Project.stubs(:by_updated_date).returns(:all_projects)
     get :index
     response.should be_success
     assigns[:projects].should == :all_projects
