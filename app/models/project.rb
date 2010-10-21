@@ -5,12 +5,14 @@ class Project < ActiveRecord::Base
 
   accepts_nested_attributes_for :project_photos
   
-  has_attached_file :photo, :styles => {:thumb => ["100x100#", :png]}
-  
   scope :by_updated_date, order('updated_at DESC')
   
   def thumbnail_url
-    photo.url(:thumb)
+    photo.file.url(:thumb)
+  end
+  
+  def photo
+    project_photos.first
   end
   
   def raised

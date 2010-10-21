@@ -9,6 +9,11 @@ class RemoveProjectRedundancies < ActiveRecord::Migration
   end
 
   def self.down
-    raise ActiveRecord::IrreversibleMigration
+    add_column :projects, :funding_needed,   :integer
+    add_column :projects, :photo_file_name,    :string
+    add_column :projects, :photo_content_type, :string
+    add_column :projects, :photo_file_size,    :integer
+    add_column :projects, :photo_updated_at,   :datetime
+    add_column :projects, :orphanage,   :string
   end
 end
