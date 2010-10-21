@@ -18,17 +18,17 @@
     %h1 Why ReliefHub
     %p ReliefHub is unique because it is built on the following guiding principles:
     %span.bold
-      1. This is a heading
-    %p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      1. Community Influenced Decision Making
+    %p Working with our community we will run ReliefHub similar to Wikipedia so individuals can give feedback and influence the decision making process.
     %span.bold
-      2. This is a heading
-    %p Lorem Ipsum is simply dummy text of ts simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      2. Self-Sustaining
+    %p Our goal is to become self-sustaining by our 5th birthday. We will work with our community to develop the best plan for achieving this goal.
     %span.bold
-      3. This is a heading
-    %p Lorem Ipsum is simply dummy text of ts simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      3. Total Transparency
+    %p Ever wonder what happen to your dollars after you make a donation?  Our goal is make it absolutely visible by publishing our detailed budgets and financials on our website for everyone to review.
     %span.bold
-      4. This is a heading
-    %p Lorem Ipsum is simply dummy text of ts simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      4. Open Source
+    %p We leverage open source technologies to build ReliefHub.org and will share all of our innovations including processes, product roadmap, and software so others in the non-profit community can benefit.
 .clear
 #bottom_info
   #contact_us
@@ -41,7 +41,7 @@
         %span.postal-code 02139
         .country-name USA
       %div
-        %span.email info@reliefhub.org
+        %span.email= mail_to('info@reliefhub.org')
     = semantic_form_for :email, :url => emails_path do |form|
       = form.error_messages
       = form.inputs do
@@ -52,30 +52,32 @@
   #faq
     %h2 FAQ
     %dl
-      %dt Why?
-      %dd Because
-      %dt When?
-      %dd Now
-      %dt Who?
-      %dd Us
-      %dt What?
-      %dd It
-      %dt Where?
-      %dd Here
+      %dt How does an orphanage get selected?
+      %dd We carefully evaluate each orphanage that we come in contact with and ensure that it meets ReliefHub’s criteria of economic and financial need.
+      %dt How does a project get chosen?
+      %dd Projects are first submitted by an Orphanage Manager, they are then reviewed for approval by a Field Administrator ensuring a need for the materials that are requested exists.  Once approved, projects are then posted to the ReliefHub’s “Projects” page for donor support.
+      %dt How do I find a project that fits my budget?
+      %dd Each project fits your budget, you as the donor decide how much to contribute!  At ReliefHub we believe every little bit helps, and we appreciate whatever funds you are willing to provide therefore you decide how to allocate funds based on the projects that spark your interest.
+      %dt What happens to my money if a project doesn’t reach 100% funding?
+      %dd If the project you have chosen to donate to does not reach completion you can pick another project for your funds to be redirected to.
+      %dt Are my contributions tax deductible?
+      %dd Yes, of course! We will also supply you with tax deduction receipts for your convenience.
+      %dt How do I donate to ReliefHub?
+      %dd Donating to ReliefHub is simple! To get started, visit our “Projects” page to see current projects; simply type the amount you would like to contribute into the box and hit the “Fund this Project” button.  Once you hit “Submit”, you can easily create an account or log in with an existing Facebook, Twitter, or Google account to track your project’s progress, collect important receipts for tax deductions and thank you notes from orphanage managers and the children themselves.
   #recent_press
     %h2 Recent Press
     .press_logo
     .press_copy
-      %h3 Lorem Ipsum is simply dum
-      %p Lorem Ipsum is simply dummy text of the printing and typesetting
+      %h3= news_article_title('Haiti Quake: Ruin And Recovery',"http://www.npr.org/templates/story/story.php?storyId=122522434")
+      %p= news_article_snippet("Haiti's brittle housing supply was shattered by the Jan. 12 earthquake, which destroyed an estimated 110,000 homes and apartment buildings. Now there are not enough houses, and not enough money for people to rent the ones still standing.")
     .clear
     .press_logo
     .press_copy
-      %h3 Lorem Ipsum is simply dum
-      %p Lorem Ipsum is simply dummy text of the printing and typesetting
+      %h3= news_article_title("'Beyond School Books' - a podcast series on education in emergencies", 'http://www.unicef.org/infobycountry/haiti_56588.html')
+      %p= news_article_snippet("NEW YORK, USA, 20 October 2010 – As schools open for the new academic year in Haiti, the hope is to bring all boys and girls to school – both those who attended before the earthquake struck in January and those hardest to reach, who will go to school for the first time.")
     .clear
     .press_logo
     .press_copy
-      %h3 Lorem Ipsum is simply dum
-      %p Lorem Ipsum is simply dummy text of the printing and typesetting
+      %h3= news_article_title('System Would Help Haiti Build, Modify Earthquake-Prone Structures','http://www.usnews.com/science/articles/2010/10/21/system-would-help-haiti-build-modify-earthquake-prone-structures.html')
+      %p= news_article_snippet("WEST LAFAYETTE, Ind.—Civil engineers studying the effects of Haiti's devastating earthquake have concluded that a relatively simple system could be used by officials to quickly decide how to modify existing buildings and construct new ones that would better withstand future quakes.")
 .clear
