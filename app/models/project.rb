@@ -8,7 +8,7 @@ class Project < ActiveRecord::Base
   scope :by_updated_date, order('updated_at DESC')
   
   def thumbnail_url
-    photo.file.url(:thumb) if photo && photo.file
+    photo.file.url(:thumb)
   end
   
   def photo

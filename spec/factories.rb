@@ -32,6 +32,5 @@ Factory.define :organization_photo do |op|
 end
 
 Factory.define :project_photo do |pp|
-  pp.file       { File.read(File.join(Rails.root, 'spec', 'fixtures', "orphanage_#{rand(3)}.jpg"))}
-  
+  pp.file       { File.open(File.join(Rails.root, 'spec', 'fixtures', "orphanage_#{rand(3)}.jpg"))}
 end

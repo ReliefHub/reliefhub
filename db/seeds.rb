@@ -1,5 +1,5 @@
 
-Organization.delete_all
+[Photo, Project, Organization].each(&:delete_all)
 Factory.create :organization
 Factory.create :organization
 
