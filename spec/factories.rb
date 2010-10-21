@@ -4,11 +4,11 @@ end
 
 Factory.define :project do |project|
   project.association(:organization)
-  project.name        { Faker::Company.catch_phrase }
-  project.goal        { rand(100000) }
-  project.requestor   { Faker::Name.name }
-  project.description { Faker::Lorem.paragraphs.join("\n") }
-  project.photo       { File.read(File.join(Rails.root, 'spec', 'fixtures', "orphanage_#{rand(3)}.jpg"))}
+  project.name           { Faker::Company.catch_phrase }
+  project.goal           { rand(100000) }
+  project.requestor      { Faker::Name.name }
+  project.description    { Faker::Lorem.paragraphs.join("\n") }
+  project.project_photos { [ Factory(:project_photo) ] }
 end
 
 Factory.define :donation do |donation|
@@ -31,6 +31,7 @@ Factory.define :organization_photo do |op|
   
 end
 
-Factory.define :project_photo do |op|
+Factory.define :project_photo do |pp|
+  pp.file       { File.read(File.join(Rails.root, 'spec', 'fixtures', "orphanage_#{rand(3)}.jpg"))}
   
 end
