@@ -92,6 +92,7 @@ GEM
     high_voltage (0.9.1)
     hoptoad_notifier (2.3.8)
       activesupport
+    hpricot (0.8.2)
     i18n (0.4.1)
     json (1.4.6)
     json_pure (1.4.6)
@@ -131,6 +132,10 @@ GEM
       rake (>= 0.8.4)
       thor (~> 0.14.0)
     rake (0.8.7)
+    relax (0.0.7)
+      hpricot (>= 0.6)
+    remit (0.0.5)
+      relax (~> 0.0.7)
     rest-client (1.6.1)
       mime-types (>= 1.16)
     rpx_now (0.6.23)
@@ -197,6 +202,7 @@ DEPENDENCIES
   pg
   rack
   rails (= 3.0.1)
+  remit
   rspec-rails (= 2.0.1)
   ruby-debug
   shoulda

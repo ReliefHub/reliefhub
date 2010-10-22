@@ -7,8 +7,12 @@ Reliefhub::Application.routes.draw do
 
   resources :emails, :only => [:create]
   resources :projects
-  resources :donations, :only => [:create]
-  
+  resources :donations, :only => [:create] do
+    member do
+      get :confirm
+    end
+  end
+
   namespace :admin do
     resources :organizations, :only => [:show, :edit, :update,  :index, :new, :create] do
       resources :projects, :only => [ :index, :show, :new, :create, :edit, :update ]
