@@ -92,4 +92,3 @@ module AmazonFPS
   end
 end
 
-ActiveRecord::Base.class_eval { include AmazonFPS }

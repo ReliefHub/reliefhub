@@ -4,3 +4,4 @@ config = YAML.load_file(config_file)[Rails.env].symbolize_keys
 AMAZON_ACCESS_KEY = config[:access_key]
 AMAZON_SECRET_KEY = config[:secret_key]
 
+ActiveRecord::Base.class_eval { include AmazonFPS }
