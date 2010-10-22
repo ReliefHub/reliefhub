@@ -1,6 +1,6 @@
 %h1 New Project Form
 %p
-  = semantic_form_for [:admin, @project], :url => admin_organization_projects_path(@organization) do |f|
+  = semantic_form_for [:admin, @project], :url => admin_organization_projects_path(@organization), :html => {:multipart => true} do |f|
     = f.inputs do
       = f.input :name
       = f.input :status
