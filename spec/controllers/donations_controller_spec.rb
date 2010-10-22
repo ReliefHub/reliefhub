@@ -79,7 +79,7 @@ describe DonationsController do
       it 'should call the Amazon service with the proper return url' do
         donation.should have_received(:confirm).with(request.url, payment_token)
       end
-      it { should redirect_to(root_url) }
+      it { should redirect_to(page_url('thank_you')) }
     end
 
     describe 'invalid confirmation' do

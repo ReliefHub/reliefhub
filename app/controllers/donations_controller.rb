@@ -16,7 +16,7 @@ class DonationsController < ApplicationController
     payment_token = session[:payment]
     result = donation.confirm(request.url, payment_token) if donation && payment_token
     if result
-      redirect_to root_url
+      redirect_to page_path('thank_you')
     else
       render :action => :new
     end
