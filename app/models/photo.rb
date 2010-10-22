@@ -4,5 +4,5 @@ class Photo < ActiveRecord::Base
                                                                    :thumb  => '75x60#',
                                                                    :small  => '114x114#',
                                                                    :medium => '165x130#',
-                                                                   :full   => '250x230#'} })
+                                                                   :full   => '288x255#'} })
 end

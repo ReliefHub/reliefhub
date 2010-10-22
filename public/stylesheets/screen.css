@@ -148,33 +148,35 @@ body {
   padding: 10px 5px 10px 60px;
   margin: 0 18px 0 0; }
 
-#featured_wrap {
+.featured_wrap {
   width: 585px;
   height: 340px;
   float: left;
   margin: 0 0 0 10px; }
-
-#featured_project {
-  width: 288px;
-  height: 255px;
-  outline: 1px solid black;
-  float: left; }
-
-#featured_project_info {
-  float: left;
-  width: 280px;
-  height: 255px;
-  padding: 0px 8px;
-  margin: 0 0 10px 0;
-  background-color: #ffffff; }
-
-.feature {
-  float: left;
-  width: 280px;
-  height: 255px;
-  padding: 0px 8px;
-  margin: 0 0 10px 0;
-  background-color: #ffffff; }
+  .featured_wrap .featured_thumbnail {
+    width: 288px;
+    height: 255px;
+    float: left; }
+  .featured_wrap .featured_project_info {
+    float: left;
+    width: 280px;
+    height: 255px;
+    padding: 0px 8px;
+    margin: 0 0 10px 0;
+    background-color: #ffffff; }
+  .featured_wrap h3 {
+    color: #3DA9DF;
+    padding: 0px 0px 0px 110px;
+    margin: 0px;
+    text-align: left; }
+  .featured_wrap h4 {
+    margin: 0px;
+    text-align: left; }
+  .featured_wrap h5 {
+    margin: 0px;
+    text-align: left; }
+  .featured_wrap input {
+    width: 200px; }
 
 .amount_index {
   margin: 0 0 10px 0;
@@ -623,7 +625,7 @@ body {
     margin-right: 5px;
     margin-bottom: 0px; }
   .projects li .summary {
-    width: 100px;
+    width: 125px;
     float: left; }
   .projects li h3 {
     color: #3DA9DF;
@@ -653,7 +655,10 @@ body {
   float: left; }
 
 /*-- jShowOff module styles --*/
-#features, #slidingFeatures, #labelFeatures, #basicFeatures, #thumbFeatures {
+.thumbFeatures {
+  float: left; }
+
+#features, #slidingFeatures, #labelFeatures, #basicFeatures {
   background: #efefef;
   position: relative;
   overflow: hidden;

@@ -5,8 +5,13 @@ describe HomesController, "routes" do
 end
 
 describe HomesController, "GET to show" do
-  before { get :show }
+  let(:featured_projects)  { [Factory.stub(:project)] }
+  before do
+    Project.stubs(:limit=>featured_projects)
+    get :show 
+  end
 
   it { should render_template(:show) }
   it { should respond_with(:success) }
+  it { should assign_to(:featured_projects).with(featured_projects) }
 end

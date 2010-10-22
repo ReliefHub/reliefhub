@@ -1,5 +1,5 @@
 class HomesController < ApplicationController
   def show
-    @project = Project.first
+    @featured_projects = Project.limit(5)
   end
 end

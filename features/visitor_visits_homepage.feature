@@ -10,7 +10,6 @@ Feature: Visitor visits home page
       | Christmas Toy Drive |
     And I am on the homepage
     Then I should see the ReliefHub process on the page
-    And I should see featured project on the page
     And I should see blog posts on the page
     And I should see recent press on the page
     And I should see "Christmas Toy Drive"

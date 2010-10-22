@@ -9,8 +9,8 @@ class Project < ActiveRecord::Base
 
   scope :by_updated_date, order('updated_at DESC')
 
-  def thumbnail_url
-    photo.file.url(:thumb)
+  def photo_url size
+    photo.file.url(size)
   end
 
   def photo

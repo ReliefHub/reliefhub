@@ -161,33 +161,48 @@ body {
   padding: 10px 5px 10px 60px;
   margin: 0 18px 0 0; }
 
-#featured_wrap {
+.featured_wrap {
   width: 585px;
   height: 340px;
   float: left;
-  margin: 0 0 0 10px; }
+  margin: 0 0 0 10px; 
 
-#featured_project {
-  width: 288px;
-  height: 255px;
-  outline: 1px solid black;
-  float: left; }
+	.featured_thumbnail {
+	  width: 288px;
+	  height: 255px;
+	  float: left; 
+	}
 
-#featured_project_info {
-  float: left;
-  width: 280px;
-  height: 255px;
-  padding: 0px 8px;
-  margin: 0 0 10px 0;
-  background-color: #ffffff; }
+  .featured_project_info {
+    float: left;
+    width: 280px;
+    height: 255px;
+    padding: 0px 8px;
+    margin: 0 0 10px 0;
+    background-color: #ffffff; }
+    h3 {
+      color: #3DA9DF;
+      padding: 0px 0px 0px 110px;
+      margin: 0px;
+      text-align: left;
+    }
 
-.feature  {
-  float: left;
-  width: 280px;
-  height: 255px;
-  padding: 0px 8px;
-  margin: 0 0 10px 0;
-  background-color: #ffffff; }
+    h4 {
+      margin: 0px;
+      text-align: left;
+    }
+
+    h5 {
+      margin: 0px;
+      text-align: left;
+    }
+
+    input {
+      width: 200px;
+    }
+
+}
+
 
 .amount_index {
   margin: 0 0 10px 0;
@@ -645,7 +660,7 @@ body {
   }
   
   .summary {
-    width: 100px;
+    width: 125px;
     float: left;
   }
   
@@ -692,12 +707,15 @@ body {
 
 /*-- jShowOff module styles --*/
 
+.thumbFeatures {
+  float: left;
+  }
 
-#features, #slidingFeatures, #labelFeatures, #basicFeatures, #thumbFeatures {
+#features, #slidingFeatures, #labelFeatures, #basicFeatures {
 	background: #efefef;
 	position: relative;
 	overflow: hidden;
-	width: 500px;
+  width: 500px;
 	height: 250px;
 	-webkit-border-top-left-radius: 6px;
 	-webkit-border-top-right-radius: 6px;

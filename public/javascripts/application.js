@@ -5,6 +5,7 @@ $(document).ready(function (){
     cssClass: 'thumbFeatures',
     effect: 'slideLeft',
     controls: false,
+    autoPlay: false
   }); 
   
   /* jShowoff does the thumbnail w/ background images in the .css file, find and replace them 

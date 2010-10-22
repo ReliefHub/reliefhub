@@ -13,6 +13,7 @@ describe DonationsController do
 
   describe 'creating a donation' do
     before do
+      controller.stubs(:current_user=>stub)
       Donation.stubs(:new=>donation)
       donation.stubs(:to_param => '1')
       payment_token.stubs(:url => AMAZON_URL)
@@ -22,7 +23,7 @@ describe DonationsController do
       before do
         donation.stubs(:save=>true)
         donation.stubs(:authorize => payment_token)
-        post :create
+        post :create, :donation=>{}
       end
       it 'should call authorize with the proper return url' do
         donation.should have_received(:authorize).with(confirm_donation_url(donation))
@@ -37,7 +38,7 @@ describe DonationsController do
       before do
         donation.stubs(:save=>true)
         donation.stubs(:authorize => nil)
-        post :create
+        post :create, :donation=>{}
       end
       it 'should call the Amazon service with the proper return url' do
         donation.should have_received(:authorize).with(confirm_donation_url(donation))
@@ -52,7 +53,7 @@ describe DonationsController do
       before do
         donation.stubs(:save=>false)
         donation.stubs(:authorize => AMAZON_URL)
-        post :create
+        post :create, :donation=>{}
       end
       it 'should not call the Amazon service at all' do
         donation.should_not have_received(:authorize)

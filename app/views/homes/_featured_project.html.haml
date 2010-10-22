@@ -1,0 +1,14 @@
+.featured_project
+  .featured_thumbnail
+    =image_tag(featured_project.photo_url(:full))
+  .featured_project_info
+    %h1= link_to featured_project.name, project_path(featured_project)
+    %h4= featured_project.organization_name
+    %h5= featured_project.requestor
+    %p=  truncate(featured_project.description, :length => 150)
+    .raised==#{featured_project.percent_raised}% of #{number_to_currency(featured_project.goal)} raised
+    =form_for(Donation.new) do |form|
+      =hidden_field_tag :'donation[project_id]', featured_project.id
+      =text_field_tag   :'donation[amount]'
+      =image_submit_tag('/images/contribute_btn.gif', :alt=>'Fund this Project')
+  .clear
