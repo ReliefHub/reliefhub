@@ -1,7 +1,15 @@
+# the dev keys use the amazon sandbox account for dev@reliefhub.org
 development: &sandbox
-  access_key: 1
-  secret_key: 2
+  access_key: AKIAJT3POPIBST76SUJQ
+  secret_key: 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
+  
+# staging and production use heroku environment variables  
+staging: &default
+  access_key: <%= ENV['AMAZON_FPS_ACCESS_KEY'] %>
+  secret_key: <%= ENV['AMAZON_FPS_SECRET_KEY'] %>
+
+producton:
+  <<: *default
 
 test:
   <<: *sandbox
-
