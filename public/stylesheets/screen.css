@@ -148,25 +148,35 @@ body {
   padding: 10px 5px 10px 60px;
   margin: 0 18px 0 0; }
 
-#featured_wrap {
+.featured_wrap {
   width: 585px;
   height: 340px;
   float: left;
   margin: 0 0 0 10px; }
-
-#featured_project {
-  width: 288px;
-  height: 255px;
-  outline: 1px solid black;
-  float: left; }
-
-#featured_project_info {
-  float: left;
-  width: 280px;
-  height: 255px;
-  padding: 0px 8px;
-  margin: 0 0 10px 0;
-  background-color: #ffffff; }
+  .featured_wrap .featured_thumbnail {
+    width: 288px;
+    height: 255px;
+    float: left; }
+  .featured_wrap .featured_project_info {
+    float: left;
+    width: 280px;
+    height: 255px;
+    padding: 0px 8px;
+    margin: 0 0 10px 0;
+    background-color: #ffffff; }
+  .featured_wrap h3 {
+    color: #3DA9DF;
+    padding: 0px 0px 0px 110px;
+    margin: 0px;
+    text-align: left; }
+  .featured_wrap h4 {
+    margin: 0px;
+    text-align: left; }
+  .featured_wrap h5 {
+    margin: 0px;
+    text-align: left; }
+  .featured_wrap input {
+    width: 200px; }
 
 .amount_index {
   margin: 0 0 10px 0;
@@ -615,7 +625,7 @@ body {
     margin-right: 5px;
     margin-bottom: 0px; }
   .projects li .summary {
-    width: 100px;
+    width: 125px;
     float: left; }
   .projects li h3 {
     color: #3DA9DF;
@@ -643,3 +653,150 @@ body {
 
 .left {
   float: left; }
+
+/*-- jShowOff module styles --*/
+#features, #slidingFeatures, #labelFeatures, #basicFeatures, #thumbFeatures {
+  position: relative;
+  overflow: hidden;
+  width: 585px;
+  height: 360px;
+  -webkit-border-top-left-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  -moz-border-radius-topright: 6px; }
+
+.jshowoff {
+  width: 585px;
+  margin: 0px 0; }
+
+.jshowoff div {
+  width: 585px; }
+
+.jshowoff div, .jshowoff img, .jshowoff {
+  -webkit-border-top-left-radius: 6px;
+  -webkit-border-top-right-radius: 6px; }
+
+#basicFeatures, .jshowoff.basicFeatures, .jshowoff.basicFeatures img, .jshowoff.basicFeatures div {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0; }
+
+.jshowoff div p, .jshowoff div h2 {
+  _background-color: #efefef; }
+
+.jshowoff h2, .jshowoff p {
+  font-size: 18px;
+  padding: 15px 20px 0px;
+  margin: 0; }
+
+.jshowoff p {
+  font-size: 13px;
+  line-height: 15px; }
+
+.eddie {
+  float: right;
+  padding: 15px 20px 15px 20px; }
+
+.jshowoff p.jshowoff-slidelinks {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  margin: 0;
+  padding: 0; }
+
+.jshowoff-slidelinks a, .jshowoff-controls a {
+  display: block;
+  background-color: #000;
+  color: #fff;
+  padding: 5px 7px 5px;
+  margin: 5px 0 0 5px;
+  float: left;
+  text-decoration: none;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  outline: none;
+  font-size: 11px;
+  line-height: 14px; }
+
+.jshowoff-slidelinks a:hover, .jshowoff-controls a:hover {
+  color: #fff; }
+
+.jshowoff-slidelinks a.jshowoff-active, .jshowoff-slidelinks a.jshowoff-active:hover {
+  background-color: #fff;
+  color: #000; }
+
+p.jshowoff-controls {
+  background: #aaa;
+  overflow: auto;
+  height: 1%;
+  padding: 0 0 5px 5px;
+  margin: 0;
+  -moz-border-radius-bottomleft: 6px;
+  -moz-border-radius-bottomright: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px; }
+
+.jshowoff-controls a {
+  margin: 5px 5px 0 0;
+  font-size: 12px;
+  line-height: 15px;
+  padding: 4px 8px 5px; }
+
+.jshowoff-pausetext {
+  color: #fff; }
+
+/*-- Re-styled Thumbnail Demo --*/
+.thumbFeatures p.jshowoff-slidelinks {
+  background: #FFFFFF;
+  bottom: 0;
+  padding: 5px 0 5px 5px;
+  top: 260px;
+  right: 15px;
+  width: 535px;
+  height: 90px; }
+
+.thumbFeatures .jshowoff-slidelinks a {
+  display: block;
+  width: 100px;
+  height: 80px;
+  background-color: none;
+  background-repeat: no-repeat;
+  margin: 0 5px 0 0;
+  padding: 0;
+  border: 1px solid #4f4f4f;
+  text-indent: -10000em;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0; }
+
+.thumbFeatures .jshowoff-slidelinks a.jshowoff-active {
+  border: 1px solid #fff; }
+
+.thumbFeatures p.jshowoff-controls {
+  background: none;
+  height: 38px;
+  overflow: visible;
+  padding: 0;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  z-index: 150; }
+
+.thumbFeatures .jshowoff-controls a {
+  display: block;
+  width: 22px;
+  height: 38px;
+  background: none;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  text-indent: -10000em;
+  position: absolute; }
+
+.thumbFeatures .jshowoff-controls a.jshowoff-play {
+  display: none; }
+
+.jshowoff.thumbFeatures {
+  float: left;
+  height: 310px; }
+
+.jshowoff.thumbFeatures div, .jshowoff.thumbFeatures img, .jshowoff.thumbFeatures {
+  -webkit-border-radius: 6px; }

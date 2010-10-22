@@ -1,7 +1,7 @@
 class DonationsController < ApplicationController
 
   def create
-    donation = Donation.new(params[:donation])
+    donation = Donation.new(params[:donation].merge(:user=>current_user))
     payment_token = donation.authorize(confirm_donation_url(donation)) if donation.save
     if payment_token
       session[:payment] = payment_token

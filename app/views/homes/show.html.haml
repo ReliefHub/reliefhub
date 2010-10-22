@@ -1,21 +1,11 @@
 #body_wrap
   #process
-  #featured_wrap
-    - if @project
-      #featured_project
-      #featured_project_info
-        %h1= link_to @project.name, @project
-        %h3 This is a sub heading
-        %h4 The tagline to the subheading
-        %p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-        .percent_raised I am the percent raised
-        .clear
-        = semantic_form_for :donation, :url => donations_path do |f|
-          .amount_index
-            = f.input :amount
-            = image_submit_tag("contribute_btn.gif")
-      .clear
-      #thumbnails
+  - if @featured_projects.first.present?
+    .featured_wrap#thumbFeatures
+      = render :partial=>'featured_project', :collection=>@featured_projects
+    #thumbnails{:style => "display:none"}    
+      - @featured_projects.each_with_index do |featured_project,index|
+        = image_tag(featured_project.photo_url(:thumb), :id => "thumbnail_#{index}")          
 .clear
 #bottom_info
   #learn_more
@@ -56,3 +46,5 @@
       %p Lorem Ipsum is simply dummy text of the printing and typesetting
     .clear
 .clear
+- content_for :javascript do
+  =javascript_include_tag 'jquery.jshowoff.min'

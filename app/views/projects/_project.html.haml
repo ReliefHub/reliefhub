@@ -1,6 +1,6 @@
 %li.project
   .summary
-    = image_tag project.thumbnail_url
+    = image_tag project.photo_url(:small)
     = link_to 'Fund this Project', project_path(project), :class => 'button'
   %h3= project.name
   %h4= project.organization_name
@@ -8,6 +8,6 @@
   %p= truncate project.description, :length => 150
   .raised== #{number_to_percentage(project.percent_raised, :precision => 0)} of #{number_to_currency(project.goal)} raised
   = form_for Donation.new do |form|
-    = hidden_field_tag :project_id, project.id
-    = text_field_tag   :amount
+    = hidden_field_tag :'donation[project_id]', project.id
+    = text_field_tag   :'donation[amount]'
     = submit_tag 'Fund this Project'
