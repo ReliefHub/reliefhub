@@ -7,14 +7,14 @@ Factory.define :project do |project|
   project.name           { Faker::Company.catch_phrase }
   project.goal           { rand(100000) }
   project.requestor      { Faker::Name.name }
-  project.description    { Faker::Lorem.paragraphs.join("\n") }
+  project.description    { "A good cause." }
   project.project_photos { [ Factory(:project_photo) ] }
 end
 
 Factory.define :donation do |donation|
   donation.association(:project)
   donation.association(:user)
-  donation.amount                  { 100 }
+  donation.amount { 100 }
 end
 
 Factory.define :user do |user|
@@ -28,7 +28,6 @@ Factory.define :email_confirmed_user, :parent => :user do |user|
 end
 
 Factory.define :organization_photo do |op|
-  
 end
 
 Factory.define :project_photo do |pp|

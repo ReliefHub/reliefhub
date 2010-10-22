@@ -22,7 +22,7 @@ en:
       send_instructions: 'You will receive an email with instructions about how to confirm your account in a few minutes.'
       confirmed: 'Your account was confirmed. You are now signed in.'
     registrations:
-      signed_up: 'You have signed up. You will receive an email within the next few minutes. It contains instructions for confirming your account.'
+      signed_up: 'You have signed up.' 
       updated: 'You updated your account.'
       destroyed: 'Bye! Your account was cancelled. We hope to see you again soon.'
     mailer:
