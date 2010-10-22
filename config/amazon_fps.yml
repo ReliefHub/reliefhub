@@ -1,0 +1,7 @@
+development: &sandbox
+  access_key: 1
+  secret_key: 2
+
+test:
+  <<: *sandbox
+

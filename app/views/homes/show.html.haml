@@ -9,12 +9,10 @@
       %p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
       .percent_raised I am the percent raised
       .clear
-      .amount_index
-        %label Amount
-        %input{ :type => "text", :name => "amount", :placeholder => "$" }
-      #contribute_btn
-        %a{ :href => "#" }
-          %img{ :src => "contribute_btn.gif", :alt => "contribute button" }
+      = semantic_form_for :donation, :url => donations_path do |f|
+        .amount_index
+          = f.input :amount
+          = image_submit_tag("contribute_btn.gif")
     .clear
     #thumbnails
 .clear
