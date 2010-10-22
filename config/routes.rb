@@ -6,7 +6,9 @@ Reliefhub::Application.routes.draw do
   devise_for :users
 
   resources :emails,    :only => [:create]
-  resources :projects,  :only => [:index, :show]
+  resources :projects,  :only => [:index, :show] do
+    collection {  get :my_projects }
+  end
 
   resources :donations, :only => [:create] do
     member do

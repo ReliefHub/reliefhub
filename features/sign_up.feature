@@ -4,6 +4,9 @@ Feature: Sign up
   As a user
   I should be able to sign up
 
+	Background:
+		Given a project exists
+
   Scenario: User signs up with invalid data
     When I go to the sign up page
     And I fill in "Email" with "invalidemail"
