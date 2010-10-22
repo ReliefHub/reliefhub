@@ -62,7 +62,7 @@ describe Admin::ProjectsController do
         project.stubs(:save=>true)
         post :create, :project=>stub, :organization_id=>organization
       end
-      it { should redirect_to(admin_organization_project_path(organization, project)) }
+      it { should redirect_to(admin_organization_path(organization)) }
       it { should set_the_flash.to("Successfully created a new project called my project") }
     end
 
