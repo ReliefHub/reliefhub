@@ -20,7 +20,7 @@ class Admin::ProjectsController < ApplicationController
     @project = organization.projects.build(params[:project])
     if @project.save
       flash[:message] = "Successfully created a new project called #{html_escape(@project.name)}"
-      redirect_to admin_organization_project_url(organization, @project)
+      redirect_to admin_organization_path(organization)
     else
       render :action => :new
     end
