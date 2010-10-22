@@ -1,0 +1,95 @@
+#col_left
+  #project_photo
+  #project_map
+#project_information
+  %h1= @project.name
+  %h3= @project.organization_name
+  %h4= @project.organization_address
+  %p= @project.description
+  %p Funds Purpose: #{@project.funds_purpose}
+  %p Funding Needed: #{number_to_currency(@project.goal, :precision => 0)}
+  %p Funding Received: #{number_to_currency(@project.amount_raised, :precision => 0)}
+  #project_percent_raised
+    I am the percent raised
+  .clear
+  #percent_raised_number
+    #{number_to_percentage(@project.percent_raised)} Raised
+#more_projects
+  %p View more projects
+  #more_projects_photos
+    #project_photo1
+      %a{ :href => "#" }
+        %img{ :src => "/images/more_projects_img.jpg", :alt => "project photo" }
+    #project_photo2
+      %a{ :href => "#" }
+        %img{ :src => "/images/more_projects_img.jpg", :alt => "project photo" }
+    #project_photo3
+      %a{ :href => "#" }
+        %img{ :src => "/images/more_projects_img.jpg", :alt => "project photo" }
+  %p Tell your friends about this project
+  #social_logos_large
+    %a{ :href => "#" }
+      %img{ :src => "/images/twitter_large.gif", :alt => "twitter_logo" }
+    %a{ :href => "#" }
+      %img{ :src => "/images/facebook_large.gif", :alt => "facebook_logo" }
+  .testimonials Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  %span.testimonial_name John Smith
+  %span.test_location New York, NY, USA
+  .testimonials Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  %span.testimonial_name John Smith
+  %span.test_location New York, NY, USA
+.clear
+
+#donor_info
+  #form_left
+    #donor_head Donor Information
+    .row
+      %label{ :class => "required" } First Name:
+      .field_holder
+        %input{ :name => "#", :type => "text", :id => "first_name" }
+        %span{ :class => "error", :style => "display:none;" }
+          Please enter your First Name
+      .clear
+    .row
+      %label{ :class => "required" } Last Name:
+      .field_holder
+        %input{ :name => "#", :type => "text", :id => "last_name" }
+        %span{ :class => "error", :style => "display:none;" }
+          Please enter your Last Name
+      .clear
+    .row
+      %label{ :class => "required" } Email:
+      .field_holder
+        %input{ :name => "#", :type => "text", :id => "email" }
+        %span{ :class => "error", :style => "display:none;" }
+          Please enter your Email
+      .clear
+    .row
+      %label{ :class => "required" } Phone:
+      .field_holder
+        %input{ :name => "#", :type => "text", :id => "phone" }
+        %span{ :class => "error", :style => "display:none;" }
+          Please enter your Phone
+      .clear
+    .row
+      %label{ :class => "required" } Address:
+      .field_holder
+        %input{ :name => "#", :type => "text", :id => "address" }
+        %span{ :class => "error", :style => "display:none;" }
+          Please enter your Address
+      .clear
+    .row
+      %label Additional Comments:
+      .field_holder
+        %textarea{ :name => "#", :rows => "6", :cols => "20", :id => "comments" }
+    .clear
+  #form_right
+    #amount_project_detail
+      %label Amount
+      %input{ :type => "text", :name => "fname", :value => "$" }
+    #pay_type
+    #submit_signup
+      %a{ :href => "#" }
+        %img{ :src => "/images/submit_.gif", :alt => "submit button" }
+    .clear
+.clear

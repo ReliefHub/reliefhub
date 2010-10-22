@@ -1,20 +1,21 @@
 #body_wrap
   #process
   #featured_wrap
-    #featured_project
-    #featured_project_info
-      %h1 Project A
-      %h3 This is a sub heading
-      %h4 The tagline to the subheading
-      %p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
-      .percent_raised I am the percent raised
+    - if @project
+      #featured_project
+      #featured_project_info
+        %h1= link_to @project.name, @project
+        %h3 This is a sub heading
+        %h4 The tagline to the subheading
+        %p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took
+        .percent_raised I am the percent raised
+        .clear
+        = semantic_form_for :donation, :url => donations_path do |f|
+          .amount_index
+            = f.input :amount
+            = image_submit_tag("contribute_btn.gif")
       .clear
-      = semantic_form_for :donation, :url => donations_path do |f|
-        .amount_index
-          = f.input :amount
-          = image_submit_tag("contribute_btn.gif")
-    .clear
-    #thumbnails
+      #thumbnails
 .clear
 #bottom_info
   #learn_more

@@ -5,8 +5,9 @@ Reliefhub::Application.routes.draw do
 
   devise_for :users
 
-  resources :emails, :only => [:create]
-  resources :projects
+  resources :emails,    :only => [:create]
+  resources :projects,  :only => [:index, :show]
+
   resources :donations, :only => [:create] do
     member do
       get :confirm
@@ -15,10 +16,9 @@ Reliefhub::Application.routes.draw do
 
   namespace :admin do
     resources :organizations, :only => [:show, :edit, :update,  :index, :new, :create] do
-      resources :projects, :only => [ :index, :show, :new, :create, :edit, :update ]
+      resources :projects, :only => [:index, :show, :new, :create, :edit, :update]
     end
   end
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

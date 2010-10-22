@@ -8,10 +8,19 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
+    # HOME
     when /the home\s?page/
       '/'
+
+    # CORE APP
+    when /the \"(.*)\" project page/i
+      project_path(Project.where(:name => $1).first)
+
+    # STATIC
     when /the "(.*)" static page/i
       page_path($1.gsub(" ", "_"))
+
+    # AUTHENTICATION
     when /the sign up page/i
       new_user_registration_path
     when /the sign in page/i
@@ -20,11 +29,13 @@ module NavigationHelpers
       destroy_user_session_path
     when /the password reset request page/i
       new_user_password_path
+
+    # ADMIN
     when /the admin organizations page/i
       admin_organizations_path
     when /the admin projects page for organization \"(.*)\"/i
-      org = Organization.find_by_name $1
-      admin_organization_projects_path(org.to_param)
+      admin_organization_projects_path(Organization.where(:name => $1).first)
+
     else
       begin
         page_name =~ /the (.*) page/

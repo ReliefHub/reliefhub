@@ -24,3 +24,12 @@ describe Project, "percent raised when goal is 0" do
 
   its(:percent_raised) { should be_zero }
 end
+
+describe Project, "delegate to organization" do
+  let(:organization) { Factory(:organization) }
+
+  subject { Factory(:project, :organization => organization) }
+
+  its(:organization_name)    { should == organization.name }
+  its(:organization_address) { should == organization.address }
+end

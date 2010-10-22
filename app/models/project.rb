@@ -5,6 +5,8 @@ class Project < ActiveRecord::Base
 
   accepts_nested_attributes_for :project_photos
 
+  delegate :name, :address, :to => :organization, :prefix => true
+
   scope :by_updated_date, order('updated_at DESC')
 
   def thumbnail_url

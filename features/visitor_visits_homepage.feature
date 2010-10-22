@@ -5,8 +5,12 @@ Feature: Visitor visits home page
   I want to see projects and understand how ReliefHub works
 
   Scenario: Visitor visits home page
-    Given I am on the homepage
+    Given the following project exists:
+      | name                |
+      | Christmas Toy Drive |
+    And I am on the homepage
     Then I should see the ReliefHub process on the page
     And I should see featured project on the page
     And I should see blog posts on the page
     And I should see recent press on the page
+    And I should see "Christmas Toy Drive"

@@ -3,7 +3,7 @@
     = image_tag project.thumbnail_url
     = link_to 'Fund this Project', project_path(project), :class => 'button'
   %h3= project.name
-  %h4= project.organization.name
+  %h4= project.organization_name
   %h5= project.requestor
   %p= truncate project.description, :length => 150
   .raised== #{number_to_percentage(project.percent_raised, :precision => 0)} of #{number_to_currency(project.goal)} raised
