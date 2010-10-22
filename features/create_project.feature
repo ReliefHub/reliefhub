@@ -1,4 +1,5 @@
 Feature: Create a project
+
   In order to collect donations
   An admin user should be able to create a project
 

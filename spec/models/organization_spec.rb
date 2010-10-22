@@ -1,16 +1,20 @@
 require "spec_helper"
 
 describe Organization do
-  let(:organization) { Factory.build :organization, :street1=>'123 main', :street2=>'', :city=>'cambridge', :state=>'mass', :zip=>'02138', :country=>"USA"}
-  it 'should combine address fields into a single address' do
-    organization.address.should == '123 main, cambridge, mass, 02138, USA'
+  subject { Factory(:organization) }
+
+  before do
+    2.times { Factory(:project, :organization => subject) }
   end
-  
-  it 'should return the number of projects' do
-    2.times { organization.projects << Factory.build(:project, :organization=>organization) }
-    organization.save
-    organization.projects_count.should == 2
-  end
-    
-  
+
+  its(:projects_count) { should == 2 }
+end
+
+describe Organization, "address" do
+  subject { Factory.build :organization,
+                          :street1 => '123 Main St', :street2 => '',
+                          :city => 'Cambridge', :state => 'MA', :zip => '02138',
+                          :country => "USA" }
+
+  its(:address) { should == '123 Main St, Cambridge, MA, 02138, USA' }
 end

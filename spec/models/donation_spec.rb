@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe Donation do
-  let(:donation)  { Factory :donation}
-  it 'should have some specs once we implement the amazon integration...'
+  subject { Factory(:donation) }
+
+  it { should belong_to(:project) }
+  it { should belong_to(:user) }
 end
