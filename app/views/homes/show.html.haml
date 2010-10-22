@@ -1,10 +1,11 @@
 #body_wrap
   #process
   - if @featured_projects.first.present?
-    .featured_wrap
-      = render :partial=>'featured_project', :collection=>[@featured_projects.first]
-      #thumbnails
-
+    .featured_wrap#thumbFeatures
+      = render :partial=>'featured_project', :collection=>@featured_projects
+    #thumbnails{:style => "display:none"}    
+      - @featured_projects.each_with_index do |featured_project,index|
+        = image_tag(featured_project.photo_url(:thumb), :id => "thumbnail_#{index}")          
 .clear
 #bottom_info
   #learn_more
