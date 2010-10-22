@@ -1,6 +1,6 @@
 %li.project
   .summary
-    = image_tag project.photo_url(:small)
+    = image_tag project.photo_url(:small) unless project.photo.nil?
     = link_to 'Fund this Project', project_path(project), :class => 'button'
   %h3= project.name
   %h4= project.organization_name
