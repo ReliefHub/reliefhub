@@ -24,6 +24,7 @@ module Admin
 
     def edit
       @organization = Organization.find(params[:id])
+      @organization.organization_photos.build
     end
 
     def update

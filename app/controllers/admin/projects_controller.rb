@@ -28,6 +28,7 @@ class Admin::ProjectsController < ApplicationController
 
   def edit
     @project = Project.find params[:id]
+    @project.project_photos.build
   end
 
   def update
