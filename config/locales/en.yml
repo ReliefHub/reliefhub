@@ -2,4 +2,9 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  home: Home
+  login: Sign in
+  logout: Sign out
+  projects: Projects
+  community: Community
+  about_us: About Us

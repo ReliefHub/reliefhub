@@ -8,7 +8,8 @@ gem "hoptoad_notifier"
 gem "paperclip"
 gem "will_paginate"
 gem "formtastic"
-gem "pg"
+#gem "pg"
+gem "mysql"
 gem "flutie"
 gem "dynamic_form"
 gem "heroku"
@@ -16,6 +17,7 @@ gem 'devise'
 gem 'devise_rpx_connectable'
 gem 'aws-s3'
 gem 'remit'
+gem "http_accept_language", :git => 'http://github.com/iain/http_accept_language.git'
 
 # http://blog.davidchelimsky.net/2010/07/11/rspec-rails-2-generators-and-rake-tasks/
 group :development, :test, :cucumber do

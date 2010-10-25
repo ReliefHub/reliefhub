@@ -14,7 +14,7 @@ module NavigationHelpers
 
     # CORE APP
     when /the \"(.*)\" project page/i
-      project_path(Project.where(:name => $1).first)
+      project_path(:id => Project.where(:name => $1).first, :locale => I18n.locale)
 
     # STATIC
     when /the "(.*)" static page/i
@@ -34,7 +34,7 @@ module NavigationHelpers
     when /the admin organizations page/i
       admin_organizations_path
     when /the admin page for organization \"(.*)\"/i
-      admin_organization_path(Organization.where(:name => $1).first)
+      admin_organization_path(:id => Organization.where(:name => $1).first)
 
     else
       begin
