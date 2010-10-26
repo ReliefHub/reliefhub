@@ -121,7 +121,7 @@ body {
     a {
       color: #3DA9DF;
       text-decoration: none;
-      font-wieght: bold; }
+      font-weight: bold; }
     .active {
       color: #ffffff;
       background-image: url(/images/active_link.gif);
@@ -144,7 +144,7 @@ body {
     a {
       color: #3DA9DF;
       text-decoration: none;
-      font-wieght: bold; } } }
+      font-weight: bold; } } }
 
 /**************Index Page*********************/
 
@@ -620,53 +620,58 @@ body {
 }
 
 
-.projects  {
+.projects {
   @include round;
   background: white;
   width: 800px;
-}
-
-.projects li  {
-  width: 320px;
-  float: left;
-  margin: 40px;
-  
-  img {
-    margin-right: 5px;
-    margin-bottom: 0px;
+  &.content {
+    padding: 10px;
+    clear: both;
   }
-  
-  .summary {
-    width: 100px;
+  li  {
+    width: 320px;
     float: left;
-  }
+    margin: 40px;
   
-  h3 {
-    color: #3DA9DF;
-    padding: 0px 0px 0px 110px;
-    margin: 0px;
-    text-align: left;
+    img {
+      margin-right: 5px;
+      margin-bottom: 0px;
+    }
+
+    .summary {
+      width: 100px;
+      float: left;
+    }
+
+    h3 {
+      color: #3DA9DF;
+     padding: 0px 0px 0px 110px;
+      margin: 0px;
+      text-align: left;
+    }
+
+    h4 {
+      padding: 10px 0px 0px 110px;
+      margin: 0px;
+      text-align: left;
+    }
+
+    h5 {
+      padding: 0px 0px 0px 110px;
+      margin: 0px;
+      text-align: left;    
+    }
+
+    p {
+      padding: 5px 0px 0px 110px;
+    }
+
+    .raised {
+      color: #662d91;
+    }
+
   }
-  
-  h4 {
-    padding: 10px 0px 0px 110px;
-    margin: 0px;
-    text-align: left;
-  }
-  
-  h5 {
-    padding: 0px 0px 0px 110px;
-    margin: 0px;
-    text-align: left;    
-  }
-  
-  p {
-    padding: 5px 0px 0px 110px;
-  }
-  
-  .raised {
-    color: #662d91;
-  }
+
 }
 
 .clear {
@@ -679,4 +684,79 @@ body {
 
 .left {
   float: left;
+}
+
+#menu {
+  padding: 0;
+}
+
+#right-menu {
+  display: inline;
+  width: 282px;
+  li {
+    @include round-top;
+    float: left;
+    padding: 8px 10px 3px 10px;
+    margin: 0px 5px;
+    background-color: #ede7fa; 
+    a {
+      text-decoration: none;
+    }
+    &:hover {
+     text-decoration: underline;
+    }
+    &.selected {
+      background-color: white; 
+    }
+  }
+}
+
+.create-button {
+  @include round;
+  $button-background: #874b98;
+  padding: 10px 15px;
+  font-weight: normal;
+  background: $button-background;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  &:hover {
+    background: lighten($button-background, 10%);
+  }
+
+}
+
+
+tr {
+  $table-background: #30aada;
+  border: 0px;
+  margin: 10px 0px;
+  &.header {
+    background: $table-background;
+    th {
+      color: white;
+      padding: 3px 5px;
+      border: 0px;
+    }
+  }
+  &.odd {
+    background: lighten($table-background, 40%);
+  }
+
+}
+
+td {
+  margin: 5px 0px;
+  padding: 5px;
+  text-align: left;
+  border: 0px;
+  border-bottom: 10px;
+  &.ong {
+    a {
+      color: #00b3f5;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
 }

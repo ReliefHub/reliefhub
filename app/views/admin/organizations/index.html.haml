@@ -1,14 +1,15 @@
-This is the Organizations page
+%h1.left
+  Organizations
 
-= link_to "Create", new_admin_organization_path
-
+.right
+  %h2.create-button= link_to "Create", new_admin_organization_path
 
 %table
-  %tr
+  %tr.header
     %th Created
     %th Name
     %th Address
     %th Contact Person
-    %th # of projects
+    %th # of Projects
   = render @organizations
 
