@@ -5,3 +5,11 @@ fr:
   projects: Projets
   community: Communauté
   about_us: Qui sommes-nous
+
+  helpers:
+    label:
+      user:
+        password: "Mot de passe"
+        password_confirmation: "Confirmation de mot de passe"
+        remember_me: "Memorize-moi"
+        email: Courriel

@@ -30,3 +30,49 @@ en:
         subject: 'Confirmation instructions'
       reset_password_instructions:
         subject: 'Reset password instructions'
+
+    common:
+      forgot_your_password?: "Forgot your password?"
+      hello: "Hello"
+      sign_in: "Sign in"
+      sign_up: "Sign up"
+    shared:
+      links:
+        didnt_receive_confirmation_instructions?: "Didn't receive confirmation instructions?"
+        didnt_receive_unlock_instructions?: "Didn't receive unlock confirmation instructions?"
+    confirmations:
+      new:
+        resend_confirmation_instructions: "Resend confirmation instructions"
+    mailer:
+      confirmation_instructions:
+        welcome: "Welcome"
+        you_can_confirm_your_account_through_the_link_below: "You can confirm your account through the link below"
+        confirm_my_account: "Confirm my account"
+      reset_password_instructions:
+        reset_password_instruction: "Someone has requested a link to change your password, and you can do this through the link below."
+        change_my_password: "Change my password"
+        wrong_request_instruction: "If you didn't request this, please ignore this email."
+        unchange_password_message: "Your password won't change until you access the link above and create a new one."
+      unlock_instructions:
+        locked_account_message: "Your account has been locked due to an excessive amount of unsuccessful sign in attempts."
+        unlock_account_instruction: "Click the link below to unlock your account"
+        unlock_my_account: "Unlock my account"
+    passwords:
+      edit:
+        change_your_password: "Change your password"
+        change_my_password: "Change my password"
+      new:
+        send_me_reset_password_instructions: "Envoyez-moi un courriel pour changer mon mot de passe"
+    registrations:
+      edit:
+        edit: "Edit"
+        password_instruction: "leave blank if you don't want to change it"
+        current_password_instruction: "we need your current password to confirm your changes"
+        update: "Update"
+        cancel_my_account: "Cancel my account"
+        unhappy?: "Unhappy?"
+        are_you_sure?: "Are you sure?"
+        back: "Back"
+    unlocks:
+      new:
+        resend_unlock_instructions: "Resend unlock instructions"
