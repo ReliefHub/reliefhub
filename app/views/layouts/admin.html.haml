@@ -1,0 +1,12 @@
+- content_for :content do
+  #menu
+    %ul#right-menu.right
+      %li.selected
+        %h3= link_to 'Organizations', :controller => 'organizations' 
+      %li
+        %h3= link_to 'Projects', projects_path
+      %li
+        %h3= link_to 'Users', page_path("organizations")
+  #content.round.projects.content
+    = yield
+= render :file => 'layouts/application'

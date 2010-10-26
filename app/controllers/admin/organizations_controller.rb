@@ -1,5 +1,6 @@
 module Admin
   class OrganizationsController < ApplicationController
+    layout 'admin'
     include ERB::Util
     def index
       @organizations = Organization.all
