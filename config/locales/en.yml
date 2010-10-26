@@ -8,3 +8,12 @@ en:
   projects: Projects
   community: Community
   about_us: About Us
+
+  homes:
+    featured_project:
+      raised: "%{percentage}% of %{goal} raised"
+      fund_this_project: 'Fund this Project'
+    show:
+      learn_more: "Learn More"
+      who_we_are: "ReliefHub is dedicated to working with orphanages around the world to help perpetuate their effectiveness and provide a foundation for gathering the resources they require to continue to care for millions of orphans and abandoned children."
+      recent_press: "Recent Press"

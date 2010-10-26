@@ -13,3 +13,13 @@ fr:
         password_confirmation: "Confirmation de mot de passe"
         remember_me: "Memorize-moi"
         email: Courriel
+
+  homes:
+    featured_project:
+      raised: "%{percentage}% de %{goal} amassés"
+      fund_this_project: 'Financer ce projet'
+    show:
+      learn_more: "En savoir plus"
+      who_we_are: "ReliefHub s'est engagé à travailler avec les orphelinats à travers le monde pour aider à perpétuer leur efficacité et leur fournir une base pour la collecte des ressources dont ils ont besoin pour continuer à prendre soin des millions d'enfants orphelins et abandonnés."
+      recent_press: "Dernières presse"
+

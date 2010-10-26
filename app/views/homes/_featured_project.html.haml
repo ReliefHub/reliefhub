@@ -6,9 +6,9 @@
     %h4= featured_project.organization_name
     %h5= featured_project.requestor
     %p=  truncate(featured_project.description, :length => 150)
-    %p.raised==#{featured_project.percent_raised}% of #{number_to_currency(featured_project.goal)} raised
+    %p.raised=t '.raised', :percentage => featured_project.percent_raised, :goal => number_to_currency(featured_project.goal)
     = form_for(Donation.new) do |form|
       = hidden_field_tag :'donation[project_id]', featured_project.id
       = text_field_tag   :'donation[amount]'
-      = image_submit_tag('/images/contribute_btn.gif', :alt=>'Fund this Project')
+      = image_submit_tag('/images/contribute_btn.gif', :alt=> t('.fund_this_project'))
   .clear
