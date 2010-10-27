@@ -2,13 +2,6 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  home: Home
-  login: Sign in
-  logout: Sign out
-  projects: Projects
-  community: Community
-  about_us: About Us
-
   homes:
     featured_project:
       raised: "%{percentage}% of %{goal} raised"
@@ -27,4 +20,37 @@ en:
       about_us: "About Us"
       about_us_text1: "ReliefHub is a 501 (c) 3 nonprofit organization founded to work with orphanages around the world to help them secure the resources required to provide excellent care for orphans and abandoned children. Initially ReliefHub will focus on Haiti, where an estimated 200,000 children are living in orphanages."
       about_us_text2: "ReliefHub is managed by an international team of volunteers from Haiti, USA, and Sweden who have come together to support this great cause. The team works tirelessly to organize innovative fundraisers and to manage the selection and distribution of funds to orphanages."
+      contact_us: "Contact Us"
+      recent_press: "Recent Press"
+    thank_you:
+      thank_you: "Thank you"
+      thank_you_for_your_support: "Thank you for your support!"
+  shared:
+    header:
+      home: Home
+      login: Sign in
+      logout: Sign out
+      projects: Projects
+      community: Community
+      about_us: About Us
+    footer:
+      projects: Projects
+      community: Community
+      contact: "Contact"
+      about_us: "About Us"
+      home: "Home"
+      all_rights_reserved: "All rights reserved."
+      approved_by: Approved By
+      featured_by: Featured By
+      partners: Partners
+      site_map: Site Map
+      my_account: My account
 
+  formtastic:
+    labels:
+      email:
+        from: "Email"
+        body: "Body"
+    actions:
+      email:
+        submit: "Contact us"

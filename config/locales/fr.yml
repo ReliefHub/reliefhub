@@ -1,11 +1,4 @@
 fr:
-  home: Accueille
-  login: Connexion
-  logout: Déconnexion
-  projects: Projets
-  community: Communauté
-  about_us: Qui sommes-nous
-
   helpers:
     label:
       user:
@@ -22,6 +15,9 @@ fr:
       learn_more: "En savoir plus"
       who_we_are: "ReliefHub s'est engagé à travailler avec les orphelinats à travers le monde pour aider à perpétuer leur efficacité et leur fournir une base pour la collecte des ressources dont ils ont besoin pour continuer à prendre soin des millions d'enfants orphelins et abandonnés."
       recent_press: "Dernières presse"
+    mailer:
+      contact:
+        heading: "Ce qui suit a été soumis via le site web ReliefHub."
   pages:
     about_us:
       our_mission: "Notre Mission"
@@ -29,3 +25,37 @@ fr:
       about_us: "Qui sommes-nous"
       about_us_text1: "ReliefHub est un 501 (c) 3 à but non lucratif créée pour travailler avec les orphelinats à travers le monde pour les aider à obtenir les ressources nécessaires pour fournir d'excellents soins aux orphelins et enfants abandonnés. Initialement ReliefHub porteront essentiellement sur Haïti, où environ 200.000 enfants vivent dans des orphelinats."
       about_us_text2: "ReliefHub est géré par une équipe internationale de volontaires en provenance d'Haïti, Etats-Unis, et la Suède qui se sont réunis pour soutenir cette grande cause L'équipe travaille sans relâche pour organiser des collectes de fonds et innovantes pour gérer la sélection et la distribution de fonds pour des orphelinats."
+      contact_us: "Nous contacter"
+      recent_press: "Dernières presse"
+    thank_you:
+      thank_you: "Merci"
+      thank_you_for_your_support: "Merci pour votre soutien!"
+  shared:
+    header:
+      home: Accueille
+      login: Connexion
+      logout: Déconnexion
+      projects: Projets
+      community: Communauté
+      about_us: Qui sommes-nous
+    footer:
+      home: Accueille
+      projects: Projets
+      community: Communauté
+      about_us: Qui sommes-nous
+      contact: "Contact"
+      all_rights_reserved: "Tous droits réservés."
+      approved_by: Approuvé par
+      featured_by: En vedette
+      partners: Partenaires
+      site_map: Plan du site
+      my_account: Mon compte
+
+  formtastic:
+    labels:
+      email:
+        from: "Courriel"
+        body: "Contenu"
+    actions:
+      email:
+        submit: "Nous contacter"

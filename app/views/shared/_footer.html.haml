@@ -3,7 +3,7 @@
 #bottom_white_module
   #approved_by
     #approve_head
-      Approved by
+      =t '.approved_by'
     #accredited_logo
       %a{ :href => "#" }
         %img{ :src => "/images/accredited_logo.gif", :alt => "accredited_logo" }
@@ -12,7 +12,7 @@
         %img{ :src => "/images/charity_logo.gif", :alt => "charity_logo" }
   #featured_by
     #featured_head
-      Featured by
+      =t '.featured_by'
     .featured_logo
       %a{ :href => "#" }
         %img{ :src => "/images/accredited_logo.gif", :alt => "accredited_logo" }
@@ -24,7 +24,7 @@
         %img{ :src => "/images/accredited_logo.gif", :alt => "accredited_logo" }
   #partners
     #partner_head
-      Partners
+      =t '.partners'
     #partner_logo
       %a{ :href => "#" }
         %img{ :src => "/images/accredited_logo.gif", :alt => "accredited_logo" }
@@ -33,22 +33,24 @@
   %ul
     %li
       %a{ :href => "#" }
-        Site Map
-    %li= link_to 'Contact', page_path("about_us")
+        =t '.site_map'
+    %li= link_to t('.contact'), page_path("about_us")
     %li= link_to 'FAQ',     page_path("about_us")
     %li
       %a{ :href => "#" }
-        My account
+        =t '.my_account'
     %li
       %a{ :href => "#" }
         Blog
     %li
       %a{ :href => "#" }
-        Community
+        =t('.community')
     %li
       %a{ :href => "#" }
-        Projects
-    %li= link_to 'About Us', page_path("about_us")
-    %li= link_to 'Home', home_path
+        =t('.projects')
+    %li= link_to t('.about_us'), page_path("about_us")
+    %li= link_to t('.home'), home_path
   .clear
-  %p &copy; Copyright #{Date.today.strftime("%Y")} ReliefHub. All rights reserved.
+  %p
+    &copy; Copyright #{Date.today.strftime("%Y")} ReliefHub.
+    =t '.all_rights_reserved'

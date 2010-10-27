@@ -19,7 +19,7 @@
 .clear
 #bottom_info
   #contact_us
-    %h2 Contact Us
+    %h2=t '.contact_us'
     .vcard
       .adr
         %span.street-address 11 Bigelow Street
@@ -32,25 +32,14 @@
     = semantic_form_for :email, :url => emails_path do |form|
       = form.error_messages
       = form.inputs do
-        = form.input :from, :label => "Email" unless user_signed_in?
+        = form.input :from unless user_signed_in?
         = form.input :body, :as => :text, :required => true
       = form.buttons do
-        = form.commit_button "Contact us"
+        = form.commit_button
   #faq
-    %h2 FAQ
-    %dl
-      %dt How do I donate to ReliefHub?
-      %dd Visit our “Projects” page to see current projects; simply type the amount you would like to contribute into the box and hit the “Fund this Project” button.  Once you hit “Submit”, you can easily create an account or log in with an existing Facebook, Twitter, or Google account to track your project’s progress, collect important receipts for tax deductions and thank you notes from orphanage managers and the children themselves.
-      %dt How does a project get chosen?
-      %dd Projects are submitted by an Orphanage Manager, they are reviewed for approval by a Field Administrator ensuring a need for the materials that are requested exists.  Once approved, projects are then posted to the ReliefHub’s “Projects” page for donor support.
-      %dt How do I find a project that fits my budget?
-      %dd Each project fits your budget, you as the donor decide how much to contribute!
-      %dt What happens to my money if a project doesn’t reach 100% funding?
-      %dd If the project you have chosen to donate to does not reach completion you can pick another project for your funds to be redirected to.
-      %dt Are my contributions tax deductible?
-      %dd Yes, of course! We will also supply you with tax deduction receipts for your convenience.
+    =render :partial => "faq"
   #recent_press
-    %h2 Recent Press
+    %h2=t '.recent_press'
     .press_logo
     .press_copy
       %h3= news_article_title('Haiti Quake: Ruin And Recovery',"http://www.npr.org/templates/story/story.php?storyId=122522434")

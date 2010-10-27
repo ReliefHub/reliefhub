@@ -4,16 +4,12 @@
       %img{ :src => "/images/project_image.jpg", :alt => "Community Image", :width => "333px", :height => '270px' }
   #community_right
     #community_description
-    %h1 Community
-    %p ReliefHub promises to be transparent to both donors and gift recipients.  We will continuously update this page to highlight our progress.  We believe that it is imperative that our community sees how much funds have been raised and how the funds are used.  Once your donation has been received, ReliefHub tracks your contribution and sends you a monthly progress report of how those funds have been allocated.  In addition to project updates, donors also receive thank you notes directly from the orphanage managers and children themselves.  Please come back soon to monitor our progress to date. 
-    %p The developers at ReliefHub have created an innovative solution to the data exchange problems often faced by relief workers and non-profit organizations.  Our crowd-funding framework allows donors to become fully integrated within the contribution process; our “you-choose” structure gives donors control of both the project they wish to support and the financial amount they want to contribute.  Our application then tracks the status of these projects and automatically updates donors of the progress of those they have supported.
+      =render :partial => 'community'
 .clear
 #community_bottom
   #dev_center
-    %h2 Development Center
-    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    =render :partial => 'dev_center'
   #financial_center
-    %h2 Financial Center
-    %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    =render :partial => 'financial_center'
 .clear
 

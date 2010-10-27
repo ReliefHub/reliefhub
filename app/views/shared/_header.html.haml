@@ -11,17 +11,17 @@
     %img{ :src => "/images/facebook_logo.gif", :alt => "facebook_logo" }
 #navigation
   %ul
-    %li= link_to t(:about_us), page_path("about_us")
-    %li= link_to t(:projects), projects_path
-    %li= link_to t(:community), page_path("community")
+    %li= link_to t('.about_us'), page_path("about_us")
+    %li= link_to t('.projects'), projects_path
+    %li= link_to t('.community'), page_path("community")
     %li
       %a{ :href => "#" }
         Blog
     - if user_signed_in?
-      %li= link_to t(:logout), destroy_user_session_url
+      %li= link_to t('.logout'), destroy_user_session_url
     - else
-      %li= link_to t(:login), user_session_url
+      %li= link_to t('.login'), user_session_url
     -# %li= link_to_rpx "Janrain", user_session_url
-    %li= link_to t(:home), home_path
+    %li= link_to t('.home'), home_path
 .clear
 
