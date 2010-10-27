@@ -22,4 +22,10 @@ fr:
       learn_more: "En savoir plus"
       who_we_are: "ReliefHub s'est engagé à travailler avec les orphelinats à travers le monde pour aider à perpétuer leur efficacité et leur fournir une base pour la collecte des ressources dont ils ont besoin pour continuer à prendre soin des millions d'enfants orphelins et abandonnés."
       recent_press: "Dernières presse"
-
+  pages:
+    about_us:
+      our_mission: "Notre Mission"
+      our_mission_text: "ReliefHub s'est engagé à travailler avec des orphelinats dans les pays du tiers monde pour les aider à obtenir les ressources dont ils ont besoin pour continuer à prendre soin des millions d'enfants orphelins et abandonnés."
+      about_us: "Qui sommes-nous"
+      about_us_text1: "ReliefHub est un 501 (c) 3 à but non lucratif créée pour travailler avec les orphelinats à travers le monde pour les aider à obtenir les ressources nécessaires pour fournir d'excellents soins aux orphelins et enfants abandonnés. Initialement ReliefHub porteront essentiellement sur Haïti, où environ 200.000 enfants vivent dans des orphelinats."
+      about_us_text2: "ReliefHub est géré par une équipe internationale de volontaires en provenance d'Haïti, Etats-Unis, et la Suède qui se sont réunis pour soutenir cette grande cause L'équipe travaille sans relâche pour organiser des collectes de fonds et innovantes pour gérer la sélection et la distribution de fonds pour des orphelinats."

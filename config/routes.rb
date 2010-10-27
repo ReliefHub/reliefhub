@@ -17,6 +17,8 @@ Reliefhub::Application.routes.draw do
       end
     end
 
+    resources :pages, :only => [:show]
+
     namespace :admin do
       resources :organizations, :only => [:show, :edit, :update, :index, :new, :create] do
         resources :projects, :only => [:index, :show, :new, :create, :edit, :update]

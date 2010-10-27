@@ -1,12 +1,12 @@
 #body_wrap
   #about_left
     #our_mission
-      %h1 Our Mission
-      %p ReliefHub is dedicated to working with orphanages in third world countries to help them secure the resources they require to continue to care for millions of orphans and abandoned children.
+      %h1=t '.our_mission'
+      %p=t '.our_mission_text'
     #about_us
-      %h1 About Us
-      %p ReliefHub is a 501 (c) 3 nonprofit organization founded to work with orphanages around the world to help them secure the resources required to provide excellent care for orphans and abandoned children. Initially ReliefHub will focus on Haiti, where an estimated 200,000 children are living in orphanages.
-      %p ReliefHub is managed by an international team of volunteers from Haiti, USA, and Sweden who have come together to support this great cause. The team works tirelessly to organize innovative fundraisers and to manage the selection and distribution of funds to orphanages.
+      %h1=t '.about_us'
+      %p=t '.about_us_text1'
+      %p=t '.about_us_text2'
       .vol_photo
       .vol_photo
       .vol_photo
@@ -15,20 +15,7 @@
       .vol_photo
   #about_right
     #why_relief
-    %h1 Why ReliefHub
-    %p ReliefHub is unique because it is built on the following guiding principles:
-    %span.bold
-      1. Community Influenced Decision Making
-    %p Working with our community we will run ReliefHub similar to Wikipedia so individuals can give feedback and influence the decision making process.
-    %span.bold
-      2. Self-Sustaining
-    %p Our goal is to become self-sustaining by our 5th birthday. We will work with our community to develop the best plan for achieving this goal.
-    %span.bold
-      3. Total Transparency
-    %p Ever wonder what happen to your dollars after you make a donation?  Our goal is make it absolutely visible by publishing our detailed budgets and financials on our website for everyone to review.
-    %span.bold
-      4. Open Source
-    %p We leverage open source technologies to build ReliefHub.org and will share all of our innovations including processes, product roadmap, and software so others in the non-profit community can benefit.
+      =render :partial => "why"
 .clear
 #bottom_info
   #contact_us
