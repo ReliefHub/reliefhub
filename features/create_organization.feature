@@ -15,8 +15,30 @@ I want to be able to Add/Edit an organization
     And I should see "oscar's orphanage"
     And I should see "sarah's orphanage"
 
+  Scenario: View organizations
+    Given the following organizations exist:
+      | name        | street1          | contact person |
+      | fred's ngo  | 123 main st      | alex           |
+      | oscar's ngo | 455 fifth avenue | alex           |
+      | sarah's ngo | 131 first st     | yan            |
+    And the following projects exists:
+      | name      | organization      |
+      | relief 1  | name: fred's ngo  |
+      | relief 2  | name: fred's ngo  |
+      | relief 3  | name: oscar's ngo |
+    Given I go to the admin organizations page
+    Then I should see "Organizations" within "h1"
+     And I should see "Organizations" within "#right-menu"
+     And I should see "Projects" within "#right-menu"
+     And I should see "Users" within "#right-menu"
+     And I should see "Organizations" tab ".selected" within "#right-menu"
+     And I should see the following organizations table:
+      | name         | address          | contact person | # of projects |
+      | fred's ngo   | 123 main st      | alex           | 2             |
+      | oscar's ngo  | 455 fifth avenue | alex           | 1             |
+      | sarah's ngo  | 131 first st     | yan            | 0             |
 
-	Scenario: Create a new organization
+  Scenario: Create a new organization
 	  Given I go to the admin organizations page
 	   When I follow "Create"
 	   When I fill in "Name" with "my orphanage"
