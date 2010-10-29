@@ -43,6 +43,18 @@ def retrieve_actual_table(row_selector = 'table tr', column_selector = 'td,th')
   actual_table
 end
 
+Then /^I should see "([^"]*)" column following the format "([^"]*)"$/ do |column, format|
+  actual_table = retrieve_actual_table
+  values = []
+  actual_table.each do |row| 
+    values.concat row.values_at(column.downcase)
+  end
+  values.each do |value|
+    assert value.match(format), "The value: #{value} at the column: #{column} does not match the format: #{format}"
+  end
+end
+
+
 Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end

@@ -24,6 +24,7 @@ I want to be able to Add/Edit/List an organization
       | fred's ngo   | 123 main st      | alex           | 2             |
       | oscar's ngo  | 455 fifth avenue | alex           | 1             |
       | sarah's ngo  | 131 first st     | yan            | 0             |
+     And I should see "Created" column following the format "[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}"
 
   Scenario: Create a new organization
 	  Given I go to the admin organizations page
