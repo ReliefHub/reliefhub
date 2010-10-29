@@ -1,19 +1,6 @@
 Feature: Add/Edit a new organization
 As an administrator
-I want to be able to Add/Edit an organization
-
-
-  Scenario: View organizations
-    Given the following organizations exist:
-      | name              | street1          | contact person |
-      | fred's orphanage  | 123 main st      | alex           |
-      | oscar's orphanage | 455 fifth avenue | alex           |
-      | sarah's orphanage | 131 first st     | yan            |
-    Given I go to the admin organizations page
-    Then I should see "Organization"
-    And I should see "fred's orphanage"
-    And I should see "oscar's orphanage"
-    And I should see "sarah's orphanage"
+I want to be able to Add/Edit/List an organization
 
   Scenario: View organizations
     Given the following organizations exist:
