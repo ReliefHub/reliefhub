@@ -1,19 +1,16 @@
-#body_wrap
-  %br
-  %br
-  %br
-  %br
-  %br
-    #h2
-      Projects
-    - @organization.projects.each do |project|
-      %h3= project.name
-      = link_to 'Edit', edit_admin_organization_project_path(@organization, project)
+%h1.left
+  Projects
 
-    = link_to 'Create', new_admin_organization_project_path(@organization)
-  %br
-  %br
-  %br
-  %br
-  %br
+.right
+  %h2.create-button= link_to "Create", new_admin_organization_path
+
+%table
+  %tr.header
+    %th Created
+    %th Name
+    %th Status
+    %th Materials Needed
+    %th Funds Needed
+    %th Funds Received
+  = render @projects
 

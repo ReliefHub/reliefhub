@@ -18,6 +18,7 @@ Reliefhub::Application.routes.draw do
     resources :organizations, :only => [:show, :edit, :update,  :index, :new, :create] do
       resources :projects, :only => [:index, :show, :new, :create, :edit, :update]
     end
+    resources :projects, :only => [:index]
   end
 
   # The priority is based upon order of creation:
