@@ -78,3 +78,21 @@ I want to be able to Add/Edit/List an organization
     And I should see "my orphanage"
     And I should see "123 main st, boston, Mass, USA"
     And I should see "alex"
+    
+  Scenario: View all projects for an organization
+    Given the following organization exists:
+      | name     |
+      | Some Org |
+    And the following projects exist:
+      | name      | organization   |
+      | Project A | name: Some Org |
+      | Project B | name: Some Org |
+      | Project C | name: Some Org |
+    And I go to the admin organizations page
+    And I follow "Some Org"
+    Then I should see "Project A"
+    And I should see "Project B"
+    And I should see "Project C"
+
+    
+    

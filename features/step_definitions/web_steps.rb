@@ -21,7 +21,7 @@ Then /^I should see the following (.*) table:$/ do |table_name, expected_table|
   expected_table.hashes.each_with_index do |expected_hash, expected_row|
     expected_hash.each_pair do |key, value|
       row = actual_table[expected_row]
-      assert row[key] == value, "#{table_name.capitalize} table cell[#{expected_row},#{key}] doesn't match. Expected #{value}, but was #{row[key]}."
+      assert row[key.downcase] == value, "#{table_name.capitalize} table cell[#{expected_row},#{key}] doesn't match. Expected #{value}, but was #{row[key]}."
     end
   end
 end
