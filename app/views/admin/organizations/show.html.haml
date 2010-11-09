@@ -25,10 +25,11 @@
   Overview
   = @organization.overview
 
-%h2 Projects in this Orphanage
-= link_to 'Create', new_admin_organization_project_path(@organization)
+%h2.left Projects in this Organization
+%h2.right.create-button= link_to 'Create Project', new_admin_organization_project_path(@organization)
+
 %table
-  %tr
+  %tr.header
     %th Created
     %th Name
     %th Status

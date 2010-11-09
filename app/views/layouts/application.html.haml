@@ -9,6 +9,6 @@
     #wrapper
       = render :partial => 'shared/header'
       = render :partial => 'shared/flashes'
-      #main= yield
+      #main= content_for?(:content) ? yield(:content) : yield
       = render :partial => 'shared/javascript'
       = render :partial => 'shared/footer'

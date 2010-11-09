@@ -1,6 +1,6 @@
-%tr
-  %td= organization.created_at
-  %td= link_to organization.name, admin_organization_path(organization)
+%tr{:class => cycle('odd', '')}
+  %td= organization.created_at.strftime("%m/%d/%Y")
+  %td.edit= link_to organization.name, admin_organization_path(organization)
   %td= organization.address
   %td= organization.contact_person
   %td= organization.projects_count

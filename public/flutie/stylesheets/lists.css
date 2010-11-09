@@ -1,7 +1,6 @@
 /* Lists */
 
 ul, ol {
-  margin-bottom:  1.5em;
   list-style-position: inside;
 }
 ul { list-style-type: disc; }

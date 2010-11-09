@@ -1,22 +1,32 @@
 Feature: Add/Edit a new organization
 As an administrator
-I want to be able to Add/Edit an organization
-
+I want to be able to Add/Edit/List an organization
 
   Scenario: View organizations
     Given the following organizations exist:
-      | name              | street1          | contact person |
-      | fred's orphanage  | 123 main st      | alex           |
-      | oscar's orphanage | 455 fifth avenue | alex           |
-      | sarah's orphanage | 131 first st     | yan            |
+      | name        | street1          | contact person |
+      | fred's ngo  | 123 main st      | alex           |
+      | oscar's ngo | 455 fifth avenue | alex           |
+      | sarah's ngo | 131 first st     | yan            |
+    And the following projects exists:
+      | name      | organization      |
+      | relief 1  | name: fred's ngo  |
+      | relief 2  | name: fred's ngo  |
+      | relief 3  | name: oscar's ngo |
     Given I go to the admin organizations page
-    Then I should see "Organization"
-    And I should see "fred's orphanage"
-    And I should see "oscar's orphanage"
-    And I should see "sarah's orphanage"
+    Then I should see "Organizations" within "h1"
+     And I should see "Organizations" within "#right-menu"
+     And I should see "Projects" within "#right-menu"
+     And I should see "Users" within "#right-menu"
+     And I should see "Organizations" tab ".selected" within "#right-menu"
+     And I should see the following organizations table:
+      | name         | address          | contact person | # of projects |
+      | fred's ngo   | 123 main st      | alex           | 2             |
+      | oscar's ngo  | 455 fifth avenue | alex           | 1             |
+      | sarah's ngo  | 131 first st     | yan            | 0             |
+     And I should see "Created" column following the format "[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}"
 
-
-	Scenario: Create a new organization
+  Scenario: Create a new organization
 	  Given I go to the admin organizations page
 	   When I follow "Create"
 	   When I fill in "Name" with "my orphanage"
@@ -68,3 +78,21 @@ I want to be able to Add/Edit an organization
     And I should see "my orphanage"
     And I should see "123 main st, boston, Mass, USA"
     And I should see "alex"
+    
+  Scenario: View all projects for an organization
+    Given the following organization exists:
+      | name     |
+      | Some Org |
+    And the following projects exist:
+      | name      | organization   |
+      | Project A | name: Some Org |
+      | Project B | name: Some Org |
+      | Project C | name: Some Org |
+    And I go to the admin organizations page
+    And I follow "Some Org"
+    Then I should see "Project A"
+    And I should see "Project B"
+    And I should see "Project C"
+
+    
+    

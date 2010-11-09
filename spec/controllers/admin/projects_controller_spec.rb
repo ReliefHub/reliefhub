@@ -7,11 +7,27 @@ describe Admin::ProjectsController do
     Organization.stubs(:find=>organization)
   end
 
+  let(:project) { Factory.stub :project }
 
   describe "routes" do
     it { should route(:get, "/admin/organizations/1/projects/17").to(:action => 'show', :organization_id=>1, :id=>17) }
+    it { should route(:get, "/admin/projects").to(:action => 'index') }
   end
   
+  describe 'admin projects' do 
+    describe 'index' do
+      let(:projects) { [stub] }
+      before do
+        Project.stubs(:all).returns(projects)
+        get :index 
+      end 
+      it "should have called project.all" do
+        Project.should have_received(:all)
+      end
+      it { should assign_to(:projects).with(projects)} 
+      it { should respond_with(:success) }
+    end
+  end
   
   describe "index" do
     before do

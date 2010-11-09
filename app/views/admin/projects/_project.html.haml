@@ -1,7 +1,7 @@
-%tr
-  %td= project.created_at
-  %td= link_to project.name, edit_admin_organization_project_path(project.organization, project)
+%tr{:class => cycle('odd', '')}
+  %td= project.created_at.strftime("%m/%d/%Y")
+  %td.edit= link_to project.name, edit_admin_organization_project_path(project.organization, project)
   %td= project.status
   %td= project.funds_purpose
-  %td= project.goal
-  %td= project.amount_raised
+  %td= number_to_currency project.goal
+  %td= number_to_currency project.amount_raised

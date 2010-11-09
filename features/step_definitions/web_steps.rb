@@ -16,6 +16,45 @@ module WithinHelpers
 end
 World(WithinHelpers)
 
+Then /^I should see the following (.*) table:$/ do |table_name, expected_table|
+  actual_table = retrieve_actual_table
+  expected_table.hashes.each_with_index do |expected_hash, expected_row|
+    expected_hash.each_pair do |key, value|
+      row = actual_table[expected_row]
+      assert row[key.downcase] == value, "#{table_name.capitalize} table cell[#{expected_row},#{key}] doesn't match. Expected #{value}, but was #{row[key]}."
+    end
+  end
+end
+
+def retrieve_actual_table(row_selector = 'table tr', column_selector = 'td,th')
+  table = tableish(row_selector, column_selector)
+  headers = table[0]
+  rows = table[1..-1]
+  actual_table = []
+  rows.each_with_index do |row, row_index|
+    line = {}
+    headers.each_with_index do |header, header_index|
+      hash = {header.downcase => row[header_index]}
+      line.merge! hash 
+    end
+    actual_table << line
+  end
+
+  actual_table
+end
+
+Then /^I should see "([^"]*)" column following the format "([^"]*)"$/ do |column, format|
+  actual_table = retrieve_actual_table
+  values = []
+  actual_table.each do |row| 
+    values.concat row.values_at(column.downcase)
+  end
+  values.each do |value|
+    assert value.match(format), "The value: #{value} at the column: #{column} does not match the format: #{format}"
+  end
+end
+
+
 Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
@@ -110,6 +149,18 @@ Then /^(?:|I )should see "([^"]*)"(?: within "([^"]*)")?$/ do |text, selector|
       page.should have_content(text)
     else
       assert page.has_content?(text)
+    end
+  end
+end
+
+Then /^(?:|I )should see "([^"]*)" tab "([^"]*)"(?: within "([^"]*)")?$/ do |text, selector_class, selector|
+  with_scope(selector) do
+    with_scope(selector_class) do
+      if page.respond_to? :should
+        page.should have_content(text)
+      else
+        assert page.has_content?(text)
+      end
     end
   end
 end
