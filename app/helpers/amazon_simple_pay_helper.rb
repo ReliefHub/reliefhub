@@ -14,6 +14,7 @@ module AmazonSimplePayHelper
     output.safe_concat(hidden_field_tag('isDonationWidget', '1'))
     output.safe_concat(hidden_field_tag('cobrandingStyle', 'logo'))
     output.safe_concat(hidden_field_tag('returnUrl', donations_confirm_url))
+    output.safe_concat(hidden_field_tag('abandonUrl', donations_abandon_url))
     output.safe_concat("</form>")
   end
 
