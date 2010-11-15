@@ -30,6 +30,9 @@ fr:
     thank_you:
       thank_you: "Merci"
       thank_you_for_your_support: "Merci pour votre soutien!"
+    donation_error:
+      were_sorry: "[TRANSLATE ME!] We're sorry"
+      there_was_a_problem: "[TRANSLATE ME!] There was a problem with your donation. Please try again."
   shared:
     header:
       home: Accueille

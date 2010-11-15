@@ -5,4 +5,6 @@ describe Donation do
 
   it { should belong_to(:project) }
   it { should belong_to(:user) }
+  it { should validate_presence_of(:amount) }
+  it { should validate_presence_of(:project) }
 end

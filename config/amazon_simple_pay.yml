@@ -1,15 +1,16 @@
 # the dev keys use the amazon sandbox account for dev@reliefhub.org
 development: &sandbox
   access_key: AKIAJT3POPIBST76SUJQ
-  secret_key: 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
+  amazon_payments_account_id: James fill this in.
   
 # staging and production use heroku environment variables  
 staging: &default
   access_key: <%= ENV['AMAZON_FPS_ACCESS_KEY'] %>
-  secret_key: <%= ENV['AMAZON_FPS_SECRET_KEY'] %>
+  amazon_payments_account_id: <%= ENV['AMAZON_PAYMENTS_ACCOUNT_ID'] %>
 
 producton:
   <<: *default
 
 test:
-  <<: *sandbox
+  access_key: TEST_ACCESS_KEY
+  amazon_payments_account_id: TEST_ACCOUNT_ID

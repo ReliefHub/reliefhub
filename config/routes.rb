@@ -11,11 +11,8 @@ Reliefhub::Application.routes.draw do
       collection { get :my_projects }
     end
 
-    resources :donations, :only => [:create] do
-      member do
-        get :confirm
-      end
-    end
+    match 'donations/confirm' => 'donations#confirm'
+    match 'donations/abandon' => 'donations#abandon'
 
     resources :pages, :only => [:show]
 

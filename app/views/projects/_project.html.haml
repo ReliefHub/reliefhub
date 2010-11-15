@@ -7,7 +7,8 @@
   %h5= project.requestor
   %p= truncate project.description, :length => 150
   .raised== #{number_to_percentage(project.percent_raised, :precision => 0)} of #{number_to_currency(project.goal)} raised
-  = form_for Donation.new do |form|
-    = hidden_field_tag :'donation[project_id]', project.id
-    = text_field_tag   :'donation[amount]'
-    = submit_tag 'Fund this Project'
+  = amazon_simple_pay_form_tag do
+    = text_field_tag 'amount'
+    = hidden_field_tag 'referenceId', project.id
+    = hidden_field_tag 'description', project.name
+    = image_submit_tag('/images/contribute_btn.gif')

@@ -25,6 +25,9 @@ en:
     thank_you:
       thank_you: "Thank you"
       thank_you_for_your_support: "Thank you for your support!"
+    donation_error:
+      were_sorry: "We're sorry"
+      there_was_a_problem: "There was a problem with your donation. Please try again."
   shared:
     header:
       home: Home

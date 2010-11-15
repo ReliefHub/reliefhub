@@ -84,12 +84,14 @@
         %textarea{ :name => "#", :rows => "6", :cols => "20", :id => "comments" }
     .clear
   #form_right
-    #amount_project_detail
-      %label Amount
-      %input{ :type => "text", :name => "fname", :value => "$" }
-    #pay_type
-    #submit_signup
-      %a{ :href => "#" }
-        %img{ :src => "/images/submit_.gif", :alt => "submit button" }
-    .clear
+    = amazon_simple_pay_form_tag do
+      #amount_project_detail
+        %label Amount
+        = text_field_tag 'amount'
+        = hidden_field_tag 'referenceId', @project.id
+        = hidden_field_tag 'description', @project.name
+      #pay_type
+      #submit_signup
+        = image_submit_tag('/images/contribute_btn.gif')
+      .clear
 .clear
