@@ -62,7 +62,7 @@ en:
         change_your_password: "Change your password"
         change_my_password: "Change my password"
       new:
-        send_me_reset_password_instructions: "Envoyez-moi un courriel pour changer mon mot de passe"
+        send_me_reset_password_instructions: "Send me an email to change my password"
     registrations:
       edit:
         edit: "Edit"
