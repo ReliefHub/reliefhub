@@ -1,7 +1,7 @@
 # the dev keys use the amazon sandbox account for dev@reliefhub.org
 development: &sandbox
   access_key: AKIAJT3POPIBST76SUJQ
-  amazon_payments_account_id: James fill this in.
+  amazon_payments_account_id: BFEWRUXTBLRP72PUVPNDRTTXELVXHN85VDMES8
   
 # staging and production use heroku environment variables  
 staging: &default
