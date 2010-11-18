@@ -10,6 +10,7 @@ module AmazonSimplePayHelper
     output << content
     output.safe_concat(hidden_field_tag('accessKey', AMAZON_ACCESS_KEY))
     output.safe_concat(hidden_field_tag('amazonPaymentsAccountId', AMAZON_PAYMENTS_ACCOUNT_ID))
+    output.safe_concat(hidden_field_tag('immediateReturn', '1'))
     output.safe_concat(hidden_field_tag('processImmediate', '1'))
     output.safe_concat(hidden_field_tag('isDonationWidget', '1'))
     output.safe_concat(hidden_field_tag('cobrandingStyle', 'logo'))

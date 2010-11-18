@@ -23,7 +23,7 @@ describe DonationsController do
       "certificateUrl"    => "https://fps.sandbox.amazonaws.com/certs/090910/PKICert.pem?requestId=bjymm6f2hc1cdrkj7cm8vrqu0ilhnmg15drctudlmkwd5k5arzp",
       "recipientName"     => "ReliefHub.org",
       "signature"         => "ys+CLudfvbP72qOCXQQvVVdAtqYt8jpf3hYV/+xh8FQpRusPHprTdpwwVPnJCyw2DT/8oAL/hm4U\nTFG2z4029bMswLtS6A+F+Q+hgvwRvxA5BkOH/adg+5FlTJ0t8OBNipZDIIL0RwSIYeDbPVPk0k0S\nDESPBjVehyvEhkbZJa8=",
-      "transactionAmount" => "12",
+      "transactionAmount" => "USD 122",
       "recipientEmail"    => "info@reliefhub.org",
       "signatureMethod"   => "RSA-SHA1",
       "transactionId"     => "15H8171G3PNH8LL41ZSGQRP32R4IN2GU83J",
@@ -41,7 +41,7 @@ describe DonationsController do
         project = stub
         projects.expects(:first => project)
         Donation.expects(:new => @donation).with({
-          :amount => '12',
+          :transaction_amount => 'USD 122',
           :project => project,
           :user => @current_user,
           :transaction_id => '15H8171G3PNH8LL41ZSGQRP32R4IN2GU83J',
@@ -57,7 +57,7 @@ describe DonationsController do
       before do
         Project.expects(:where => []).with(:id => 9876)
         Donation.expects(:new => @donation).with({
-          :amount => '12',
+          :transaction_amount => 'USD 122',
           :project => nil,
           :user => @current_user,
           :transaction_id => '15H8171G3PNH8LL41ZSGQRP32R4IN2GU83J',
@@ -72,7 +72,7 @@ describe DonationsController do
     describe 'missing project id' do
       before do
         Donation.expects(:new => @donation).with({
-          :amount => '12',
+          :transaction_amount => 'USD 122',
           :project => nil,
           :user => @current_user,
           :transaction_id => '15H8171G3PNH8LL41ZSGQRP32R4IN2GU83J',
