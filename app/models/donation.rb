@@ -7,8 +7,16 @@ class Donation < ActiveRecord::Base
   validates_presence_of :transaction_id
 
   def transaction_amount=(currency_and_amount)
-    if currency_and_amount =~ /^\s*(USD)?\s*[-+]?([0-9]*\.[0-9]+|[0-9]+)$/
-      self.amount = $2
+    currency = parse(currency_and_amount).first
+    if currency == 'USD'
+      amount = parse(currency_and_amount).last.to_i
+    else
+      amount = currency.to_i
     end
+    self.amount = amount unless amount == 0
+  end
+
+  def parse(currency_and_amount)
+    @parsed ||= currency_and_amount.split
   end
 end
