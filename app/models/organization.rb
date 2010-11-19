@@ -5,7 +5,7 @@ class Organization < ActiveRecord::Base
   accepts_nested_attributes_for :organization_photos
 
   def address
-    [:street1, :street2, :city, :state, :zip, :country].map {|field| self.send(field) }.reject(&:blank?).join(', ')
+    [:street1, :street2, :city, :state, :zip, :country, :email_address, :website].map {|field| self.send(field) }.reject(&:blank?).join(', ')
   end
 
   delegate :count, :to => :projects, :prefix => true
