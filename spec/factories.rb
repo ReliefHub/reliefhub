@@ -15,6 +15,7 @@ Factory.define :donation do |donation|
   donation.association(:project)
   donation.association(:user)
   donation.amount { 100 }
+  donation.transaction_id { "123abc" }
 end
 
 Factory.define :user do |user|

@@ -15,6 +15,13 @@ describe Donation do
     its(:amount) { should == 140 }
   end
 
+  describe 'parsing transation amount from Amazon with cents' do
+    before do
+      subject.transaction_amount = 'USD 140.22'
+    end
+    its(:amount) { should == 140 }  # fix after conversion to float
+  end
+
   describe 'parsing transation amount from Amazon without a currency' do
     before do
       subject.transaction_amount = '1340'
