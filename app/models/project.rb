@@ -9,6 +9,9 @@ class Project < ActiveRecord::Base
 
   scope :by_updated_date, order('updated_at DESC')
 
+  cattr_reader :per_page
+  @@per_page = 10
+
   def photo_url size
     photo.file.url(size)
   end

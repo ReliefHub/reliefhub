@@ -9,12 +9,12 @@ describe ProjectsController, "GET to index" do
   let(:projects) { [] }
 
   before do
-    Project.stubs(:by_updated_date).returns(projects)
+    Project.stubs(:paginate).returns(projects)
     get :index
   end
 
   it "sorts by updated date" do
-    Project.should have_received(:by_updated_date)
+    Project.should have_received(:paginate)
   end
 
   it { should assign_to(:projects).with(projects) }
