@@ -11,4 +11,8 @@ class User < ActiveRecord::Base
   def projects_i_have_contributed_to
     projects.uniq
   end
+  
+  def details
+    [:first_name, :last_name, :email, :password].map {|field| self.send(field) }.reject(&:blank?).join(', ')
+  end
 end
