@@ -2,15 +2,9 @@ require 'spec_helper'
 
 describe User do
   it { should have_many(:donations) }
+  
+  it { should validate_presence_of(:email) }
+  it { should validate_presence_of(:first_name) }
+  it { should validate_presence_of(:last_name) }  
 end
 
-describe User, 'details' do
-  subject { Factory.build :user,
-                          :first_name => 'Stevie',
-                          :last_name => 'Wonder',
-                          :email => 'steviewonder@gmail.com',
-                          :password => 'stevieisthebest1'
-                          }
-                          
-  its(:details) { should == 'Stevie, Wonder, steviewonder@gmail.com, stevieisthebest1' }
-end

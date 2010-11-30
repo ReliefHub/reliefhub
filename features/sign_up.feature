@@ -21,5 +21,5 @@ Feature: Sign up
     And I fill in "Password" with "password"
     And I fill in "Password confirmation" with "password"
     And I press "Sign up"
-    Then I should see "You have signed up"
+    Then I should see error messages on the page
 

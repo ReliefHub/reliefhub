@@ -7,12 +7,12 @@ class User < ActiveRecord::Base
   
   has_many :donations
   has_many :projects, :through=>:donations
+
+  validates_presence_of :email
+  validates_presence_of :first_name
+  validates_presence_of :last_name
   
   def projects_i_have_contributed_to
     projects.uniq
-  end
-  
-  def details
-    [:first_name, :last_name, :email, :password].map {|field| self.send(field) }.reject(&:blank?).join(', ')
   end
 end
