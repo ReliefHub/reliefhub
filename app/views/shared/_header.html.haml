@@ -15,7 +15,7 @@
     %li= link_to t('.projects'), projects_path
     %li= link_to t('.community'), page_path("community")
     %li
-      %a{ :href => "#" }
+      %a{ :href => "http://blog.reliefhub.org/" }
         Blog
     - if user_signed_in?
       %li= link_to t('.logout'), destroy_user_session_url
