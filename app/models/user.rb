@@ -14,5 +14,12 @@ class User < ActiveRecord::Base
   
   def projects_i_have_contributed_to
     projects.uniq
-  end
+ end
+  def update_with_password(params={}) 
+     if params[:password].blank? 
+       params.delete(:password) 
+       params.delete(:password_confirmation) if params[:password_confirmation].blank? 
+     end 
+     update_attributes(params) 
+   end
 end
