@@ -193,7 +193,7 @@ body {
 #learn_more {
   width: 230px;
   float: left;
-  min-height: 388px;
+  min-height: 396px;
   border-right: 3px solid #662d91;
   margin: 20px 0 0 0;
   padding: 0 20px 0 0; }
@@ -203,8 +203,8 @@ body {
   float: left;
   min-height: 330px;
   border-right: 3px solid #662d91;
-  margin: 14px 0 0 20px;
-  padding: 0 14px 0 0; }
+  margin: 20px 0 0 30px;
+  padding: 0 20px 0 0; }
 
 .blog_date {
   font-size: 16px;
@@ -222,7 +222,7 @@ body {
 #recent_press {
   width: 230px;
   float: left;
-  min-height: 350px;
+  min-height: 330px;
   margin: 20px 0 0 30px;
   padding: 0 0 0 0; }
 
