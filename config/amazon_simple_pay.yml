@@ -5,8 +5,8 @@ development: &sandbox
   
 # staging and production use heroku environment variables  
 staging: &default
-  access_key: <%= ENV['AMAZON_FPS_ACCESS_KEY'] %>
-  amazon_payments_account_id: <%= ENV['AMAZON_PAYMENTS_ACCOUNT_ID'] %>
+  access_key: ENV['AMAZON_FPS_ACCESS_KEY']
+  amazon_payments_account_id: ENV['AMAZON_PAYMENTS_ACCOUNT_ID']
 
 producton:
   <<: *default
