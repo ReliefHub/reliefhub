@@ -14,8 +14,17 @@ describe Organization, "address" do
   subject { Factory.build :organization,
                           :street1 => '123 Main St', :street2 => '',
                           :city => 'Cambridge', :state => 'MA', :zip => '02138',
-                          :country => "USA",
-                          :email_address => 'john@doe.com', :website => 'www.johndone.com' }
+                          :country => "USA"
+                          }
 
   its(:address) { should == '123 Main St, Cambridge, MA, 02138, USA' }
+end
+
+describe Organization, "info" do
+  subject { Factory.build :organization,
+                          :email_address => 'john@doe.com',
+                          :website => 'www.johndoe.com'
+                          }
+
+  its(:info) { should == 'john@doe.com, www.johndoe.com' }
 end
