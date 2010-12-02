@@ -570,13 +570,23 @@ body {
   margin: 40px 0 0 0;}
 
 #community_left {
-  width: 333px;
+  background-image: url(/images/community.png);
+  background-repeat: no-repeat;
+  border: 2px solid #CCEFFE;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  width: 325px;
   height: 250px;
+  margin-top: 5px;
+  margin-left: 20px;
   float: left; }
 
 #community_right {
-  width: 425px;
-  height: 250px;
+  border: 2px solid #CCEFFE;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  width: 415px;
+  height: 240px;
   float: right;
   text-align: left;
   background-color: #ffffff;
