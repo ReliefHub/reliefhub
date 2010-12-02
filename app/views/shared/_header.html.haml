@@ -1,17 +1,14 @@
-=link_to_language "English", :en
-=link_to_language "Français", :fr
-.clear
 #relief_logo
   = link_to home_path do
-    %img{ :src => "/images/relief_logo.gif", :alt => "relief_logo" }
+    %img{ :src => "/images/relief_logo.png", :alt => "relief_logo" }
 #social_logos
-  %a{ :href => "#" }
-    %img{ :src => "/images/twitter_logo.gif", :alt => "twitter_logo" }
-  %a{ :href => "#" }
-    %img{ :src => "/images/facebook_logo.gif", :alt => "facebook_logo" }
+  %a{ :href => "http://twitter.com/#!/ReliefHub" }
+    %img{ :src => "/images/button_twitter.png", :alt => "twitter_logo" }
+  %a{ :href => "http://www.facebook.com/reliefhub.org" }
+    %img{ :src => "/images/button_facebook.png", :alt => "facebook_logo" }
 #navigation
   %ul
-    %li= link_to t('.about_us'), page_path("about_us")
+    %li= link_to t('.about_us'), page_path ("about_us")
     %li= link_to t('.projects'), projects_path
     %li= link_to t('.community'), page_path("community")
     %li
@@ -24,4 +21,7 @@
     -# %li= link_to_rpx "Janrain", user_session_url
     %li= link_to t('.home'), home_path
 .clear
-
+#lang
+  =link_to_language image_tag('/images/francais.png'), :fr
+  =link_to_language image_tag('/images/english.png'), :en
+.clear
