@@ -234,7 +234,7 @@ body {
   background-repeat: no-repeat; }
 
 .press_copy {
-  float: right;
+  float: left;
   height: 100px;
   width: 175px; }
 
@@ -580,22 +580,38 @@ body {
   height: 80px;
   background-color: #ffffff;
   padding: 10px;
-  margin: 0 0 20px 0; }
+  margin: 0 0 20px 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; }
 
 #about_us {
   width: 390px;
   height: 260px;
   background-color: #ffffff;
   padding: 10px;
-  margin: 0 0 20px 0; }
+  margin: 0 0 20px 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; }
 
 .vol_photo {
-  height: 50px;
-  width: 40px;
   background-image: url(/images/vol_photo.jpg);
   background-repeat: no-repeat;
+  height: 90px;
+  width: 97px;
   float: left;
-  margin: 10px 10px 0 0; }
+  margin: 10px 10px 0 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px; }
+
+.vol_photo2 {
+  background-image: url(/images/vol_photo2.jpg);
+  background-repeat: no-repeat;
+  height: 90px;
+  width: 74px;
+  float: left;
+  margin: 10px 10px 0 12px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px; }
 
 #about_right {
   width: 380px;
@@ -603,7 +619,9 @@ body {
   float: right;
   text-align: left;
   background-color: #ffffff;
-  padding: 5px; }
+  padding: 5px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; }
 
 .bold {
   font-weight: bold; }
@@ -621,7 +639,7 @@ body {
   width: 230px;
   float: left;
   text-align: left;
-  min-height: 150px;
+  min-height: 537px;
   border-right: 3px solid #662d91;
   margin: 20px 0 0 0;
   padding: 0 20px 0 0; }
@@ -629,6 +647,9 @@ body {
     width: 200px;
     margin-top: 10px; }
     #contact_us fieldset #email_from, #contact_us fieldset #email_body {
+      border: 1px solid #e3e3e3;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
       width: 180px; }
 
 #submit_contact {

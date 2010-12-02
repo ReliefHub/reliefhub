@@ -8,11 +8,7 @@
       %p=t '.about_us_text1'
       %p=t '.about_us_text2'
       .vol_photo
-      .vol_photo
-      .vol_photo
-      .vol_photo
-      .vol_photo
-      .vol_photo
+      .vol_photo2
   #about_right
     #why_relief
       =render :partial => "why"
@@ -40,17 +36,17 @@
     =render :partial => "faq"
   #recent_press
     %h2=t '.recent_press'
-    .press_logo
+
     .press_copy
       %h3= news_article_title('Haiti Quake: Ruin And Recovery',"http://www.npr.org/templates/story/story.php?storyId=122522434")
       %p= news_article_snippet("Haiti's brittle housing supply was shattered by the Jan. 12 earthquake, which destroyed an estimated 110,000 homes and apartment buildings. Now there are not enough houses, and not enough money for people to rent the ones still standing.")
     .clear
-    .press_logo
+
     .press_copy
       %h3= news_article_title("'Beyond School Books' - a podcast series on education in emergencies", 'http://www.unicef.org/infobycountry/haiti_56588.html')
       %p= news_article_snippet("NEW YORK, USA, 20 October 2010 – As schools open for the new academic year in Haiti, the hope is to bring all boys and girls to school – both those who attended before the earthquake struck in January and those hardest to reach, who will go to school for the first time.")
     .clear
-    .press_logo
+
     .press_copy
       %h3= news_article_title('System Would Help Haiti Build, Modify Earthquake-Prone Structures','http://www.usnews.com/science/articles/2010/10/21/system-would-help-haiti-build-modify-earthquake-prone-structures.html')
       %p= news_article_snippet("WEST LAFAYETTE, Ind.—Civil engineers studying the effects of Haiti's devastating earthquake have concluded that a relatively simple system could be used by officials to quickly decide how to modify existing buildings and construct new ones that would better withstand future quakes.")
