@@ -194,14 +194,17 @@ body {
   width: 230px;
   float: left;
   min-height: 396px;
+  max-height: 396px;
   border-right: 3px solid #662d91;
   margin: 20px 0 0 0;
   padding: 0 20px 0 0; }
 
 #relief_blog {
+  overflow: hidden;
   width: 230px;
   float: left;
   min-height: 330px;
+  max-height: 396px;
   border-right: 3px solid #662d91;
   margin: 20px 0 0 30px;
   padding: 0 20px 0 0; }
@@ -220,9 +223,11 @@ body {
   width: 175px; }
 
 #recent_press {
+  overflow: hidden;
   width: 230px;
   float: left;
   min-height: 330px;
+  max-height: 396px;
   margin: 20px 0 0 30px;
   padding: 0 0 0 0; }
 
@@ -231,6 +236,34 @@ body {
   width: 50px;
   float: left;
   background-image: url(/images/npr_logo.gif);
+  background-repeat: no-repeat; }
+
+.unicef {
+  height: 30px;
+  width: 50px;
+  float: left;
+  background-image: url(/images/unicef.jpg);
+  background-repeat: no-repeat; }
+
+.usnews {
+  height: 30px;
+  width: 50px;
+  float: left;
+  background-image: url(/images/usnews.jpg);
+  background-repeat: no-repeat; }
+
+.coldis {
+  height: 30px;
+  width: 50px;
+  float: left;
+  background-image: url(/images/columbusdispatch.jpg);
+  background-repeat: no-repeat; }
+
+.cnn {
+  height: 30px;
+  width: 50px;
+  float: left;
+  background-image: url(/images/cnn.jpg);
   background-repeat: no-repeat; }
 
 .press_copy {
@@ -613,6 +646,7 @@ body {
   float: left;
   text-align: left;
   min-height: 150px;
+  max-height: 537px;
   border-right: 3px solid #662d91;
   margin: 20px 0 0 30px;
   padding: 0 20px 0 0; }
@@ -621,7 +655,8 @@ body {
   width: 230px;
   float: left;
   text-align: left;
-  min-height: 150px;
+  min-height: 537px;
+  max-height: 537px;
   border-right: 3px solid #662d91;
   margin: 20px 0 0 0;
   padding: 0 20px 0 0; }
