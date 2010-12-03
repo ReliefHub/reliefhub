@@ -16,22 +16,7 @@
     =render :partial => "relief_blog"
    
   #recent_press
-    %h2=t '.recent_press'
-    .press_logo
-    .press_copy
-      %h3 Lorem Ipsum is simply dum
-      %p Lorem Ipsum is simply dummy text of the printing and typesetting
-    .clear
-    .press_logo
-    .press_copy
-      %h3 Lorem Ipsum is simply dum
-      %p Lorem Ipsum is simply dummy text of the printing and typesetting
-    .clear
-    .press_logo
-    .press_copy
-      %h3 Lorem Ipsum is simply dum
-      %p Lorem Ipsum is simply dummy text of the printing and typesetting
-    .clear
+    =render :partial => "pages/recent_press"
 .clear
 - content_for :javascript do
   =javascript_include_tag 'jquery.jshowoff.min'
