@@ -245,21 +245,15 @@ body {
   margin: 20px 0 0 0; }
 
 #processed_by {
-  height: 40px;
-  width: 64px;
   margin: 22px 0 0 160px;
   float: left; }
 
 #partners {
-  height: 55px;
-  width: 115px;
-  margin: 12px 35px 0 0;
+  margin: 18px 65px 0 0;
   float: right; }
 
 #partnersff {
-  height: 45px;
-  width: 19px;
-  margin: 20px 125px 0 0;
+  margin: 18px 95px 0 0;
   float: right; }
 
 /********************Projects***********************/
@@ -540,6 +534,14 @@ body {
 
 #community_right {
   width: 425px;
+  margin-left: 20px;
+  float: left; }
+
+#community_right {
+  border: 2px solid #CCEFFE;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  width: 415px;
   height: 250px;
   float: right;
   text-align: left;
