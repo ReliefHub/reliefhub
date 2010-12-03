@@ -543,24 +543,23 @@ body {
   background-image: url(/images/community.png);
   background-repeat: no-repeat;
   border: 2px solid #CCEFFE;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
   width: 325px;
   height: 250px;
-  margin-top: 5px;
   margin-left: 20px;
   float: left; }
 
 #community_right {
   border: 2px solid #CCEFFE;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
   width: 415px;
-  height: 240px;
+  height: 250px;
   float: right;
   text-align: left;
   background-color: #ffffff;
-  padding: 10px 26px 10px 26px; }
+  padding: 0px 26px 10px 14px; }
 
 #dev_center {
   width: 330px;
