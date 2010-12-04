@@ -92,7 +92,7 @@ body {
   float: left;
   height: 68px;
   width: 68px;
-  margin: 0 0 15px 0; }
+  margin: 0 0 0 0; }
 
 #social_logos {
   float: right;
@@ -155,18 +155,18 @@ body {
 
 #process {
   float: left;
-  width: 100px;
-  height: 340px;
+  width: 165px;
+  height: 393px;
   background-image: url(/images/process.gif);
   background-repeat: no-repeat;
-  padding: 10px 13px 10px 30px;
-  margin: 0 0px 0 0; }
+  padding: 0 15px 0 0;
+  margin: 0 0 0 0; }
 
 .featured_wrap {
   width: 585px;
   height: 340px;
   float: left;
-  margin: 0 0 0 10px; }
+  margin: 0 0 0 0; }
   .featured_wrap .featured_thumbnail {
     width: 288px;
     height: 255px;
@@ -210,7 +210,7 @@ body {
   min-height: 396px;
   max-height: 396px;
   border-right: 3px solid #662d91;
-  margin: 25px 0 0 0;
+  margin: 10px 0 0 0;
   padding: 0 20px 0 0; }
 
 #relief_blog {
@@ -220,7 +220,7 @@ body {
   min-height: 330px;
   max-height: 396px;
   border-right: 3px solid #662d91;
-  margin: 25px 0 0 30px;
+  margin: 10px 0 0 30px;
   padding: 0 20px 0 0; }
 
 .blog_date {
@@ -242,7 +242,7 @@ body {
   float: left;
   min-height: 330px;
   max-height: 396px;
-  margin: 20px 0 0 30px;
+  margin: 10px 0 0 30px;
   padding: 0 0 0 0; }
 
 .press_logo {
@@ -301,6 +301,9 @@ body {
 
 #partnersff {
   margin: 18px 95px 0 0;
+  float: right; }
+
+#lang {
   float: right; }
 
 /********************Projects***********************/
@@ -849,9 +852,8 @@ p.jshowoff-controls {
 
 /*-- Re-styled Thumbnail Demo --*/
 .thumbFeatures p.jshowoff-slidelinks {
-  margin: 0px auto 0px auto;
-  top: 236px;
-  right: -40px;
+  top: 260px;
+  right: -24px;
   width: 580px;
   height: 100px; }
 
@@ -859,7 +861,7 @@ p.jshowoff-controls {
   display: block;
   width: 92px;
   height: 72px;
-  margin: 25px 2px 0 5px;
+  margin: 25px 5px 0 5px;
   padding: 0;
   border: 1px solid #673090;
   text-indent: -10000em;
@@ -876,7 +878,7 @@ p.jshowoff-controls {
   height: 38px;
   overflow: visible;
   padding: 0;
-  position: absolute;
+  float: right;
   top: 100px;
   width: 100%;
   z-index: 150; }
