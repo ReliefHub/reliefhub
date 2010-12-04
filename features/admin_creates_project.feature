@@ -1,7 +1,7 @@
 Feature: Create a project
 
   In order to collect donations
-  An admin user should be able to create a project
+  An admin should be able to create a project
 
   Scenario: View all projects for an organization
     Given the following projects exist:
