@@ -2,9 +2,9 @@
   #process
   - if @featured_projects.first.present?
     .featured_wrap#thumbFeatures
-      = render :partial=>'featured_project', :collection=>@featured_projects
-    #thumbnails{:style => "display:none"}    
-      - @featured_projects.each_with_index do |featured_project,index|
+      = render :partial => 'featured_project', :collection => @featured_projects
+    #thumbnails{:style => "display:none"}
+      - @featured_projects.each_with_index do |featured_project, index|
         = image_tag(featured_project.photo_url(:thumb), :id => "thumbnail_#{index}") unless featured_project.photo.nil?
 .clear
 #bottom_info
@@ -14,7 +14,6 @@
   #relief_blog
     %h2 ReliefHub Blog
     =render :partial => "relief_blog"
-   
   #recent_press
     =render :partial => "pages/recent_press"
 .clear
