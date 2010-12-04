@@ -208,14 +208,17 @@ body {
   width: 230px;
   float: left;
   min-height: 396px;
+  max-height: 396px;
   border-right: 3px solid #662d91;
   margin: 25px 0 0 0;
   padding: 0 20px 0 0; }
 
 #relief_blog {
+  overflow: hidden;
   width: 230px;
   float: left;
   min-height: 330px;
+  max-height: 396px;
   border-right: 3px solid #662d91;
   margin: 25px 0 0 30px;
   padding: 0 20px 0 0; }
@@ -234,10 +237,12 @@ body {
   width: 175px; }
 
 #recent_press {
+  overflow: hidden;
   width: 230px;
   float: left;
-  min-height: 150px;
-  margin: 25px 0 0 30px;
+  min-height: 330px;
+  max-height: 396px;
+  margin: 20px 0 0 30px;
   padding: 0 0 0 0; }
 
 .press_logo {
@@ -247,48 +252,56 @@ body {
   background-image: url(/images/npr_logo.gif);
   background-repeat: no-repeat; }
 
+.unicef {
+  height: 30px;
+  width: 50px;
+  float: left;
+  background-image: url(/images/unicef.jpg);
+  background-repeat: no-repeat; }
+
+.usnews {
+  height: 30px;
+  width: 50px;
+  float: left;
+  background-image: url(/images/usnews.jpg);
+  background-repeat: no-repeat; }
+
+.coldis {
+  height: 30px;
+  width: 50px;
+  float: left;
+  background-image: url(/images/columbusdispatch.gif);
+  background-repeat: no-repeat; }
+
+.cnn {
+  height: 30px;
+  width: 50px;
+  float: left;
+  background-image: url(/images/cnn.jpg);
+  background-repeat: no-repeat; }
+
 .press_copy {
-  float: right;
+  float: left;
   height: 100px;
   width: 175px; }
 
 #bottom_white_module {
-  background-color: #fff;
-  height: 80px;
-  margin: 20px 0px 0px;
-  width: 800px; }
+  height: 69px;
+  width: 784px;
+  background-image: url(/images/footer.png);
+  margin: 20px 0 0 0; }
 
-#approved_by {
-  height: 40px;
-  width: 250px;
-  margin: 20px 0 0 10px;
+#processed_by {
+  margin: 22px 0 0 160px;
   float: left; }
 
-#approve_head, #featured_head, #partner_head {
-  margin: 0 0 5px 0; }
+#partners {
+  margin: 18px 65px 0 0;
+  float: right; }
 
-#accredited_logo, #charity_logo, .featured_logo, #partner_logo {
-  float: left;
-  height: 30px;
-  width: 70px; }
-
-#featured_by, #partners {
-  height: 40px;
-  width: 250px;
-  margin: 20px 0 0 10px;
-  float: left; }
-
-#contribute_btn {
-  width: 144px;
-  height: 40px; }
-
-#lang {
-  display: block;
-  float: right;
-  height: 20px;
-  width: 60px;
-  margin-top: -10px;
-  padding: 0 0 0 0; }
+#partnersff {
+  margin: 18px 95px 0 0;
+  float: right; }
 
 /********************Projects***********************/
 #projects {
@@ -562,17 +575,26 @@ body {
   margin: 40px 0 0 0; }
 
 #community_left {
-  width: 333px;
+  background-image: url(/images/community.png);
+  background-repeat: no-repeat;
+  border: 2px solid #CCEFFE;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  width: 325px;
   height: 250px;
+  margin-left: 20px;
   float: left; }
 
 #community_right {
-  width: 425px;
+  border: 2px solid #CCEFFE;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  width: 415px;
   height: 250px;
   float: right;
   text-align: left;
   background-color: #ffffff;
-  padding: 10px 26px 10px 26px; }
+  padding: 0px 26px 10px 14px; }
 
 #dev_center {
   width: 330px;
@@ -602,22 +624,38 @@ body {
   height: 80px;
   background-color: #ffffff;
   padding: 10px;
-  margin: 0 0 20px 0; }
+  margin: 0 0 20px 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; }
 
 #about_us {
   width: 390px;
   height: 260px;
   background-color: #ffffff;
   padding: 10px;
-  margin: 0 0 20px 0; }
+  margin: 0 0 20px 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; }
 
 .vol_photo {
-  height: 50px;
-  width: 40px;
   background-image: url(/images/vol_photo.jpg);
   background-repeat: no-repeat;
+  height: 90px;
+  width: 97px;
   float: left;
-  margin: 10px 10px 0 0; }
+  margin: 10px 10px 0 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px; }
+
+.vol_photo2 {
+  background-image: url(/images/vol_photo2.jpg);
+  background-repeat: no-repeat;
+  height: 90px;
+  width: 74px;
+  float: left;
+  margin: 10px 10px 0 12px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px; }
 
 #about_right {
   width: 380px;
@@ -625,7 +663,9 @@ body {
   float: right;
   text-align: left;
   background-color: #ffffff;
-  padding: 5px; }
+  padding: 5px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; }
 
 .bold {
   font-weight: bold; }
@@ -635,6 +675,7 @@ body {
   float: left;
   text-align: left;
   min-height: 150px;
+  max-height: 537px;
   border-right: 3px solid #662d91;
   margin: 20px 0 0 30px;
   padding: 0 20px 0 0; }
@@ -643,7 +684,8 @@ body {
   width: 230px;
   float: left;
   text-align: left;
-  min-height: 150px;
+  min-height: 537px;
+  max-height: 537px;
   border-right: 3px solid #662d91;
   margin: 20px 0 0 0;
   padding: 0 20px 0 0; }
@@ -651,6 +693,9 @@ body {
     width: 200px;
     margin-top: 10px; }
     #contact_us fieldset #email_from, #contact_us fieldset #email_body {
+      border: 1px solid #e3e3e3;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
       width: 180px; }
 
 #submit_contact {
