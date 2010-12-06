@@ -134,7 +134,7 @@ body {
 #footer {
   height: 40px;
   width: 700px;
-  margin: 0 0 0 0;
+  margin: 12px 0 0 0;
   color: #3DA9DF; }
   #footer p {
     font-size: 10px;
@@ -155,8 +155,8 @@ body {
 
 #process {
   float: left;
-  width: 165px;
-  height: 393px;
+  width: 174px;
+  height: 380px;
   background-image: url(/images/process.gif);
   background-repeat: no-repeat;
   padding: 0 15px 0 0;
@@ -166,7 +166,7 @@ body {
   width: 585px;
   height: 340px;
   float: left;
-  margin: 0 0 0 0; }
+  margin: 0 0 0 25px; }
   .featured_wrap .featured_thumbnail {
     width: 288px;
     height: 255px;
@@ -270,7 +270,7 @@ body {
   height: 30px;
   width: 50px;
   float: left;
-  background-image: url(/images/columbusdispatch.gif);
+  background-image: url(/images/coldis.gif);
   background-repeat: no-repeat; }
 
 .cnn {
@@ -768,8 +768,7 @@ body {
   height: 360px;
   -webkit-border-top-left-radius: 6px;
   -webkit-border-top-right-radius: 6px;
-  -moz-border-radius-topleft: 6px;
-  -moz-border-radius-topright: 6px; }
+  -moz-border-radius: 6px; }
 
 .jshowoff {
   width: 585px;
@@ -780,7 +779,8 @@ body {
 
 .jshowoff div, .jshowoff img, .jshowoff {
   -webkit-border-top-left-radius: 6px;
-  -webkit-border-top-right-radius: 6px; }
+  -webkit-border-top-right-radius: 6px;
+  -moz-border-radius: 6px; }
 
 #basicFeatures, .jshowoff.basicFeatures, .jshowoff.basicFeatures img, .jshowoff.basicFeatures div {
   -webkit-border-radius: 6px;
@@ -806,7 +806,7 @@ body {
   position: absolute;
   bottom: 5px;
   right: 5px;
-  margin: 0;
+  margin: 0 -25px 0 0;
   padding: 0; }
 
 .jshowoff-slidelinks a, .jshowoff-controls a {
