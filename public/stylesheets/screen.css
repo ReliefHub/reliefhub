@@ -155,11 +155,11 @@ body {
 
 #process {
   float: left;
-  width: 174px;
-  height: 380px;
+  width: 190px;
+  height: 385px;
   background-image: url(/images/process.gif);
   background-repeat: no-repeat;
-  padding: 0 15px 0 0;
+  padding: 0 10px 0 0;
   margin: 0 0 0 0; }
 
 .featured_wrap {
@@ -305,6 +305,28 @@ body {
 
 #lang {
   float: right; }
+
+#view_projects_all {
+  height: 20px;
+  width: 125px;
+  top: -17px;
+  left: -35px;
+  margin: 0;
+  padding: 0;
+  color: #673090;
+  float: right;
+  display: block;
+  text-decoration: none;
+  position: relative; }
+  #view_projects_all li {
+    padding: 0;
+    margin: 0 0 0 0; }
+    #view_projects_all li a {
+      font-size: 14px;
+      color: #673090;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center; }
 
 /********************Projects***********************/
 #projects {
@@ -852,16 +874,17 @@ p.jshowoff-controls {
 
 /*-- Re-styled Thumbnail Demo --*/
 .thumbFeatures p.jshowoff-slidelinks {
+  background-image: url(/images/thumbbg.png);
   top: 260px;
-  right: -24px;
-  width: 580px;
-  height: 100px; }
+  width: 565px;
+  height: 130px;
+  right: 11px; }
 
 .thumbFeatures .jshowoff-slidelinks a {
   display: block;
   width: 92px;
   height: 72px;
-  margin: 25px 5px 0 5px;
+  margin: 13px 8px 0 9px;
   padding: 0;
   border: 1px solid #673090;
   text-indent: -10000em;
