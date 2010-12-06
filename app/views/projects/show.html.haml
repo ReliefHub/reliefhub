@@ -1,6 +1,7 @@
 #col_left
-  #project_photo
-  #project_map
+  - if @project.photo
+    #project_photo= image_tag(@project.photo_url(:small))
+  =# #project_map
 #project_information
   %h1= @project.name
   %h3= @project.organization_name
