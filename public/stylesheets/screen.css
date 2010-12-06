@@ -309,7 +309,7 @@ body {
 #view_projects_all {
   height: 20px;
   width: 125px;
-  top: -17px;
+  top: -8px;
   left: -35px;
   margin: 0;
   padding: 0;
@@ -875,7 +875,7 @@ p.jshowoff-controls {
 /*-- Re-styled Thumbnail Demo --*/
 .thumbFeatures p.jshowoff-slidelinks {
   background-image: url(/images/thumbbg.png);
-  top: 260px;
+  top: 271px;
   width: 565px;
   height: 130px;
   right: 11px; }
