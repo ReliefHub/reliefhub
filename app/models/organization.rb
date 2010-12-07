@@ -7,10 +7,10 @@ class Organization < ActiveRecord::Base
   def address
     [:street1, :street2, :city, :state, :zip, :country].map {|field| self.send(field) }.reject(&:blank?).join(', ')
   end
-  
+
   def info
     [:email_address, :website].map {|field| self.send(field) }.reject(&:blank?).join(', ')
   end
-  
+
   delegate :count, :to => :projects, :prefix => true
 end

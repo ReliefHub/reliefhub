@@ -1,7 +1,6 @@
 class DonationsController < ApplicationController
   def confirm
-    project_id = params[:referenceId]
-    project = Project.where(:id => project_id.to_i).first unless project_id.blank?
+    project  = Project.where(:id => params[:referenceId]).first
     donation = Donation.new(
       :user               => current_user,
       :project            => project,

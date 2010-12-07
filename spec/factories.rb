@@ -8,7 +8,7 @@ Factory.define :project do |project|
   project.goal           { rand(100000) }
   project.requestor      { Faker::Name.name }
   project.description    { "A good cause." }
-  project.project_photos { [ Factory(:project_photo) ] }
+  project.project_photos { [Factory(:project_photo)] }
 end
 
 Factory.define :donation do |donation|
@@ -30,9 +30,9 @@ Factory.define :email_confirmed_user, :parent => :user do |user|
   user.email_confirmed { true }
 end
 
-Factory.define :organization_photo do |op|
+Factory.define :organization_photo do |photo|
 end
 
-Factory.define :project_photo do |pp|
-  pp.file       { File.open(File.join(Rails.root, 'spec', 'fixtures', "orphanage_#{rand(3)}.jpg"))}
+Factory.define :project_photo do |photo|
+  photo.file { File.open(File.join(Rails.root, 'spec', 'fixtures', "orphanage_0.jpg")) }
 end

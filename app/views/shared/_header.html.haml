@@ -2,18 +2,16 @@
   = link_to home_path do
     %img{ :src => "/images/relief_logo.png", :alt => "relief_logo" }
 #social_logos
-  %a{ :href => "http://twitter.com/#!/ReliefHub" }
-    %img{ :src => "/images/button_twitter.png", :alt => "twitter_logo" }
-  %a{ :href => "http://www.facebook.com/reliefhub.org" }
-    %img{ :src => "/images/button_facebook.png", :alt => "facebook_logo" }
+  %a{ :href => "http://twitter.com/reliefhub" }
+    %img{ :src => "/images/twitter_logo.gif", :alt => "twitter_logo" }
+  %a{ :href => "#" }
+    %img{ :src => "/images/facebook_logo.gif", :alt => "facebook_logo" }
 #navigation
   %ul
     %li= link_to t('.about_us'), page_path ("about_us")
     %li= link_to t('.projects'), projects_path
     %li= link_to t('.community'), page_path("community")
-    %li
-      %a{ :href => "http://blog.reliefhub.org/" }
-        Blog
+    %li= link_to 'Blog', 'http://blog.reliefhub.org/'
     - if user_signed_in?
       %li= link_to t('.logout'), destroy_user_session_url
     - else

@@ -11,7 +11,7 @@ gem "pg"
 gem "flutie"
 gem "dynamic_form"
 gem "heroku"
-gem 'devise'  
+gem 'devise'
 gem 'devise_rpx_connectable'
 gem 'aws-s3'
 gem "http_accept_language", :git => 'http://github.com/iain/http_accept_language.git'

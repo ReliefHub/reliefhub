@@ -2,7 +2,7 @@ Feature: Visitor reviews project
 
   In order to donate to a Haitian orphanage project
   As a visitor
-  I want to review the project
+  I want to view the project
 
   Scenario: Visitor reviews project
     Given the following organization exists:
@@ -11,6 +11,7 @@ Feature: Visitor reviews project
     And the following project exists:
       | name                | description   | funds purpose           | goal | organization                        |
       | Christmas Toy Drive | Toys for tots | New or gently used toys | 1000 | name: Mission des Eglises Baptistes |
+    And "Christmas Toy Drive" has a project photo
     And I am on the homepage
     And I follow "Christmas Toy Drive"
     Then I should be on the "Christmas Toy Drive" project page
@@ -21,3 +22,5 @@ Feature: Visitor reviews project
     And I should see "$1,000"
     And I should see "$0"
     And I should see "0% Raised"
+    And I should see the "small" photo for the "Christmas Toy Drive" project
+    And I should see the Facebook and Twitter share buttons

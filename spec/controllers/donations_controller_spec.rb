@@ -8,10 +8,9 @@ describe DonationsController do
   end
 
   describe 'confirm a donation' do
-
     before do
       @current_user = stub
-      controller.stubs(:current_user=>@current_user)
+      controller.stubs(:current_user => @current_user)
       @donation = mock
     end
 
@@ -37,7 +36,7 @@ describe DonationsController do
     describe 'success' do
       before do
         projects = stub
-        Project.expects(:where => projects).with(:id => 451234)
+        Project.expects(:where => projects).with(:id => "451234")
         project = stub
         projects.expects(:first => project)
         Donation.expects(:new => @donation).with({
@@ -55,7 +54,7 @@ describe DonationsController do
 
     describe 'failure' do
       before do
-        Project.expects(:where => []).with(:id => 9876)
+        Project.expects(:where => []).with(:id => "9876")
         Donation.expects(:new => @donation).with({
           :transaction_amount => 'USD 122',
           :project => nil,
@@ -86,12 +85,10 @@ describe DonationsController do
   end
 
   describe 'abandon a donation' do
-
     before do
       get :abandon
     end
 
     it { should redirect_to(page_path('donation_error')) }
   end
-
 end

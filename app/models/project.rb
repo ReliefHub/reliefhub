@@ -5,14 +5,15 @@ class Project < ActiveRecord::Base
 
   accepts_nested_attributes_for :project_photos
 
-  delegate :name, :address, :to => :organization, :prefix => true
+  delegate :name, :address,
+           :to => :organization, :prefix => true
 
   scope :by_updated_date, order('updated_at DESC')
 
   cattr_reader :per_page
   @@per_page = 10
 
-  def photo_url size
+  def photo_url(size)
     photo.file.url(size)
   end
 
