@@ -192,6 +192,12 @@ body {
   .featured_wrap input {
     width: 200px; }
 
+#progressbar {
+  width: 180px;
+  height: 4px;
+  border: 2px #673090 solid;
+  margin: 0 33px; }
+
 .amount_index {
   margin: 0 0 10px 0;
   text-align: left; }
@@ -499,15 +505,8 @@ body {
   height: 43px;
   float: left; }
 
-<<<<<<< HEAD:public/stylesheets/screen.css
-#social_logos_large {
-  height: 40px;
-  width: 150px;
-  margin: 0 0 0 20px; }
-=======
 #social_logos_large a {
   float: left; }
->>>>>>> master:public/stylesheets/screen.css
 
 .testimonials {
   font-style: italic;
@@ -815,8 +814,8 @@ body {
 
 .jshowoff h2, .jshowoff p {
   font-size: 18px;
-  padding: 15px 20px 0px;
-  margin: 0; }
+  padding: 5px 20px 0px;
+  margin: 0 15px; }
 
 .jshowoff p {
   font-size: 13px;

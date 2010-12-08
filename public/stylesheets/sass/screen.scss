@@ -221,7 +221,13 @@ body {
 
 }
 
-
+#progressbar {  
+    width:180px;  
+    height: 4px;
+    border: 2px #673090 solid;
+    margin: 0 33px;
+} 
+ 
 .amount_index {
   margin: 0 0 10px 0;
   text-align: left;
@@ -902,8 +908,8 @@ body {
 	}
 .jshowoff h2, .jshowoff p {
 	font-size: 18px;
-	padding: 15px 20px 0px;
-	margin: 0;
+	padding: 5px 20px 0px;
+	margin: 0 15px;
 	}
 .jshowoff p {
 	font-size: 13px;
