@@ -4,20 +4,20 @@
 #social_logos
   %a{ :href => "http://twitter.com/reliefhub" }
     %img{ :src => "/images/twitter_logo.gif", :alt => "twitter_logo" }
-  %a{ :href => "#" }
+  %a{ :href => "http://www.facebook.com/reliefhub.org" }
     %img{ :src => "/images/facebook_logo.gif", :alt => "facebook_logo" }
 #navigation
   %ul
-    %li= link_to t('.about_us'), page_path ("about_us")
-    %li= link_to t('.projects'), projects_path
-    %li= link_to t('.community'), page_path("community")
-    %li= link_to 'Blog', 'http://blog.reliefhub.org/'
     - if user_signed_in?
       %li= link_to t('.logout'), destroy_user_session_url
+      %li= link_to 'Admin', admin_organizations_path
     - else
       %li= link_to t('.login'), user_session_url
+    %li= link_to 'Blog', 'http://blog.reliefhub.org/'
+    %li= link_to t('.community'), page_path("community")
+    %li= link_to t('.projects'), projects_path
+    %li= link_to t('.about_us'), page_path ("about_us")
     -# %li= link_to_rpx "Janrain", user_session_url
-    %li= link_to t('.home'), home_path
 .clear
 #lang
   =link_to_language image_tag('/images/francais.png'), :fr
