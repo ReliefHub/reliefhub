@@ -57,7 +57,7 @@ fieldset.buttons li { display: inline; }
 
 /* Text fields */
 input[type="text"], input[type="password"] {
-  width: 300px;
+  width: 150px;
   padding: 3px 2px;
   font-size: inherit;
 }

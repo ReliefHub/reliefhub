@@ -1,6 +1,6 @@
 .featured_project
   .featured_thumbnail
-    =image_tag(featured_project.photo_url(:full)) unless featured_project.photo.nil?
+    = link_to image_tag(featured_project.photo_url(:full)), project_path(featured_project) unless featured_project.photo.nil?
   .featured_project_info
     %h1= link_to featured_project.name, project_path(featured_project)
     %h4= featured_project.organization_name

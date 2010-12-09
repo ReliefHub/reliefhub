@@ -7,6 +7,7 @@
   %h3= @project.organization_name
   %h4= @project.organization_address
   %p= @project.description
+  %p= @project.overview
   %p Funds Purpose: #{@project.funds_purpose}
   %p Funding Needed: #{number_to_currency(@project.goal, :precision => 0)}
   %p Funding Received: #{number_to_currency(@project.amount_raised, :precision => 0)}
@@ -14,7 +15,7 @@
     I am the percent raised
   .clear
   #percent_raised_number
-    #{number_to_percentage(@project.percent_raised)} Raised
+    #{number_to_percentage(@project.percent_raised, :precision => 0)} Raised
 #more_projects
   %p View more projects
   #more_projects_photos
@@ -44,18 +45,11 @@
   #form_left
     #donor_head Donor Information
     .row
-      %label{ :class => "required" } First Name:
+      %label{ :class => "required" } Name:
       .field_holder
         %input{ :name => "#", :type => "text", :id => "first_name" }
         %span{ :class => "error", :style => "display:none;" }
           Please enter your First Name
-      .clear
-    .row
-      %label{ :class => "required" } Last Name:
-      .field_holder
-        %input{ :name => "#", :type => "text", :id => "last_name" }
-        %span{ :class => "error", :style => "display:none;" }
-          Please enter your Last Name
       .clear
     .row
       %label{ :class => "required" } Email:
@@ -63,20 +57,6 @@
         %input{ :name => "#", :type => "text", :id => "email" }
         %span{ :class => "error", :style => "display:none;" }
           Please enter your Email
-      .clear
-    .row
-      %label{ :class => "required" } Phone:
-      .field_holder
-        %input{ :name => "#", :type => "text", :id => "phone" }
-        %span{ :class => "error", :style => "display:none;" }
-          Please enter your Phone
-      .clear
-    .row
-      %label{ :class => "required" } Address:
-      .field_holder
-        %input{ :name => "#", :type => "text", :id => "address" }
-        %span{ :class => "error", :style => "display:none;" }
-          Please enter your Address
       .clear
     .row
       %label Additional Comments:
