@@ -8,8 +8,8 @@
     %p=  truncate(featured_project.description, :length => 150)
     %br
     #progressbar
-    =render :partial => 'progbar', :object => featured_project.percent_raised 
-    %p.raised=t '.raised', :percentage => featured_project.percent_raised, :goal => number_to_currency(featured_project.goal)
+    =render :partial => 'shared/progbar', :object => featured_project 
+    %p.raised=t '.raised', :percentage => number_to_percentage(featured_project.percent_raised, :precision => 0), :goal => number_to_currency(featured_project.goal, :precision => 0)
     = amazon_simple_pay_form_tag do
       = text_field_tag 'amount'
       = hidden_field_tag 'referenceId', featured_project.id
