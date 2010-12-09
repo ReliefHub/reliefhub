@@ -1,4 +1,4 @@
 :javascript
   $(document).ready(function() {
-    $("#progressbar").progressbar({ value: #{progbar.percent_raised} })
+    $("#pb_#{progbar.id} #progressbar").progressbar({ value: #{progbar.percent_raised} })
   });

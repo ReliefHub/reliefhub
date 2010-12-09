@@ -7,7 +7,8 @@
     %h5= featured_project.requestor
     %p=  truncate(featured_project.description, :length => 150)
     %br
-    #progressbar
+    %div{:id => ['pb', featured_project.id]}
+      #progressbar
     =render :partial => 'shared/progbar', :object => featured_project 
     %p.raised=t '.raised', :percentage => number_to_percentage(featured_project.percent_raised, :precision => 0), :goal => number_to_currency(featured_project.goal, :precision => 0)
     = amazon_simple_pay_form_tag do
