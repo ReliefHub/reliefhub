@@ -499,15 +499,8 @@ body {
   height: 43px;
   float: left; }
 
-<<<<<<< HEAD:public/stylesheets/screen.css
-#social_logos_large {
-  height: 40px;
-  width: 150px;
-  margin: 0 0 0 20px; }
-=======
 #social_logos_large a {
   float: left; }
->>>>>>> master:public/stylesheets/screen.css
 
 .testimonials {
   font-style: italic;
@@ -577,7 +570,7 @@ body {
     width: 250px; }
 
 #form_right {
-  width: 200px;
+  width: 235px;
   height: 320px;
   float: right;
   margin: 80px 0 0 0; }
@@ -588,8 +581,8 @@ body {
 
 #pay_type {
   width: 100px;
-  height: 115px;
-  background-image: url(/images/pay_type.gif);
+  height: 50px;
+  background-image: url(/images/footer_amazonpayments.png);
   background-repeat: no-repeat; }
 
 #submit_signup {

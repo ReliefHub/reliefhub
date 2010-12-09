@@ -1,11 +1,12 @@
 %li.project
   .summary
-    = image_tag project.photo_url(:small) unless project.photo.nil?
+    = link_to image_tag(project.photo_url(:small)), project_path(project) unless project.photo.nil?
     = link_to 'Fund this Project', project_path(project), :class => 'button'
-  %h3= project.name
+  %h3= link_to project.name, project_path(project)
   %h4= project.organization_name
   %h5= project.requestor
   %p= truncate project.description, :length => 150
+  %p= link_to 'Learn more...', project_path(project)
   .raised== #{number_to_percentage(project.percent_raised, :precision => 0)} of #{number_to_currency(project.goal)} raised
   = amazon_simple_pay_form_tag do
     = text_field_tag 'amount'
