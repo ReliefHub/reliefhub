@@ -11,8 +11,9 @@
   %p Funds Purpose: #{@project.funds_purpose}
   %p Funding Needed: #{number_to_currency(@project.goal, :precision => 0)}
   %p Funding Received: #{number_to_currency(@project.amount_raised, :precision => 0)}
-  #project_percent_raised
-    I am the percent raised
+  %div{:id => ['pb', @project.id]}
+    #progressbar
+  =render :partial => 'shared/progbar', :object => @project 
   .clear
   #percent_raised_number
     #{number_to_percentage(@project.percent_raised, :precision => 0)} Raised
