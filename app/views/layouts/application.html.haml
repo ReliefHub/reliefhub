@@ -5,6 +5,8 @@
     %title ReliefHub
     = stylesheet_link_tag :flutie, 'screen', :media => 'all'
     = csrf_meta_tag
+    -# This include is to fix a strange issues where the progress bar wasn't rendering properly
+    = javascript_include_tag 'jquery'
   %body.body_class
     #wrapper
       = render :partial => 'shared/header'
