@@ -193,10 +193,9 @@ body {
     width: 200px; }
 
 #progressbar {
-  width: 180px;
-  height: 4px;
-  border: 2px #673090 solid;
-  margin: 0 33px; }
+  width: 200px;
+  height: 10px;
+  border: 1px #eeeeee solid; }
 
 .amount_index {
   margin: 0 0 10px 0;
