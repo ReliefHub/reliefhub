@@ -5,10 +5,10 @@ Feature: Add/Edit a new organization
 
   Scenario: View organizations
     Given the following organizations exist:
-      | name        | street1          | contact person |
-      | fred's ngo  | 123 main st      | alex           |
-      | oscar's ngo | 455 fifth avenue | alex           |
-      | sarah's ngo | 131 first st     | yan            |
+      | name        | street1          | street2 | city      | state | zip   | contact person |
+      | fred's ngo  | 123 main st      | apt1    | cambridge | ma    | 02121 | alex           |
+      | oscar's ngo | 455 fifth avenue | apt2    | boston    | ma    | 02122 | alex           |
+      | sarah's ngo | 131 first st     |         | brookline | ma    | 02123 | yan            |
     And the following projects exists:
       | name      | organization      |
       | relief 1  | name: fred's ngo  |
@@ -21,10 +21,10 @@ Feature: Add/Edit a new organization
       And I should see "Users" within "#right-menu"
       And I should see "Organizations" tab ".selected" within "#right-menu"
       And I should see the following organizations table:
-       | name         | address          | contact person | # of projects |
-       | fred's ngo   | 123 main st      | alex           | 2             |
-       | oscar's ngo  | 455 fifth avenue | alex           | 1             |
-       | sarah's ngo  | 131 first st     | yan            | 0             |
+       | name         | address                                   | contact person | # of projects |
+       | fred's ngo   | 123 main st, apt1, cambridge, ma, 02121   | alex           | 2             |
+       | oscar's ngo  | 455 fifth avenue, apt2, boston, ma, 02122 | alex           | 1             |
+       | sarah's ngo  | 131 first st, brookline, ma, 02123        | yan            | 0             |
       And I should see "Created" column following the format "[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}"
 
   Scenario: Create a new organization
@@ -55,15 +55,17 @@ Feature: Add/Edit a new organization
       And I follow "oliver's orphanage"
       And I follow "Edit"
      When I fill in "Street1" with "456 lower st"
+      And I fill in "Street2" with "Apt 4"
       And I fill in "City" with "New York"
       And I fill in "State" with "NY"
+      And I fill in "Zip" with "01234"
       And I fill in "Country" with "USA"
       And I fill in "Contact person" with "Yan"
       And I fill in "Phone number" with "012-345-6789"
       And I press "Save"
      Then I should see "Successfully changed oliver's orphanage "
       And I should see "oliver's orphanage"
-      And I should see "456 lower st, New York, NY, USA"
+      And I should see "456 lower st, Apt 4, New York, NY, 01234, USA"
       And I should see "Yan"
 
   Scenario: Create a new organization
