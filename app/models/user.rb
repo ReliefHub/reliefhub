@@ -12,6 +12,27 @@ class User < ActiveRecord::Base
   validates_presence_of :first_name
   validates_presence_of :last_name
 
+  ROLES =%w[site_admin field_operator organization_manager visitor]
+
+  # http://github.com/ryanb/cancan/wiki/role-based-authorization
+  def roles=(roles)
+    self.roles_mask = (roles & ROLES).map { |r| 2**ROLES.index(r) }.sum
+  end
+
+  def roles
+    ROLES.reject do |r|
+      ((roles_mask || 0) & 2**ROLES.index(r)).zero?
+    end
+  end
+
+  def is?(role)
+    roles.include?(role.to_s)
+  end
+
+  def display_name
+    "#{first_name} #{last_name}"
+  end
+
   def unique_projects
     projects.uniq
   end

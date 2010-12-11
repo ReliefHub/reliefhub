@@ -20,6 +20,7 @@ Reliefhub::Application.routes.draw do
         resources :projects, :except => [:index, :destroy]
       end
       resources :projects, :only => [:index]
+      resources :users,    :only => [:index]
     end
 
     resources :emails, :only => [:create]

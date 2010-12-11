@@ -1,0 +1,13 @@
+%h1.left
+  Users
+
+-#.right
+  -#%h2.create-button= link_to "Create", new_admin_organization_path
+%table
+  %tr.header
+    %th Created
+    %th User Name
+    %th Field Operator
+    %th Orphanage Manager
+    %th Site Administrator
+  = render @users
