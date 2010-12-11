@@ -442,19 +442,12 @@ body {
   height: 340px; }
 
 #project_photo {
-  height: 146px;
-  width: 146px;
   float: left;
-  margin: 10px 10px 10px 10px; }
+  margin: 10px; }
 
 #project_map {
-  height: 146px;
-  width: 146px;
-  background-image: url(/images/map.jpg);
-  background-repeat: no-repeat;
   float: left;
-  margin: 10px 10px 10px 10px;
-  outline: 1px solid #000000; }
+  margin: 10px; }
 
 #project_percent_raised {
   width: 180px;
