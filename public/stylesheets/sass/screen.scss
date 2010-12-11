@@ -234,6 +234,14 @@ body {
   }
 }
 
+.ui-progressbar .ui-progressbar-value {
+  margin: 0; 
+  height:100%;
+  background-color: #673090;
+  border: none;
+  -moz-border-radius: 3px; 
+  -webkit-border-radius: 3px; }
+
 #thumbnails {
   width: 585px;
   height: 80px;
