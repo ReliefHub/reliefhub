@@ -192,11 +192,24 @@ body {
   .featured_wrap input {
     width: 200px; }
 
+#progressbar {
+  width: 200px;
+  height: 10px;
+  border: 1px #eeeeee solid; }
+
 .amount_index {
   margin: 0 0 10px 0;
   text-align: left; }
   .amount_index input[type="text"] {
     width: 200px; }
+
+.ui-progressbar .ui-progressbar-value {
+  margin: 0;
+  height: 100%;
+  background-color: #673090;
+  border: none;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px; }
 
 #thumbnails {
   width: 585px;
@@ -801,8 +814,8 @@ body {
 
 .jshowoff h2, .jshowoff p {
   font-size: 18px;
-  padding: 15px 20px 0px;
-  margin: 0; }
+  padding: 5px 20px 0px;
+  margin: 0 15px; }
 
 .jshowoff p {
   font-size: 13px;

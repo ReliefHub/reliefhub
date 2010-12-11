@@ -221,7 +221,11 @@ body {
 
 }
 
-
+#progressbar {    
+  width: 200px;
+  height: 10px;
+  border: 1px #eeeeee solid; }
+ 
 .amount_index {
   margin: 0 0 10px 0;
   text-align: left;
@@ -229,6 +233,14 @@ body {
     width: 200px;
   }
 }
+
+.ui-progressbar .ui-progressbar-value {
+  margin: 0; 
+  height:100%;
+  background-color: #673090;
+  border: none;
+  -moz-border-radius: 3px; 
+  -webkit-border-radius: 3px; }
 
 #thumbnails {
   width: 585px;
@@ -880,7 +892,7 @@ body {
 	}
 .jshowoff div {	
 	width: 585px;
-	}
+}
 .jshowoff div, .jshowoff img, .jshowoff {
 	-webkit-border-top-left-radius: 6px;
 	-webkit-border-top-right-radius: 6px;
@@ -895,8 +907,8 @@ body {
 	}
 .jshowoff h2, .jshowoff p {
 	font-size: 18px;
-	padding: 15px 20px 0px;
-	margin: 0;
+	padding: 5px 20px 0px;
+	margin: 0 15px;
 	}
 .jshowoff p {
 	font-size: 13px;
