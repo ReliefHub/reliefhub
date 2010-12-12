@@ -36,7 +36,8 @@ Factory.define :user do |user|
 end
 
 Factory.define :email_confirmed_user, :parent => :user do |user|
-  user.email_confirmed { true }
+  #user.email_confirmed { true }
+  user.confirmation_token { "randon_characters" }
 end
 
 Factory.define :organization_photo do |photo|
@@ -44,4 +45,10 @@ end
 
 Factory.define :project_photo do |photo|
   photo.file { File.open(File.join(Rails.root, 'spec', 'fixtures', "orphanage_0.jpg")) }
+end
+
+Factory.define :comment do |comment|
+  comment.association(:project)
+  comment.association(:user)
+  comment.body { "This is a comment to say well done and keep up the great work" }
 end
