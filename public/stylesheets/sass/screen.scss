@@ -220,11 +220,6 @@ body {
     }
 
 }
-
-#progressbar {    
-  width: 200px;
-  height: 10px;
-  border: 1px #eeeeee solid; }
  
 .amount_index {
   margin: 0 0 10px 0;
@@ -399,7 +394,23 @@ body {
       font-weight: bold;
       text-align: center; } } }
   
+/***********J-Query Progress Bar**********/
 
+#progressbar {    
+  width: 200px;
+  height: 10px;
+  border: 1px #eeeeee solid; }
+
+.ui-progressbar { 
+  height:2em; 
+  text-align: left; }
+
+.ui-progressbar .ui-progressbar-value {
+  margin: 0; 
+  height:100%;
+  border: none;
+  color: #376090;
+  }
 
 /********************Projects***********************/
 
