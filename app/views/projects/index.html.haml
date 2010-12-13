@@ -1,6 +1,8 @@
-.right=link_to('Give to Any Project', :class => 'button')
+.right=link_to image_tag('/images/givetoany.gif')
 %h2 Projects
 .projects
  %ul=render @projects
+ .clear
+.pagination
  %ul=will_paginate @projects
  .clear

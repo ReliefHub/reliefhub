@@ -214,10 +214,7 @@ body {
         text-decoration: none;
         &:link {
           color: #3DA9DF;
-          text-decoration: none; }
-    }
-  }
-    
+          text-decoration: none; } } }    
     h3 {
       color: #3DA9DF;
       padding: 0px 0px 0px 110px;
@@ -514,10 +511,20 @@ body {
   width: 50px; }
 
 .pagination {
-  margin: 0;
+  margin: 8px 0 0 150px;
   width: 180px;
   height: 20px;
-  float: left;
+  font-size: 14px;
+  a {
+    color: #3DA9DF; 
+    &:hover {
+      color: #666666;
+      font-weight: bold; } }
+    &:link {
+      color: #000000; }
+      &:active {
+        font-weight: bold;
+        color: #000000; }
   ul {
     clear: both;
     position: relative;
@@ -526,12 +533,7 @@ body {
       display: inline;
       list-style-type: none;
       padding-right: 5px;
-      margin: 0; } }
-  a {
-    color: #3DA9DF; }
-  li.active {
-    font-weight: bold;
-    color: #000000; } }
+      margin: 0; } } }
 
 /*************************Project Details*************************/
 
@@ -841,8 +843,9 @@ body {
    text-decoration: none;
    &:link {
      color: #673090;
-     text-decoration: none; }
-     }
+     text-decoration: none;
+     font-size: 12px;
+     font-weight: bold; } }
   
   li  {
     width: 320px;
@@ -891,9 +894,7 @@ body {
         &:link {
           color: #3DA9DF;
           text-decoration: none;
-      }
-    } 
-
+          font-size: 16px; } } 
     h4 {
       padding: 10px 0px 0px 10px;
       margin: 0px;

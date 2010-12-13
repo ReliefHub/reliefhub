@@ -13,7 +13,7 @@
   =render :partial => 'shared/progbar', :object => project
   %br
   = amazon_simple_pay_form_tag do
-    = text_field_tag 'amount'
+    = text_field_tag  'amount'
     = hidden_field_tag 'referenceId', project.id
     = hidden_field_tag 'description', project.name
-    = image_submit_tag('/images/fund_btn.gif')
+    = image_submit_tag('/images/fundthisproject.png')
