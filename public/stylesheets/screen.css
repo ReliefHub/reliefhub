@@ -41,7 +41,7 @@ ul {
   clear: both; }
 
 a {
-  color: #662D91;
+  color: #000000;
   text-decoration: none; }
 
 h1 {
@@ -66,11 +66,17 @@ h4 {
   color: #000000;
   font-size: 12px;
   text-align: left;
-  margin: 0 0 5px 0; }
+  margin: 0 0 0 0; }
+
+h5 {
+  color: #000000;
+  font-size: 11px;
+  margin: 0px;
+  text-align: left; }
 
 p {
   text-align: left;
-  margin: 0 0 5px 0; }
+  margin: 0 0 0 0; }
 
 body {
   font-family: arial, verdana, sans-serif;
@@ -178,19 +184,33 @@ body {
     padding: 0px 8px;
     margin: 0 0 10px 0;
     background-color: #ffffff; }
-  .featured_wrap h3 {
-    color: #3DA9DF;
-    padding: 0px 0px 0px 110px;
-    margin: 0px;
-    text-align: left; }
-  .featured_wrap h4 {
-    margin: 0px;
-    text-align: left; }
-  .featured_wrap h5 {
-    margin: 0px;
-    text-align: left; }
-  .featured_wrap input {
-    width: 200px; }
+    .featured_wrap .featured_project_info h2 {
+      color: #3DA9DF;
+      text-align: left;
+      text-decoration: none; }
+      .featured_wrap .featured_project_info h2 a {
+        color: #3DA9DF;
+        text-decoration: none; }
+        .featured_wrap .featured_project_info h2 a:link {
+          color: #3DA9DF;
+          text-decoration: none; }
+    .featured_wrap .featured_project_info h3 {
+      color: #3DA9DF;
+      padding: 0px 0px 0px 110px;
+      margin: 0px;
+      text-align: left; }
+    .featured_wrap .featured_project_info h4 {
+      margin: 0px;
+      text-align: left; }
+    .featured_wrap .featured_project_info h5 {
+      margin: 0px;
+      text-align: left; }
+    .featured_wrap .featured_project_info input {
+      width: 200px; }
+    .featured_wrap .featured_project_info p {
+      font-size: 13px;
+      line-height: 15px;
+      text-align: left; }
 
 #progressbar {
   width: 200px;
@@ -746,33 +766,62 @@ body {
   .projects.content {
     padding: 10px;
     clear: both; }
+  .projects a {
+    color: #673090;
+    text-decoration: none; }
+    .projects a:link {
+      color: #673090;
+      text-decoration: none; }
   .projects li {
     width: 320px;
+    height: 250px;
     float: left;
-    margin: 40px; }
+    margin: 25px; }
+    .projects li input[type="text"], .projects li input[type="password"] {
+      width: 100px;
+      padding: 3px 2px;
+      font-size: 12px;
+      float: left;
+      white-space: nowrap;
+      margin: 0; }
     .projects li img {
-      margin-right: 5px;
-      margin-bottom: 0px; }
+      margin: 0 5px 5px 0;
+      -moz-border-radius: 8px;
+      -webkit-border-radius: 8px; }
+    .projects li .raised {
+      color: #673090;
+      height: 15px;
+      width: 100px;
+      margin-bottom: 15px;
+      float: justify;
+      white-space: nowrap;
+      font-size: 12px; }
     .projects li .summary {
       width: 125px;
       float: left; }
     .projects li h3 {
-      color: #3DA9DF;
-      padding: 0px 0px 0px 110px;
+      padding: 0px 0px 0px 10px;
       margin: 0px;
-      text-align: left; }
-    .projects li h4 {
-      padding: 10px 0px 0px 110px;
-      margin: 0px;
-      text-align: left; }
-    .projects li h5 {
-      padding: 0px 0px 0px 110px;
-      margin: 0px;
-      text-align: left; }
-    .projects li p {
-      padding: 5px 0px 0px 110px; }
-    .projects li .raised {
-      color: #662d91; }
+      text-align: left;
+      text-decoration: none;
+      color: #3DA9DF; }
+      .projects li h3 a {
+        color: #3DA9DF;
+        text-decoration: none; }
+        .projects li h3 a:link {
+          color: #3DA9DF;
+          text-decoration: none; }
+      .projects li h3 h4 {
+        padding: 10px 0px 0px 10px;
+        margin: 0px;
+        text-align: left; }
+      .projects li h3 h5 {
+        padding: 0;
+        margin: 0px;
+        text-align: left; }
+      .projects li h3 .learn_more {
+        white-space: nowrap;
+        float: right; }
 
 .clear {
   clear: both; }
@@ -812,14 +861,19 @@ body {
 .jshowoff div p, .jshowoff div h2 {
   _background-color: #efefef; }
 
-.jshowoff h2, .jshowoff p {
-  font-size: 18px;
+.jshowoff h2 {
+  color: #3DA9DF; }
+
+.jshowoff p {
+  font-size: 16px;
   padding: 5px 20px 0px;
-  margin: 0 15px; }
+  margin: 0;
+  text-decoration: none; }
 
 .jshowoff p {
   font-size: 13px;
-  line-height: 15px; }
+  line-height: 15px;
+  text-align: left; }
 
 .eddie {
   float: right;

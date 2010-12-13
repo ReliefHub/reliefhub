@@ -52,13 +52,13 @@ address {
 }
 del { color:#666; }
 
-a, a:link {
+/*a, a:link {
   color: #1a4882;
   text-decoration: underline;
 }
 a:visited { color: #1a4882; }
 a:hover { color: #052246; }
-a:active, a:focus { color: #1a4882; }
+a:active, a:focus { color: #1a4882; }*/
 
 blockquote {
   margin: 1.5em 0;
