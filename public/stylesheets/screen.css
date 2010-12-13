@@ -672,7 +672,7 @@ body {
 
 #our_mission {
   width: 390px;
-  height: 80px;
+  height: 130px;
   background-color: #ffffff;
   padding: 10px;
   margin: 0 0 20px 0;
@@ -710,9 +710,10 @@ body {
 
 #about_right {
   width: 380px;
-  height: 390px;
+  height: 440px;
   float: right;
   text-align: left;
+  margin: 0 0 20px 0;
   background-color: #ffffff;
   padding: 5px;
   -webkit-border-radius: 10px;
