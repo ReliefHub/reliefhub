@@ -19,7 +19,7 @@ class Project < ActiveRecord::Base
   end
 
   def photo
-    project_photos.last
+    project_photos.first
   end
 
   def amount_raised
