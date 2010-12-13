@@ -389,6 +389,7 @@ body {
 }  
 
 #lang{
+  height: 10px;
   float:right;
 }
 //#approved_by {
@@ -554,16 +555,20 @@ body {
 
 #col_left {
   float: left;
-  width: 170px;
-  height: 340px; }
+  width: 225px;
+  height: 470px; }
 
 #project_photo {
+  img {
+    @include round;
+    margin: 0 0 0 0;
+  }
   float: left;
   margin: 10px; }
 
 #project_map {
   float: left;
-  margin: 10px; }
+  margin: 0px 10px 10px 10px; }
 
 #project_percent_raised {
   width: 180px;
@@ -573,12 +578,13 @@ body {
   margin: 10px 50px  5px 0; }
 
 #project_information {
-  width: 390px;
-  height: 300px;
+  @include round;
+  width: 360px;
+  height: 420px;
   background-color: #FFFFFF;
   float: left;
   padding: 10px;
-  margin: 5px 0 0 10px; }
+  margin: 10px 0 0 10px; }
 
 #percent_raised_number {
   width: 200px;
@@ -933,7 +939,6 @@ body {
     display: block;
   }
 }
-
 
 .projects {
   @include round;

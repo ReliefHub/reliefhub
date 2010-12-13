@@ -1,8 +1,8 @@
 #col_left
   - if @project.photo
-    #project_photo= image_tag(@project.photo_url(:small))
+    #project_photo= image_tag(@project.photo_url(:medium))
   #project_map
-    = google_map_image("146x146", @project.organization_address)
+    = google_map_image("212x212", @project.organization_address)
 #project_information
   %h1= @project.name
   %h3= @project.organization_name
