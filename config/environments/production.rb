@@ -49,7 +49,4 @@ Reliefhub::Application.configure do
 
   # TBD change to reliefhub.org when going live
   config.action_mailer.default_url_options = { :host => 'production.reliefhub.org' }
-  
-  # use hassle gem to generate css in the /tmp directory on heroku 
-  ActionController::Dispatcher.middleware.use Hassle
 end
