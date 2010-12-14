@@ -98,6 +98,9 @@ GEM
       json (~> 1.4.6)
       term-ansicolor (~> 1.0.5)
     haml (3.0.21)
+    hassle (0.0.1)
+      haml
+      rack
     heroku (1.10.14)
       json_pure (>= 1.2.0, < 1.5.0)
       launchy (~> 0.3.2)
@@ -207,6 +210,7 @@ DEPENDENCIES
   flutie
   formtastic
   haml
+  hassle
   heroku
   high_voltage
   hoptoad_notifier

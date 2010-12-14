@@ -17,6 +17,7 @@ gem 'aws-s3'
 gem "http_accept_language", :git => 'http://github.com/iain/http_accept_language.git'
 gem 'will_paginate', '3.0.pre2' # still not release for Rails 3
 gem 'cancan'
+gem 'hassle'
 
 # http://blog.davidchelimsky.net/2010/07/11/rspec-rails-2-generators-and-rake-tasks/
 group :development, :test, :cucumber do
