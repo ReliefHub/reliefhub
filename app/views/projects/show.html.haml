@@ -18,60 +18,37 @@
   .clear
   #percent_raised_number
     #{number_to_percentage(@project.percent_raised, :precision => 0)} Raised
-#more_projects
-  %p View more projects
-  #more_projects_photos
-    #project_photo1
-      %a{ :href => "#" }
-        %img{ :src => "/images/more_projects_img.jpg", :alt => "project photo" }
-    #project_photo2
-      %a{ :href => "#" }
-        %img{ :src => "/images/more_projects_img.jpg", :alt => "project photo" }
-    #project_photo3
-      %a{ :href => "#" }
-        %img{ :src => "/images/more_projects_img.jpg", :alt => "project photo" }
-  #social_logos_large
-    .addthis_toolbox.addthis_default_style
-      %a.addthis_button_facebook_like{ "fb:like:layout" => "button_count" }
-      %a.addthis_button_tweet
-      %script{ :type => "text/javascript", :src => "http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4cfc4db62e7d6471" }
-.clear
-%br
-#donor_info
-  #form_left
-    #donor_head Donor Information
-    .row
-      %label{ :class => "required" } Name:
-      .field_holder
-        %input{ :name => "#", :type => "text", :id => "first_name" }
-        %span{ :class => "error", :style => "display:none;" }
-          Please enter your First Name
-      .clear
-    .row
-      %label{ :class => "required" } Email:
-      .field_holder
-        %input{ :name => "#", :type => "text", :id => "email" }
-        %span{ :class => "error", :style => "display:none;" }
-          Please enter your Email
-      .clear
-    .row
-      %label Additional Comments:
-      .field_holder
-        %textarea{ :name => "#", :rows => "6", :cols => "20", :id => "comments" }
-    .clear
-  #form_right
+#col_right
+  #donor_info
     = amazon_simple_pay_form_tag do
       #amount_project_detail
         %label Amount
         = text_field_tag 'amount'
         = hidden_field_tag 'referenceId', @project.id
         = hidden_field_tag 'description', @project.name
-      #pay_type
       #submit_signup
-        = image_submit_tag('/images/contribute_btn.gif')
+        = image_submit_tag('/images/contributenow.png')
       .clear
+      #pay_type
+      .clear
+  #more_projects
+    %p View more projects
+    #more_projects_photos
+      #project_photo1
+        %a{ :href => "#" }
+          %img{ :src => "/images/more_projects_img.jpg", :alt => "project photo" }
+      #project_photo2
+        %a{ :href => "#" }
+          %img{ :src => "/images/more_projects_img.jpg", :alt => "project photo" }
+      #project_photo3
+        %a{ :href => "#" }
+          %img{ :src => "/images/more_projects_img.jpg", :alt => "project photo" }
+    #social_logos_large
+      .addthis_toolbox.addthis_default_style
+        %p Tell your friends about this project
+        %a.addthis_button_facebook_like{ "fb:like:layout" => "button_count" }
+        %a.addthis_button_tweet
+        %script{ :type => "text/javascript", :src => "http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4cfc4db62e7d6471" }
 .clear
 %br
 =render :partial => 'comments', :object => @project 
-
-
