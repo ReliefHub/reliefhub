@@ -2,7 +2,7 @@ class Project < ActiveRecord::Base
   belongs_to :organization
   has_many   :project_photos, :foreign_key => :owner_id
   has_many   :donations
-  has_many   :comments, :dependent => :destroy
+  has_many   :comments, :dependent => :destroy, :order => 'id DESC'
 
   accepts_nested_attributes_for :project_photos
 

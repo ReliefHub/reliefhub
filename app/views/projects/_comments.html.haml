@@ -14,7 +14,7 @@
       - @project.comments.each do |comment|
         .comment
           .comment_body 
-            = comment.body
+            = "\"#{comment.body}\""
           %span.comment_author #{comment.user.full_name}
           %span.comment_author_location #{comment.user.location}
 .clear
