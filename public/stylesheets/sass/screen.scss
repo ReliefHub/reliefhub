@@ -254,6 +254,10 @@ body {
       text-align: left;
       margin: 5px 0 0 0;
       }
+      
+      #contribute_now_btn {
+          margin: 5px 0 0 0;
+      }
 
 #progressbar {    
   width: 200px;
@@ -961,7 +965,7 @@ body {
       font-size: 12px;
       float: left;
       white-space: nowrap;
-      margin: 0;
+      margin: 10px 0 0 40px;
     }
     
     img {
@@ -975,7 +979,7 @@ body {
       height: 15px;
       width: 100px;
       margin-bottom: 15px;
-      float: justify;
+      float: right;
       white-space: nowrap;
       font-size: 12px; } 
     
