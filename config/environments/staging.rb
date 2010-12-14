@@ -48,4 +48,7 @@ Reliefhub::Application.configure do
   config.active_support.deprecation = :notify
 
   config.action_mailer.default_url_options = { :host => 'staging.reliefhub.org' }
+  
+  # use hassle gem to generate css in the /tmp directory on heroku 
+  ActionController::Dispatcher.middleware.use Hassle
 end
