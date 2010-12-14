@@ -10,10 +10,10 @@
     %div{:id => ['pb', featured_project.id]}
       #progressbar
     =render :partial => 'shared/progbar', :object => featured_project 
-    %p.raised=t '.raised', :percentage => number_to_percentage(featured_project.percent_raised, :precision => 0), :goal => number_to_currency(featured_project.goal, :precision => 0)
+    .featured_raised=t '.raised', :percentage => number_to_percentage(featured_project.percent_raised, :precision => 0), :goal => number_to_currency(featured_project.goal, :precision => 0)
     = amazon_simple_pay_form_tag do
       = text_field_tag 'amount'
       = hidden_field_tag 'referenceId', featured_project.id
       = hidden_field_tag 'description', featured_project.name
-      = image_submit_tag('/images/contribute_btn.gif', :id => 'contribute_now_btn', :alt=> t('.fund_this_project'))
+      = image_submit_tag('/images/contributenow.png', :id => 'contribute_now_btn', :alt=> t('.fund_this_project'))
   .clear
