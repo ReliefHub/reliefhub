@@ -1,0 +1,38 @@
+$non_round_radius: 0px;
+
+@mixin non-round-top-left{
+  -moz-border-radius-topleft: $non_round_radius;
+  -webkit-border-top-left-radius: $non_round_radius;
+}
+
+@mixin non-round-top-right{
+  -moz-border-radius-topright: $non_round_radius;
+  -webkit-border-top-right-radius: $non_round_radius;
+}
+
+@mixin non-round-bottom-left{
+  -moz-border-radius-bottomleft: $non_round_radius;
+  -webkit-border-bottom-left-radius: $non_round_radius;
+}
+
+@mixin non-round-bottom-right{
+  -moz-border-radius-bottomright: $non_round_radius;
+  -webkit-border-bottom-right-radius: $non_round_radius;
+}
+
+@mixin non-round-top {
+  @include non-round-top-left; 
+  @include non-round-top-right; 
+}
+
+@mixin non-round-bottom {
+  @include non-round-bottom-left; 
+  @include non-round-bottom-right;   
+}
+
+@mixin non-round {
+ @include non-round-top-left; 
+ @include non-round-top-right; 
+ @include non-round-bottom-left; 
+ @include non-round-bottom-right; 
+}

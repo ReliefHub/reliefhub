@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
 
   has_many :donations
   has_many :projects, :through => :donations
+  has_many :comments, :dependent => :destroy
 
   validates_presence_of :email
   validates_presence_of :first_name
@@ -41,5 +42,13 @@ class User < ActiveRecord::Base
     params.delete(:password)              if params[:password].blank?
     params.delete(:password_confirmation) if params[:password_confirmation].blank?
     update_attributes(params)
+  end
+
+  def full_name
+    "#{self.first_name} #{self.last_name}"
+  end
+
+  def location
+    "New York, NY"
   end
 end

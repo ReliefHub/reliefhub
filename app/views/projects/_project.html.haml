@@ -1,15 +1,19 @@
 %li.project
   .summary
     = link_to image_tag(project.photo_url(:small)), project_path(project) unless project.photo.nil?
-    = link_to 'Fund this Project', project_path(project), :class => 'button'
   %h3= link_to project.name, project_path(project)
   %h4= project.organization_name
   %h5= project.requestor
-  %p= truncate project.description, :length => 150
-  %p= link_to 'Learn more...', project_path(project)
+  %p= truncate project.description, :length => 75
+  .learn_more= link_to 'Learn more...', project_path(project)
+  %br
   .raised== #{number_to_percentage(project.percent_raised, :precision => 0)} of #{number_to_currency(project.goal)} raised
+  %div{:id => ['pb', project.id]}
+    #progressbar
+  =render :partial => 'shared/progbar', :object => project
+  %br
   = amazon_simple_pay_form_tag do
-    = text_field_tag 'amount'
+    = text_field_tag  'amount'
     = hidden_field_tag 'referenceId', project.id
     = hidden_field_tag 'description', project.name
-    = image_submit_tag('/images/contribute_btn.gif')
+    = image_submit_tag('/images/fundthisproject.png')

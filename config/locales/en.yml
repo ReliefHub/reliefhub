@@ -2,13 +2,17 @@
 # See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  comment:
+    create:
+      error: "Error saving your comment - "
+      success: "Comment was successfully created."
   homes:
     featured_project:
-      raised: "%{percentage}% of %{goal} raised"
+      raised: "%{percentage} of %{goal} raised"
       fund_this_project: 'Fund this Project'
     show:
       learn_more: "Learn More"
-      who_we_are: "ReliefHub is dedicated to working with orphanages around the world to help perpetuate their effectiveness and provide a foundation for gathering the resources they require to continue to care for millions of orphans and abandoned children."
+      who_we_are: "ReliefHub is dedicated to working with orphanages around the world to help perpetuate their effectiveness and provide a foundation for gathering the resources they require to continue to care for millions of orphans and abandoned children. Our team is committed to providing excellent service for each and every project that is chosen and completed through the help of our donor’s generosity. Through our combined efforts, we can reach out to countless others."
       recent_press: "Recent Press"
     mailer:
       contact:
@@ -16,7 +20,7 @@ en:
   pages:
     about_us:
       our_mission: "Our Mission"
-      our_mission_text: "ReliefHub is dedicated to working with orphanages in third world countries to help them secure the resources they require to continue to care for millions of orphans and abandoned children."
+      our_mission_text: "ReliefHub is dedicated to working with orphanages in third world countries to help them secure the resources they require to continue to care for millions of orphans and abandoned children. Our team is committed to providing excellent service for each and every project that is chosen and completed through the help of our donor’s generosity. Through our combined efforts, we can reach out to countless others."
       about_us: "About Us"
       about_us_text1: "ReliefHub is a 501 (c) 3 nonprofit organization founded to work with orphanages around the world to help them secure the resources required to provide excellent care for orphans and abandoned children. Initially ReliefHub will focus on Haiti, where an estimated 200,000 children are living in orphanages."
       about_us_text2: "ReliefHub is managed by an international team of volunteers from Haiti, USA, and Sweden who have come together to support this great cause. The team works tirelessly to organize innovative fundraisers and to manage the selection and distribution of funds to orphanages."
@@ -51,9 +55,13 @@ en:
 
   formtastic:
     labels:
+      comment:
+        body: "Please leave a message explaining why this cause is important to you:"
       email:
         from: "Email"
         body: "Body"
     actions:
+      comment:
+        create: "Submit"
       email:
         submit: "Contact us"

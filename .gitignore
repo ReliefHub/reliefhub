@@ -13,3 +13,6 @@ tags
 !.keep
 vendor/bundler_gems
 .rvmrc
+public/stylesheets/round.css
+public/stylesheets/non_round.css
+public/stylesheets/screen.css

@@ -29,7 +29,7 @@ en:
       confirmation_instructions:
         subject: 'Confirmation instructions'
       reset_password_instructions:
-        subject: 'Reset password instructions'
+        subject: 'Reset your password for ReliefHub.org'
 
     common:
       forgot_your_password?: "Forgot your password?"
@@ -49,9 +49,9 @@ en:
         you_can_confirm_your_account_through_the_link_below: "You can confirm your account through the link below"
         confirm_my_account: "Confirm my account"
       reset_password_instructions:
-        reset_password_instruction: "Someone has requested a link to change your password, and you can do this through the link below."
+        reset_password_instruction: "Can’t remember password? Don’t worry, be happy! We are asking you to take this step to verify your identity and ensure your account is protected. Please click on this link below to reset your password. If you did not initiate this new password request at ReliefHub.org, please ignore this email."
         change_my_password: "Change my password"
-        wrong_request_instruction: "If you didn't request this, please ignore this email."
+        wrong_request_instruction: "If you did not initiate this new password request at ReliefHub.org, please ignore this email."
         unchange_password_message: "Your password won't change until you access the link above and create a new one."
       unlock_instructions:
         locked_account_message: "Your account has been locked due to an excessive amount of unsuccessful sign in attempts."

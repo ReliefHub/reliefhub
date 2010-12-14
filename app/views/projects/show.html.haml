@@ -1,7 +1,8 @@
 #col_left
   - if @project.photo
     #project_photo= image_tag(@project.photo_url(:small))
-  =# #project_map
+  #project_map
+    = google_map_image("146x146", @project.organization_address)
 #project_information
   %h1= @project.name
   %h3= @project.organization_name
@@ -11,8 +12,9 @@
   %p Funds Purpose: #{@project.funds_purpose}
   %p Funding Needed: #{number_to_currency(@project.goal, :precision => 0)}
   %p Funding Received: #{number_to_currency(@project.amount_raised, :precision => 0)}
-  #project_percent_raised
-    I am the percent raised
+  %div{:id => ['pb', @project.id]}
+    #progressbar
+  =render :partial => 'shared/progbar', :object => @project 
   .clear
   #percent_raised_number
     #{number_to_percentage(@project.percent_raised, :precision => 0)} Raised
@@ -33,14 +35,8 @@
       %a.addthis_button_facebook_like{ "fb:like:layout" => "button_count" }
       %a.addthis_button_tweet
       %script{ :type => "text/javascript", :src => "http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4cfc4db62e7d6471" }
-  =#.testimonials Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  =#%span.testimonial_name John Smith
-  =#%span.test_location New York, NY, USA
-  =#.testimonials Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  =#%span.testimonial_name John Smith
-  =#%span.test_location New York, NY, USA
 .clear
-
+%br
 #donor_info
   #form_left
     #donor_head Donor Information
@@ -75,3 +71,7 @@
         = image_submit_tag('/images/contribute_btn.gif')
       .clear
 .clear
+%br
+=render :partial => 'comments', :object => @project 
+
+

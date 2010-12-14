@@ -8,3 +8,8 @@ Given /^"([^"]*)" has a project photo$/ do |name|
   project   = Project.where(:name => name).first
   project.project_photos << Factory(:project_photo)
 end
+
+Then /^I should see a Google map image of "([^"]*)"'s address$/ do |name|
+  organization = Organization.where(:name => name).first
+  page.should have_css("img[src*='http://maps.google.com/maps/api/staticmap'][alt='#{organization.address}']")
+end

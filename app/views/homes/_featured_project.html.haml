@@ -2,14 +2,18 @@
   .featured_thumbnail
     = link_to image_tag(featured_project.photo_url(:full)), project_path(featured_project) unless featured_project.photo.nil?
   .featured_project_info
-    %h1= link_to featured_project.name, project_path(featured_project)
+    %h2= link_to featured_project.name, project_path(featured_project)
     %h4= featured_project.organization_name
     %h5= featured_project.requestor
-    %p=  truncate(featured_project.description, :length => 150)
-    %p.raised=t '.raised', :percentage => featured_project.percent_raised, :goal => number_to_currency(featured_project.goal)
+    %p=  truncate(featured_project.description, :length => 50)
+    %br
+    %div{:id => ['pb', featured_project.id]}
+      #progressbar
+    =render :partial => 'shared/progbar', :object => featured_project 
+    .featured_raised=t '.raised', :percentage => number_to_percentage(featured_project.percent_raised, :precision => 0), :goal => number_to_currency(featured_project.goal, :precision => 0)
     = amazon_simple_pay_form_tag do
       = text_field_tag 'amount'
       = hidden_field_tag 'referenceId', featured_project.id
       = hidden_field_tag 'description', featured_project.name
-      = image_submit_tag('/images/contribute_btn.gif', :id => 'contribute_now_btn', :alt=> t('.fund_this_project'))
+      = image_submit_tag('/images/contributenow.png', :id => 'contribute_now_btn', :alt=> t('.fund_this_project'))
   .clear

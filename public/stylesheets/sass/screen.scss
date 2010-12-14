@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "round";
+@import "non_round";
 
 /* CSS Document */
 /*CSS Reset*/
@@ -52,7 +53,7 @@ ul {
   clear: both; }
 
 a {
-  color: #662D91;
+  color: #000000;
   text-decoration: none; }
 
 h1 {
@@ -77,11 +78,18 @@ h4 {
   color: #000000;
   font-size: 12px;
   text-align: left;
-  margin: 0 0 5px 0; }
+  margin: 2px 0 0 0; }
+
+h5 {
+    color: #000000;
+    font-size: 11px;
+    margin: 0px;
+    text-align: left;
+  }
 
 p {
   text-align: left;
-  margin: 0 0 5px 0; }
+  margin: 0 0 0 0; }
 
 body {
   font-family: arial, verdana, sans-serif;
@@ -197,7 +205,17 @@ body {
     height: 255px;
     padding: 0px 8px;
     margin: 0 0 10px 0;
-    background-color: #ffffff; }
+    background-color: #ffffff;
+    h2 {
+      color: #3DA9DF;
+      text-align: left;
+      text-decoration: none;
+      a {
+        color: #3DA9DF;
+        text-decoration: none;
+        &:link {
+          color: #3DA9DF;
+          text-decoration: none; } } }  
     h3 {
       color: #3DA9DF;
       padding: 0px 0px 0px 110px;
@@ -218,10 +236,34 @@ body {
     input {
       width: 200px;
     }
+    
+    p {
+      font-size: 13px;
+    	line-height: 15px;
+    	text-align: left; } } }
 
-}
+  .featured_raised {
+      color: #673090;
+      font-size: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      float: left;
+      height: 15px;
+      width: 45px;
+      white-space: nowrap;
+      text-align: left;
+      margin: 5px 0 0 0;
+      }
+      
+      #contribute_now_btn {
+          margin: 5px 0 0 0;
+      }
 
-
+#progressbar {    
+  width: 200px;
+  height: 10px;
+  border: 1px #eeeeee solid; }
+ 
 .amount_index {
   margin: 0 0 10px 0;
   text-align: left;
@@ -229,6 +271,14 @@ body {
     width: 200px;
   }
 }
+
+.ui-progressbar .ui-progressbar-value {
+  margin: 0; 
+  height:100%;
+  background-color: #673090;
+  border: none;
+  -moz-border-radius: 3px; 
+  -webkit-border-radius: 3px; }
 
 #thumbnails {
   width: 585px;
@@ -253,7 +303,8 @@ body {
   max-height: 396px;
   border-right: 3px solid #662d91;
   margin: 10px 0 0 30px;
-  padding: 0 20px 0 0; }
+  padding: 0 20px 0 0;
+}
 
 .blog_date {
   font-size: 16px;
@@ -276,7 +327,7 @@ body {
   max-height: 396px;
   margin: 10px 0 0 30px;
   padding: 0 0 0 0; }
-
+  
 .press_logo {
   height: 30px;
   width: 50px;
@@ -360,10 +411,7 @@ body {
 //  margin: 20px 0 0 10px;
 //  float: left; }
 //
-//#contribute_btn {
-//  width: 144px;
-//  height: 44px; }
-//
+
 
 #view_projects_all {
   height: 20px;
@@ -478,10 +526,20 @@ body {
   width: 50px; }
 
 .pagination {
-  margin: 0;
+  margin: 8px 0 0 150px;
   width: 180px;
   height: 20px;
-  float: left;
+  font-size: 14px;
+  a {
+    color: #3DA9DF; 
+    &:hover {
+      color: #666666;
+      font-weight: bold; } }
+    &:link {
+      color: #000000; }
+      &:active {
+        font-weight: bold;
+        color: #000000; }
   ul {
     clear: both;
     position: relative;
@@ -490,12 +548,7 @@ body {
       display: inline;
       list-style-type: none;
       padding-right: 5px;
-      margin: 0; } }
-  a {
-    color: #3DA9DF; }
-  li.active {
-    font-weight: bold;
-    color: #000000; } }
+      margin: 0; } } }
 
 /*************************Project Details*************************/
 
@@ -505,19 +558,12 @@ body {
   height: 340px; }
 
 #project_photo {
-  height: 146px;
-  width: 146px;
   float: left;
-  margin: 10px 10px 10px 10px; }
+  margin: 10px; }
 
 #project_map {
-  height: 146px;
-  width: 146px;
-  background-image: url(/images/map.jpg);
-  background-repeat: no-repeat;
   float: left;
-  margin: 10px 10px 10px 10px;
-  outline: 1px solid #000000; }
+  margin: 10px; }
 
 #project_percent_raised {
   width: 180px;
@@ -583,6 +629,96 @@ body {
   border-right: 1px solid #662d91;
   height: 420px;
   float: left; }
+
+.comments {
+  margin: 0 130px 15px 0; 
+  text-align: right; }
+
+.comment {
+  margin: 0 0 25px 0; 
+}
+
+.comment_body {
+  font-style: italic;
+  color: #000000;
+  margin: 0 110px 15px 0; 
+  text-align: right; }
+
+.comment_author {
+  font-size: 14px;
+  text-align: right; }
+
+.comment_author_location {
+  font-size: 10px; 
+  text-align: right; }
+
+#comment_section {
+  @include round;
+  width: 100%;
+  background-color: #ffffff; 
+  text-align: left;
+  form {
+    fieldset {
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
+      background: inherit;
+      ol {
+        margin: 0 0 0 0;
+        li {
+          margin: 0 0 0 0;
+        }
+      }
+    }
+    input[type=submit] {
+      $button-background: #874b98;
+      border: 0px;
+      @include round;
+      padding: 10px 15px;
+      font-weight: normal;
+      background: $button-background;
+      color: #FFF;
+      &:hover {
+        background: lighten($button-background, 10%);
+      }
+    }
+  }
+  textarea {
+    @include non-round;
+    border: 1px solid #EEE;
+    padding: 0;
+    margin: 5px 0 5px 0;
+    background: white;
+    width: 100%;
+    height: 70px;
+  }
+}
+
+#comment_form {
+  padding: 0 0 10px 30px;
+  margin: 0 30px 0 0;
+}
+
+#comment_section_head {
+  text-align: left;
+  font-size: 25px;
+  margin: 0 0 20px 0;
+  padding: 25px 0 0 0;
+  color: #3DA9DF; }
+
+.comment_submit_button {
+  @include round;
+  $button-background: #874b98;
+  padding: 10px 15px;
+  font-weight: normal;
+  background: $button-background;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+  &:hover {
+    background: lighten($button-background, 10%);
+  }
+}
 
 #donor_head {
   text-align: left;
@@ -706,7 +842,7 @@ body {
 
 #our_mission {
   width: 390px;
-  height: 80px;
+  height: 130px;
   background-color: #ffffff;
   padding: 10px;
   margin: 0 0 20px 0;
@@ -744,9 +880,10 @@ body {
 
 #about_right {
   width: 380px;
-  height: 390px;
+  height: 440px;
   float: right;
   text-align: left;
+  margin: 0 0 20px 0;
   background-color: #ffffff;
   padding: 5px;
   -webkit-border-radius: 10px;
@@ -806,53 +943,82 @@ body {
     padding: 10px;
     clear: both;
   }
+
+ a {
+   color: #673090;
+   text-decoration: none;
+   &:link {
+     color: #673090;
+     text-decoration: none;
+     font-size: 12px;
+     font-weight: bold; } }
   
   li  {
     width: 320px;
+    height: 250px;
     float: left;
-    margin: 40px;
-  
-    img {
-      margin-right: 5px;
-      margin-bottom: 0px;
+    margin: 25px;
+    
+    input[type="text"], input[type="password"] {
+      width: 100px;
+      padding: 3px 2px;
+      font-size: 12px;
+      float: left;
+      white-space: nowrap;
+      margin: 10px 0 0 40px;
     }
-
+    
+    img {
+      margin: 0 5px 5px 0;
+      -moz-border-radius: 8px;
+      -webkit-border-radius: 8px;
+    }
+    
+    .raised {
+      color: #673090;
+      height: 15px;
+      width: 100px;
+      margin-bottom: 15px;
+      float: right;
+      white-space: nowrap;
+      font-size: 12px; } 
+    
     .summary {
       width: 125px;
       float: left;
     }
-
-    h3 {
-      color: #3DA9DF;
-     padding: 0px 0px 0px 110px;
+      
+     h3 {
+      padding: 0px 0px 0px 10px;
       margin: 0px;
       text-align: left;
-    }
-
+      text-decoration: none;
+      color:  #3DA9DF;
+      a {
+        color: #3DA9DF;
+        text-decoration: none;
+        &:link {
+          color: #3DA9DF;
+          text-decoration: none;
+          font-size: 16px; } } 
     h4 {
-      padding: 10px 0px 0px 110px;
+      padding: 10px 0px 0px 10px;
       margin: 0px;
       text-align: left;
     }
 
     h5 {
-      padding: 0px 0px 0px 110px;
+      padding: 0;
       margin: 0px;
-      text-align: left;    
+      text-align: left;
     }
 
-    p {
-      padding: 5px 0px 0px 110px;
+  .learn_more {
+    white-space: nowrap;
+    float: right; }
     }
-
-    .raised {
-      color: #662d91;
-    }
-
   }
-
 }
-
 .clear {
   clear: both;
 }
@@ -887,7 +1053,7 @@ body {
 	}
 .jshowoff div {	
 	width: 585px;
-	}
+}
 .jshowoff div, .jshowoff img, .jshowoff {
 	-webkit-border-top-left-radius: 6px;
 	-webkit-border-top-right-radius: 6px;
@@ -900,14 +1066,19 @@ body {
 .jshowoff div p, .jshowoff div h2 {
 	_background-color: #efefef;
 	}
-.jshowoff h2, .jshowoff p {
-	font-size: 18px;
-	padding: 15px 20px 0px;
+.jshowoff h2 {
+  color: #3DA9DF;
+}
+.jshowoff p {
+	font-size: 16px;
+	padding: 5px 0px 0px;
 	margin: 0;
+	text-decoration: none;
 	}
 .jshowoff p {
 	font-size: 13px;
 	line-height: 15px;
+	text-align: left;
 	}
 .eddie {
 	float: right;
