@@ -4,6 +4,8 @@ Reliefhub::Application.routes.draw do
   scope "(:locale)", :locale => /en|fr/ do
     resource :home, :only => [:show]
 
+    resources :comments, :only => [:create]
+
     resources :projects, :only => [:index, :show] do
       collection do
         get :my_projects
