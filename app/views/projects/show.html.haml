@@ -36,26 +36,6 @@
       %a.addthis_button_tweet
       %script{ :type => "text/javascript", :src => "http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4cfc4db62e7d6471" }
 .clear
-#comment_section
-  #comment_form
-    #comment_section_head Comments
-    - if !user_signed_in?
-      Sign in to leave a comment 
-    - if user_signed_in?
-      = semantic_form_for [@comment] do |f|
-        = f.inputs do
-          = f.input :body
-          = f.input :project_id, :as => :hidden, :value => @project.id
-          .right
-            = f.commit_button
-    .comments 
-      - @project.comments.each do |comment|
-        .comment
-          .comment_body 
-            = comment.body
-          %span.comment_author #{comment.user.full_name}
-          %span.comment_author_location #{comment.user.location}
-.clear
 %br
 #donor_info
   #form_left
@@ -91,3 +71,7 @@
         = image_submit_tag('/images/contribute_btn.gif')
       .clear
 .clear
+%br
+=render :partial => 'comments', :object => @project 
+
+

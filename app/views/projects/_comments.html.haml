@@ -1,0 +1,20 @@
+#comment_section
+  #comment_form
+    #comment_section_head Comments
+    - if !user_signed_in?
+      Sign in to leave a comment 
+    - if user_signed_in?
+      = semantic_form_for [@comment] do |f|
+        = f.inputs do
+          = f.input :body
+          = f.input :project_id, :as => :hidden, :value => @project.id
+          .right
+            = f.commit_button
+    .comments 
+      - @project.comments.each do |comment|
+        .comment
+          .comment_body 
+            = comment.body
+          %span.comment_author #{comment.user.full_name}
+          %span.comment_author_location #{comment.user.location}
+.clear
