@@ -1031,8 +1031,48 @@ body {
   float: left;
 }
 
+/****************Admin Edit Project ********************/
 
-/*-- jShowOff module styles --*/
+.edit_project {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: 800px;
+  
+  li  {
+    width: 400px;
+    height: auto;
+    margin: 10 10 10 10;
+    text-align: left;
+    
+    input[type="text"], input[type="password"] {
+      width: 300px;
+      padding: 0;
+      font-size: 12px;
+      margin: 10 10 10 10;
+    } }
+  
+  form ol {
+    list-style: none;
+    margin: 10 10 10 10;
+    ol {
+      margin-left: 0; }
+    li {
+      margin: 10 10 10 10; }
+    ol li {
+      margin: 10 10 10 10; }
+  .files {
+    height: auto;
+    width: 140px;
+    li  {
+      width: 160px;
+      height: auto;
+      margin: 10 10 10 10;
+      list-style: square inside; }
+    } } }
+  
+
+/**************-- jShowOff module styles --************/
 
 .thumbFeatures {
 
