@@ -934,6 +934,7 @@ body {
   }
 }
 
+/*************** Projects List Page *******************/
 
 .projects {
   @include round;
@@ -1025,12 +1026,90 @@ body {
 
 .right {
   float: right;
+  a {
+    color: #FFF;
+    text-decoration: none;
+    &:link {
+      color: #FFF; } }
 }
 
 .left {
   float: left;
+  h2 {
+    color: #673090;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 30px;
+    
+  }
 }
 
+/**************** Admin Organization View *******************/
+
+.details {
+  width: auto;
+  height: 80px;  
+  background: white;
+  table {
+    width: 600px;
+    height: 100px;
+    margin-bottom: 0;
+    border: none;
+    border-color: #FFF;
+    border-spacing: 2px 2px;
+    display: table;
+    border-spacing: none;
+    border-collapse: separate;
+    td {
+      background: #FFF;
+      margin: 2px 2px 2px 2px;
+      padding: 0;
+      color: #000;
+      vertical-align: top;
+      padding: 0 4px 0 4px;
+      
+    }
+    tr {
+      background: #FFF;
+      margin: 0;
+      padding: 0;
+      color: #000;
+      vertical-align: bottom; }
+    th {
+      color:#000;
+      font-weight: bold;
+      text-decoration: none;
+      height: 15px;
+      border: none;
+      margin: 0 15px 0 0;
+    }
+      }
+    }
+
+.org_section {
+  height: 20px;
+  width: auto;
+  margin: 25px;
+  padding: 2px 0 0 5px;
+  float: left; }
+.pictures {
+  height: 200px;
+  width: 150px;
+  float: left;
+  margin: 10px 0 0 0;
+}
+
+.overview {
+  width: auto;
+  height: auto;
+  margin: 10px;
+  p {
+    float: left;
+    font-size: 12px;
+    font-weight: normal;
+    text-decoration: none;
+  }
+}
 
 /*-- jShowOff module styles --*/
 
@@ -1209,6 +1288,10 @@ p.jshowoff-controls {
     background-color: #ede7fa; 
     a {
       text-decoration: none;
+      color: #673090;
+      &:link {
+        color: #673090;
+      }
     }
     &:hover {
      text-decoration: underline;
@@ -1225,6 +1308,7 @@ p.jshowoff-controls {
   padding: 10px 15px;
   font-weight: normal;
   background: $button-background;
+  border: 1px solid #000;
   a {
     color: white;
     text-decoration: none;
