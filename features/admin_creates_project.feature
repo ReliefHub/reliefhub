@@ -3,12 +3,18 @@ Feature: Create a project
   In order to collect donations
   An admin should be able to create a project
 
+  Background:
+    Given the following user exists:
+      | first_name | last_name | email              | password | password_confirmation | roles |
+      | Admin      | User      | admin@test.com     | secret   | secret                | admin |
+
   Scenario: View all projects for an organization
     Given the following projects exist:
       | name      | organization   |
       | Project A | name: Some Org |
       | Project B | name: Some Org |
       | Project C | name: Some Org |
+    And I sign in as "admin@test.com/secret"
     And I go to the admin page for organization "Some Org"
     Then I should see "Project A"
     And I should see "Project B"
@@ -31,6 +37,7 @@ Feature: Create a project
       | name: relief 1  | 100    |
       | name: relief 2  | 700    |
       | name: relief 2  | 300    |
+    And I sign in as "admin@test.com/secret"
     Given I go to the admin projects page
     Then I should see "Projects" within "h1"
      And I should see "Organizations" within "#right-menu"
@@ -48,6 +55,7 @@ Feature: Create a project
     Given the following organization exists:
       | name     |
       | Some Org |
+    And I sign in as "admin@test.com/secret"
     And I go to the admin organizations page
     And I follow "Some Org"
     When I follow "Create Project"
@@ -59,9 +67,36 @@ Feature: Create a project
     Given the following project exists:
       | name      | organization   |
       | Project A | name: Some Org |
+    And I sign in as "admin@test.com/secret"
     And I go to the admin organizations page
     And I follow "Some Org"
     When I follow "Project A"
     When I fill in "Name" with "Test Project 2"
     And I press "Save Project"
     Then I should see "Successfully saved changes"
+
+  Scenario: Anonymous user attempts to view admin projects page
+    Given I go to the admin projects page
+    Then I should see "Access Denied" within "h1"
+    And I follow "sign in"
+    Then I should see "Sign in" within "h2"
+
+  Scenario: Field operator attempts to view admin projects page
+    Given the following user exists:
+      | first_name | last_name | email              | password | password_confirmation | roles                               |
+      | Garret     | Schuster  | garret@test.com    | secret   | secret                | field_operator                      |
+    And I sign in as "garret@test.com/secret"
+    And I go to the admin projects page
+    Then I should see "Access Denied" within "h1"
+    And I follow "sign out"
+    Then I should see "Signed out."
+
+  Scenario: Organization manager attempts to view admin projects page
+    Given the following user exists:
+      | first_name | last_name | email              | password | password_confirmation | roles                               |
+      | Lue        | Ankunding | lue@test.com       | secret   | secret                | organization_manager                |
+    And I sign in as "lue@test.com/secret"
+    And I go to the admin projects page
+    Then I should see "Access Denied" within "h1"
+    And I follow "sign out"
+    Then I should see "Signed out."

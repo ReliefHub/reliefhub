@@ -10,7 +10,8 @@
   %ul
     - if user_signed_in?
       %li= link_to t('.logout'), destroy_user_session_url
-      %li= link_to 'Admin', admin_organizations_path
+      - if current_user.is?('admin')
+        %li= link_to 'Admin', admin_organizations_path
     - else
       %li= link_to t('.login'), user_session_url
     %li= link_to 'Blog', 'http://blog.reliefhub.org/'

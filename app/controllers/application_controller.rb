@@ -26,4 +26,9 @@ class ApplicationController < ActionController::Base
     destroy_user_session_path
   end
   helper_method :sign_out_path
+
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to page_path(current_user.nil? ? 'access_denied_anonymous' : 'access_denied')
+  end
+
 end

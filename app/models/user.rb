@@ -13,10 +13,14 @@ class User < ActiveRecord::Base
   validates_presence_of :first_name
   validates_presence_of :last_name
 
-  ROLES =%w[site_admin field_operator organization_manager visitor]
+  scope :ascending, order('last_name, first_name')
 
   # http://github.com/ryanb/cancan/wiki/role-based-authorization
+
+  ROLES =%w[admin field_operator organization_manager]
+
   def roles=(roles)
+    roles = roles.split if roles.is_a? String
     self.roles_mask = (roles & ROLES).map { |r| 2**ROLES.index(r) }.sum
   end
 
