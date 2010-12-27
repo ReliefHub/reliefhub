@@ -18,12 +18,12 @@ Feature: View ReliefHub user list
     And I should see "Users" within "#right-menu"
     And I should see "Users" tab ".selected" within "#right-menu"
     And I should see the following users table:
-      | User Name         | Field Operator | Orphanage Manager | Site Administrator |
-      | Lue Ankunding     | Disabled       | Enabled           | Disabled           |
-      | Cassandra Goodwin | Enabled        | Enabled           | Disabled           |
-      | Julio Kulas       | Disabled       | Disabled          | Disabled           |
-      | Garret Schuster   | Enabled        | Disabled          | Disabled           |
-      | Admin User        | Disabled       | Disabled          | Enabled            |
+      | User Name         | Email              | Field Operator | Orphanage Manager | Site Administrator |
+      | Lue Ankunding     | lue@test.com       | Disabled       | Enabled           | Disabled           |
+      | Cassandra Goodwin | cassandra@test.com | Enabled        | Enabled           | Disabled           |
+      | Julio Kulas       | julio@test.com     | Disabled       | Disabled          | Disabled           |
+      | Garret Schuster   | garret@test.com    | Enabled        | Disabled          | Disabled           |
+      | Admin User        | admin@test.com     | Disabled       | Disabled          | Enabled            |
     And I should see "Created" column following the format "[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}"
 
   Scenario: Anonymous user attempts to view users
