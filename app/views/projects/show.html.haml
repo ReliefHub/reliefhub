@@ -7,11 +7,16 @@
   %h1= @project.name
   %h3= @project.organization_name
   %h4= @project.organization_address
+  %br
   %p= @project.description
   %p= @project.overview
+  %br
   %p Funds Purpose: #{@project.funds_purpose}
+  %br
   %p Funding Needed: #{number_to_currency(@project.goal, :precision => 0)}
+  %br
   %p Funding Received: #{number_to_currency(@project.amount_raised, :precision => 0)}
+  %br
   %div{:id => ['pb', @project.id]}
     #progressbar
   =render :partial => 'shared/progbar', :object => @project 
