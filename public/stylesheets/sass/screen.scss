@@ -1250,3 +1250,21 @@ td {
     }
   }
 }
+
+/******************** Access Denied ***********************/
+
+#access_denied {
+  width: 800px;
+  height: 130px;
+  background-color: #ffffff;
+  margin: 0 0 20px 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  h1 {
+    text-align: center;
+  }
+  a {
+    color: #3DA9DF;
+    font-weight: bold;
+  }
+}
