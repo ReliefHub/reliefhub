@@ -31,18 +31,11 @@ http://github.com/ReliefHub/reliefhub
 Pivotal Tracker:
 
 https://www.pivotaltracker.com/projects/122363
-   
-Campfire Chat Room:
-
-https://futurefridays.campfirenow.com/7f77a
-  
+     
 Designs:
 
 http://melissayasko.com/ReliefHub/reliefhub.html
 
-Build Machine:
-
-http://ci.reliefhub.railsmachina.com
 
 ==Development Notes
 
