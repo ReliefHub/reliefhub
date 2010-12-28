@@ -3,6 +3,11 @@ Feature: Add/Edit a new organization
   As an admin
   I want to be able to Add/Edit/List an organization
 
+  Background:
+    Given the following user exists:
+      | first_name | last_name | email              | password | password_confirmation | roles |
+      | Admin      | User      | admin@test.com     | secret   | secret                | admin |
+
   Scenario: View organizations
     Given the following organizations exist:
       | name        | street1          | street2 | city      | state | zip   | contact person |
@@ -14,6 +19,7 @@ Feature: Add/Edit a new organization
       | relief 1  | name: fred's ngo  |
       | relief 2  | name: fred's ngo  |
       | relief 3  | name: oscar's ngo |
+    And I sign in as "admin@test.com/secret"
     Given I go to the admin organizations page
      Then I should see "Organizations" within "h1"
       And I should see "Organizations" within "#right-menu"
@@ -28,7 +34,8 @@ Feature: Add/Edit a new organization
       And I should see "Created" column following the format "[0-9]{1,2}/[0-9]{1,2}/[0-9]{4}"
 
   Scenario: Create a new organization
-    Given I go to the admin organizations page
+    Given I sign in as "admin@test.com/secret"
+      And I go to the admin organizations page
      When I follow "Create"
      When I fill in "Name" with "my orphanage"
       And I fill in "Street1" with "123 main st"
@@ -51,6 +58,7 @@ Feature: Add/Edit a new organization
       | oliver's orphanage | 123 main st      | alex           |
       | oscar's orphanage  | 455 fifth avenue | alex           |
       | olivia's orphanage | 131 first st     | yan            |
+      And I sign in as "admin@test.com/secret"
     Given I go to the admin organizations page
       And I follow "oliver's orphanage"
       And I follow "Edit"
@@ -69,7 +77,8 @@ Feature: Add/Edit a new organization
       And I should see "Yan"
 
   Scenario: Create a new organization
-    Given I go to the admin organizations page
+    Given I sign in as "admin@test.com/secret"
+      And I go to the admin organizations page
      When I follow "Create"
      When I fill in "Name" with "my orphanage"
       And I fill in "Street1" with "123 main st"
@@ -93,8 +102,35 @@ Feature: Add/Edit a new organization
       | Project A | name: Some Org |
       | Project B | name: Some Org |
       | Project C | name: Some Org |
+     And I sign in as "admin@test.com/secret"
      And I go to the admin organizations page
      And I follow "Some Org"
     Then I should see "Project A"
      And I should see "Project B"
      And I should see "Project C"
+
+  Scenario: Anonymous user attempts to view admin organizations page
+    Given I go to the admin organizations page
+    Then I should see "Access Denied" within "h1"
+    And I follow "sign in"
+    Then I should see "Sign in" within "h2"
+
+  Scenario: Field operator attempts to view admin organizations page
+    Given the following user exists:
+      | first_name | last_name | email              | password | password_confirmation | roles                               |
+      | Garret     | Schuster  | garret@test.com    | secret   | secret                | field_operator                      |
+    And I sign in as "garret@test.com/secret"
+    And I go to the admin organizations page
+    Then I should see "Access Denied" within "h1"
+    And I follow "sign out"
+    Then I should see "Signed out."
+
+  Scenario: Organization manager attempts to view admin organizations page
+    Given the following user exists:
+      | first_name | last_name | email              | password | password_confirmation | roles                               |
+      | Lue        | Ankunding | lue@test.com       | secret   | secret                | organization_manager                |
+    And I sign in as "lue@test.com/secret"
+    And I go to the admin organizations page
+    Then I should see "Access Denied" within "h1"
+    And I follow "sign out"
+    Then I should see "Signed out."

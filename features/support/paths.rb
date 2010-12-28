@@ -33,6 +33,10 @@ module NavigationHelpers
     # ADMIN
     when /the admin organizations page/i
       admin_organizations_path
+    when /the admin projects page/i
+      admin_projects_path
+    when /the admin projects page/i
+      admin_users_path
     when /the admin page for organization \"(.*)\"/i
       admin_organization_path(:id => Organization.where(:name => $1).first)
 
