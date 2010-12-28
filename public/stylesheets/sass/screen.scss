@@ -1102,12 +1102,15 @@ body {
   padding: 0;
   height: auto;
   width: 800px;
+  background-color: #CCEFFE;
   
   li  {
     width: 400px;
     height: auto;
     margin: 10px 0 0 0;
     text-align: left;
+    padding: 0 0 0 15px;
+    list-style: none;
     
     input[type="text"], input[type="password"] {
       width: 300px;
@@ -1135,7 +1138,7 @@ body {
       list-style: square inside; }
     } } }
 
-/*-- jShowOff module styles --*/
+/**********-- jShowOff module styles --***********/
 
 .thumbFeatures {
 
