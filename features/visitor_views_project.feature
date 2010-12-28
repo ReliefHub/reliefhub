@@ -22,7 +22,7 @@ Feature: Visitor reviews project
     And I should see "$1,000"
     And I should see "$0"
     And I should see "0% Raised"
-    And I should see the "small" photo for the "Christmas Toy Drive" project
+    And I should see the "medium" photo for the "Christmas Toy Drive" project
     And I should see the Facebook and Twitter share buttons
     And I should see a Google map image of "Mission des Eglises Baptistes"'s address
     And I should see "Comments"

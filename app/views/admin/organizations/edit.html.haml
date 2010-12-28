@@ -1,16 +1,21 @@
-= semantic_form_for [:admin, @organization], :html => {:multipart => true} do |f|
-  = f.inputs do
-    = f.input :name
-    = render :partial=>'admin/edit_photo', :collection=>@organization.organization_photos, :locals=>{:field_name=>'organization[organization_photos_attributes][][file]'}
-    = f.input :street1
-    = f.input :street2
-    = f.input :city
-    = f.input :state
-    = f.input :zip
-    = f.input :country, :as => :string
-    = f.input :contact_person
-    = f.input :phone_number
-    = f.input :email_address
-    = f.input :website
-    = f.input :overview
-  = f.submit "Save"
+%h1 Edit Organization
+.edit_org
+  = semantic_form_for [:admin, @organization], :html => {:multipart => true} do |f|
+    = f.inputs do
+      = f.input :name
+    .org_files
+      = render :partial=>'admin/edit_photo', :collection=>@organization.organization_photos, :locals=>{:field_name=>'organization[organization_photos_attributes][][file]'}
+    .clear
+      = f.input :street1
+      = f.input :street2
+      = f.input :city
+      = f.input :state
+      = f.input :zip
+      = f.input :country, :as => :string
+      = f.input :contact_person
+      = f.input :phone_number
+      = f.input :email_address
+      = f.input :website
+      = f.input :overview
+    .clear
+      = f.submit "Save"

@@ -32,6 +32,16 @@ en:
     donation_error:
       were_sorry: "We're sorry"
       there_was_a_problem: "There was a problem with your donation. Please try again."
+    access_denied:
+      access_denied: "Access Denied"
+      access_denied_text1: "You don't have access to this page. Please"
+      access_denied_sign_out: "sign out"
+      access_denied_sign_in: "sign in"
+      access_denied_text2: "and sign in as a different user."
+    access_denied_anonymous:
+      access_denied: "Access Denied"
+      access_denied_text: "You don't have access to this page. Please"
+      access_denied_sign_in: "sign in."
   shared:
     header:
       home: Home

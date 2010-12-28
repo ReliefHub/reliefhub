@@ -1,7 +1,7 @@
 class Admin::ProjectsController < ApplicationController
   layout 'admin'
-
   before_filter :organization, :except => [:index]
+  load_and_authorize_resource
 
   def index
     @projects = Project.all
