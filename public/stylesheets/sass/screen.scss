@@ -289,8 +289,8 @@ body {
 #learn_more {
   width: 230px;
   float: left;
-  min-height: 396px;
-  max-height: 396px;
+  min-height: 430px;
+  max-height: 430px;
   border-right: 3px solid #662d91;
   margin: 10px 0 0 0;
   padding: 0 20px 0 0; }
@@ -299,8 +299,8 @@ body {
   overflow: hidden;
   width: 230px;
   float: left;
-  min-height: 330px;
-  max-height: 396px;
+  min-height: 430px;
+  max-height: 430px;
   border-right: 3px solid #662d91;
   margin: 10px 0 0 30px;
   padding: 0 20px 0 0;
@@ -324,7 +324,7 @@ body {
   width: 230px;
   float: left;
   min-height: 330px;
-  max-height: 396px;
+  max-height: 430px;
   margin: 10px 0 0 30px;
   padding: 0 0 0 0; }
   
@@ -786,6 +786,7 @@ body {
   width: 325px;
   height: 250px;
   margin-left: 20px;
+  margin-top:20px;
   float: left; }
 
 #community_right {
@@ -794,6 +795,7 @@ body {
   -moz-border-radius: 10px;
   width: 415px;
   height: 285px;
+  margin-top:20px;
   float: right;
   text-align: left;
   background-color: #ffffff;
@@ -803,14 +805,14 @@ body {
   width: 330px;
   float: left;
   text-align: left;
-  height: 280px;
+  height: 320px;
   border-right: 3px solid #662d91;
   margin: 0px 40px 0 10px;
   padding: 0px 40px 0 0; }
 
 #financial_center {
   width: 330px;
-  height: 280px;
+  height: 320px;
   float: left;
   text-align: left;
   margin: 0;
@@ -820,7 +822,8 @@ body {
 
 #about_left {
   width: 400px;
-  height: 390px;
+  height: 448px;
+  margin: 20px 0 20px 0;
   float: left; }
 
 #our_mission {
@@ -838,6 +841,17 @@ body {
   background-color: #ffffff;
   padding: 10px;
   margin: 0 0 20px 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px; }
+
+#about_right {
+  width: 385px;
+  height: 448px;
+  float: right;
+  text-align: left;
+  margin: 20px 0 20px 0;
+  background-color: #ffffff;
+  padding: 5px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px; }
 
@@ -861,25 +875,14 @@ body {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px; }
 
-#about_right {
-  width: 385px;
-  height: 448px;
-  float: right;
-  text-align: left;
-  margin: 0 0 20px 0;
-  background-color: #ffffff;
-  padding: 5px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px; }
-
 .bold {
   font-weight: bold; }
 
 #faq {
-  width: 230px;
+  width: 253px;
   float: left;
   text-align: left;
-  min-height: 150px;
+  min-height: 600px;
   max-height: 600px;
   border-right: 3px solid #662d91;
   margin: 20px 0 0 30px;
@@ -891,7 +894,7 @@ body {
   float: left;
   min-height: 150px;
   max-height: 600px;
-  margin: 10px 0 0 30px;
+  margin: 20px 0 0 30px;
   padding: 0 0 0 0; }
 
 #contact_us {
