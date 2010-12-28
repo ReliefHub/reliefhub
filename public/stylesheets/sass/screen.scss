@@ -1027,47 +1027,46 @@ body {
   }
 }
 
-/**************** Admin Organization View *******************/
+/****************Admin Edit Project ********************/
 
-.details {
-  width: auto;
-  height: 80px;  
-  background: white;
-  table {
-    width: 600px;
-    height: 100px;
-    margin-bottom: 0;
-    border: none;
-    border-color: #FFF;
-    border-spacing: 2px 2px;
-    display: table;
-    border-spacing: none;
-    border-collapse: separate;
-    td {
-      background: #FFF;
-      margin: 2px 2px 2px 2px;
+.edit_project {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  width: 800px;
+  
+  li  {
+    width: 400px;
+    height: auto;
+    margin: 10px 0 0 0;
+    text-align: left;
+    
+    input[type="text"], input[type="password"] {
+      width: 300px;
       padding: 0;
-      color: #000;
-      vertical-align: top;
-      padding: 0 4px 0 4px;
-      
-    }
-    tr {
-      background: #FFF;
-      margin: 0;
-      padding: 0;
-      color: #000;
-      vertical-align: bottom; }
-    th {
-      color:#000;
-      font-weight: bold;
-      text-decoration: none;
-      height: 15px;
-      border: none;
-      margin: 0 15px 0 0;
-    }
-      }
-    }
+      font-size: 12px;
+      margin: 10 10 10 10;
+    } }
+  
+  form ol {
+    list-style: none;
+    margin: 10 10 10 10;
+    ol {
+      margin-left: 0; }
+    li {
+      margin: 10 10 10 10; }
+    ol li {
+      margin: 10 10 10 10; }
+  .files {
+    height: auto;
+    width: 140px;
+    li  {
+      width: 160px;
+      height: auto;
+      margin: 10 10 10 10;
+      list-style: square inside; }
+    } } }
+  
 
 .org_section {
   height: 20px;
