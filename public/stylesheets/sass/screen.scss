@@ -111,7 +111,7 @@ body {
   float: left;
   height: 68px;
   width: 68px;
-  margin: 0 0 0 0; }
+  margin: 10px 0 0 0; }
 
 #social_logos {
   float: right;
@@ -131,10 +131,10 @@ body {
       text-decoration: none;
       font-weight: bold;
       padding: 7px 0 2px 0;
-      margin-top: 30px;
+      margin-top: 20px;
       margin-bottom: 5px;
-      margin-left: 0px;
-      margin-right: 2px;      
+      margin-left: 3px;
+      margin-right: 3px;      
       background-image: url(/images/button.png);
       background-repeat: no-repeat;
       display: block;
@@ -185,13 +185,13 @@ body {
   background-image: url(/images/process.gif);
   background-repeat: no-repeat;
   padding: 0 10px 0 0;
-  margin: 0 0 0 0; }
+  margin: 10px 0 0 0; }
 
 .featured_wrap {
   width: 585px;
   height: 340px;
   float: left;
-  margin: 0 0 0 25px; 
+  margin: 10px 0 0 25px; 
 
 	.featured_thumbnail {
 	  width: 288px;
@@ -389,6 +389,7 @@ body {
 }  
 
 #lang{
+  height: 10px;
   float:right;
 }
 //#approved_by {
@@ -554,16 +555,20 @@ body {
 
 #col_left {
   float: left;
-  width: 170px;
-  height: 340px; }
+  width: 225px;
+  height: 470px; }
 
 #project_photo {
+  img {
+    @include round;
+    margin: 0 0 0 0;
+  }
   float: left;
   margin: 10px; }
 
 #project_map {
   float: left;
-  margin: 10px; }
+  margin: 0px 10px 10px 10px; }
 
 #project_percent_raised {
   width: 180px;
@@ -573,12 +578,13 @@ body {
   margin: 10px 50px  5px 0; }
 
 #project_information {
-  width: 390px;
-  height: 300px;
+  @include round;
+  width: 360px;
+  height: 420px;
   background-color: #FFFFFF;
   float: left;
   padding: 10px;
-  margin: 5px 0 0 10px; }
+  margin: 10px 0 0 10px; }
 
 #percent_raised_number {
   width: 200px;
@@ -589,46 +595,37 @@ body {
   color: #662d91;
   margin: 10px 0 0 0; }
 
-#more_projects {
+#col_right {
+  font-size: 12px;
+  font-weight: bold;
   float: right;
   width: 200px;
-  height: 320px;
-  margin: 5px 0 0 0;
+  height: 320px; }
+
+#more_projects {
+  margin: 130px 0 15px 5px; 
+  img { @include round; }
   p {
     color: #662d91;
     text-align: center; } }
 
 #more_projects_photos {
-  width: 150px;
   height: 50px;
-  margin: 0 0 15px 20px; }
+  margin: 0 0 15px 0px; }
 
 #project_photo1, #project_photo2, #project_photo3 {
   width: 49px;
   height: 43px;
+  margin: 0 5px 0 5px;
   float: left; }
 
 #social_logos_large {
-  a { float: left; }
+  margin: 0 0 0 20px;
+  width: 140px;
+  a { 
+    width: 58px;
+    float: left; }
 }
-
-.testimonials {
-  font-style: italic;
-  color: #000000;
-  margin: 0 0 15px 0;
-  text-align: left; }
-
-.testimonial_name {
-  font-size: 14px; }
-
-.test_location {
-  font-size: 10px; }
-
-#form_left {
-  width: 530px;
-  border-right: 1px solid #662d91;
-  height: 420px;
-  float: left; }
 
 .comments {
   margin: 0 130px 15px 0; 
@@ -723,44 +720,30 @@ body {
 #donor_head {
   text-align: left;
   font-size: 20px;
+  font-weight: bold;
   margin: 0 0 15px 0;
   padding: 10px 0 0 20px;
-  color: #3DA9DF; }
+  color: #3DA9DF; 
+  a {
+    width: 50px;
+    float: left; }
+  margin: 0 0 15px 20px; }
 
 #donor_info {
-  width: 800px;
-  height: 430px;
-  background-color: #ffffff; }
-
-.row {
-  padding: 10px 0;
-  textarea {
-    border: 1px solid #888;
-    padding: 3px;
-    background: white;
-    width: 400px; }
-  select {
-    width: 240px; }
-  label {
-    width: 90px;
-    float: left;
-    font-size: 13px;
-    color: #333;
-    text-align: right; } }
+  width: 200px;
+  height: 100px;
+  margin: 25px 0 0 5px;
+  img {
+    @include round; }
+  p {
+    color: #662d91;
+    text-align: center; } }
 
 .required {
   font-weight: bold; }
 
 .intromessageRequired {
   padding: 10px 0; }
-
-.row span {
-  display: none;
-  &.error {
-    display: block;
-    clear: both;
-    padding: 2px 0 0 0;
-    color: red; } }
 
 .field_holder {
   padding-left: 15px;
@@ -769,13 +752,10 @@ body {
   input {
     width: 250px; } }
 
-#form_right {
-  width: 235px;
-  height: 320px;
-  float: right;
-  margin: 80px 0 0 0; }
-
 #amount_project_detail {
+  input[type=text] {
+    border: 1px solid #AAA;
+  }
   margin: 0 0 10px 0;
   text-align: left; }
 
@@ -783,12 +763,15 @@ body {
   width: 100px;
   height: 50px;
   background-image: url(/images/footer_amazonpayments.png);  
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat; 
+  margin: 20px 0 0 50px; }
 
 #submit_signup {
-  height: 25px;
-  width: 92px;
-  margin: 10px 50px 0 0; }
+  text-align: left;
+  input {
+    width: 160px;
+    height: 50px;
+  }}
 
 /*************************Community*************************/
 #community_bottom {
@@ -933,7 +916,6 @@ body {
     display: block;
   }
 }
-
 
 .projects {
   @include round;
@@ -1306,5 +1288,23 @@ td {
       text-decoration: none;
       font-weight: bold;
     }
+  }
+}
+
+/******************** Access Denied ***********************/
+
+#access_denied {
+  width: 800px;
+  height: 130px;
+  background-color: #ffffff;
+  margin: 0 0 20px 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  h1 {
+    text-align: center;
+  }
+  a {
+    color: #3DA9DF;
+    font-weight: bold;
   }
 }

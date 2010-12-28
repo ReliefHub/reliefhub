@@ -6,7 +6,7 @@
       %li{:class => "#{controller_name == 'projects' ? 'selected' : ''}"}
         %h3= link_to 'Projects', admin_projects_path
       %li{:class => "#{controller_name == 'users' ? 'selected' : ''}"}
-        %h3= link_to 'Users', '#'
+        %h3= link_to 'Users', admin_users_path
   #content.round.projects.content
     = yield
 = render :file => 'layouts/application'

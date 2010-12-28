@@ -13,3 +13,4 @@ Feature: Visitor visits home page
     And I should see blog posts on the page
     And I should see recent press on the page
     And I should see "Christmas Toy Drive"
+    And I should not see "Admin"

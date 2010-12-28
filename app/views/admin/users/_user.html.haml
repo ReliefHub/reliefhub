@@ -1,0 +1,7 @@
+%tr
+  %td= user.created_at.strftime("%m/%d/%Y")
+  %td= user.display_name
+  %td= user.email
+  %td= display_if_is?(user, 'field_operator')
+  %td= display_if_is?(user, 'organization_manager')
+  %td= display_if_is?(user, 'admin')
