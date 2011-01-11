@@ -2,7 +2,7 @@
   #menu
     %ul#right-menu.right
       %li{:class => "#{controller_name == 'organizations' ? 'selected' : ''}"}
-        %h3= link_to 'Organizations', :controller => 'organizations' 
+        %h3= link_to 'Organizations', admin_organizations_path 
       %li{:class => "#{controller_name == 'projects' ? 'selected' : ''}"}
         %h3= link_to 'Projects', admin_projects_path
       %li{:class => "#{controller_name == 'users' ? 'selected' : ''}"}

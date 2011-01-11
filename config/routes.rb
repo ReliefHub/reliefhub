@@ -27,6 +27,13 @@ Reliefhub::Application.routes.draw do
 
     resources :emails, :only => [:create]
     devise_for :users
+    
+    resources :users do
+      collection do
+        get :projects
+      end
+    end
+
   end
 
   match '/:locale' => 'homes#show'
